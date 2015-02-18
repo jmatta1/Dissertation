@@ -1,0 +1,179 @@
+%
+%  Main file for James Till Matta's dissertation
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[final,numrefs,sort&compress]{nddiss2e}
+
+\usepackage{graphicx}   % need for figures
+\usepackage{dcolumn}    % use to align table columns on decimal point
+\usepackage{epstopdf}   % allows use of eps figures
+\epstopdfsetup{update}  % only regenerate pdf files when eps file is newer
+\usepackage{xstring}    % for \IfEqCase
+% % % % % % % % % % % % % % % % % %
+% Define a few commands for conveniences sake
+\newcommand{\gr}{$\gamma$-ray}
+\newcommand{\pr}{$^{135}$Pr}
+\newcommand{\li}{$^{6}$Li}
+\newcommand{\nuc}[1]{ %
+	\IfEqCase{#1}{%
+        {ni}{$^{58}$Ni}%
+        {zr}{$^{90}$Zr}%
+        {sn}{$^{116}$Sn}%
+        {pb}{$^{208}$Pb}%
+        {sb}{$^{123}$Sb}%
+        {li}{$^{6}$Li}%
+        {pr}{$^{135}$Pr}%
+        {o}{$^{16}$O}%
+        {c}{$^{12}$C}%
+    }[\PackageError{nuc}{Undefined option to nuc: #1}{}]%
+}
+
+
+\begin{document}
+
+\frontmatter 
+\title{COLLECTIVE NUCLEAR STRUCTURE AT HIGH AND LOW SPINS\\ THE TRANSVERSE WOBBLING MODE IN \pr{} AND \\ \li{} AS A PROBE OF THE ISOSCALAR GIANT MONOPOLE RESONANCE}
+\author{James Till Matta}
+\work{Dissertation}
+\degaward{Doctor of Philosophy}
+\advisor{Umesh Garg}
+\department{Physics}
+
+\maketitle
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% Front stuff
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% You must either set the copyright information or put your work in the public domain.
+\copyrightholder{James Till Matta} % See template or documentation for
+\copyrightyear{2015}           % other copyright options.
+\makecopyright
+
+% An abstract is optional for a mster's thesis, and required for a doctoral dissertation.
+\begin{abstract}
+  Figure out what to write for an abstract
+\end{abstract}
+
+% A dedication is optional.
+\renewcommand{\dedicationname}{DEDICATED TO:}
+
+\begin{dedication}
+  To my fianc\'e Tina Michele Piquet, my father James Frank Matta, and my mother Margaret Louisa Till. Without their support and understanding this all would have imploded.
+\end{dedication}
+
+% These are required, and must be in this order.
+\tableofcontents
+\listoffigures
+\listoftables
+
+% A preface is optional.
+\begin{preface}
+  PREFACE GOES HERE IF I WANT ONE
+\end{preface}
+
+\begin{acknowledge}
+  ACKNOWLEDGEMENTS SECTION GOES HERE
+\end{acknowledge}
+
+% A symbols section is optional.
+\begin{symbols}
+
+\end{symbols}
+
+\mainmatter
+%
+% An unnumbered chapter (features)
+%
+%\unnumchapter{FEATURES OF FORMATTING IN THIS EXAMPLE FILE}
+% The \unnumchapter command allows you to include an unnumbered chapter as part of
+% the main text before Chapter 1. It will appear in your table of contents, and you
+% should have at most one such chapter (although nothing in the class file will
+% prevent you from creating more).
+
+%
+% Chapter 1
+%
+\include{cmn_chaps/chapter_01_introduction}
+
+%
+% Seperator for part 1
+%
+\unnumchapter{PART I: TRANSVERSE WOBBLING IN $^{135}$Pr}
+
+%
+% Chapter 2
+%
+\include{pr_chaps/chapter_02_nuclear_models}
+
+%
+% Chapter 3
+%
+\include{pr_chaps/chapter_03_pr_exp_methods}
+
+%
+% Chapter 4
+%
+\include{pr_chaps/chapter_04_transverse_wobbling}
+
+%
+% Chapter 5
+%
+\include{pr_chaps/chapter_05_wobbling_discussion}
+
+%
+% Seperator for part 2
+%
+\unnumchapter{PART II: $^6$Li AS A PROBE OF THE ISOSCALAR GIANT MONOPOLE RESONANCE}
+
+%
+% Chapter 6
+%
+\include{li_chaps/chapter_06_nuclear_scattering}
+
+%
+% Chapter 7
+%
+\include{li_chaps/chapter_07_li_exp_methods}
+
+%
+% Chapter 8
+%
+\include{li_chaps/chapter_08_data_analysis}
+
+%
+% Chapter 9
+%
+\include{li_chaps/chapter_09_li_discussion}
+
+%
+% Seperator for part 3
+%
+\unnumchapter{PART III: Final Summation}
+
+%
+% Chapter 10
+%
+\include{cmn_chaps/chapter_10_final_sum}
+
+%
+% Appendix (optional)
+%
+
+\appendix
+
+
+%
+% Back stuff
+%
+
+% % comment out the following three lines
+% if using chapter-wise bibliography
+
+ \backmatter
+ \bibliographystyle{abbrvnat} % The standard abbrvnat style should be acceptable. Also provided with both the advanced and standard
+ \bibliography{dissertation}       % distributions are nddiss2e and nddiss2enoarticletitles style options.
+
+\end{document}
