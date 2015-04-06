@@ -13,26 +13,48 @@ Across all of experimental physics there is a common theme in the design of an e
 Across nuclear physics there are vast array of reactions used. Narrowing to in-beam \gr{} spectroscopy one finds some common ``workhorse'' reactions that are commonly used. Of these workhorse reactions the heavy-ion fusion-evaporation reaction is frequently chosen for its selectivity in final products, producing relatively few species with large cross-section, and its creation of states with a large amount of angular momentum.\cite{beausang1996arrays}.
 \subsection{Creation and Decay of the Compound Nucleus}
 \label{ssec:exp-pr-fus-evap-cn}
-The fusion evaporation reaction proceeds by the formation of a highly excited compound nucleus\cite{bohr1936neutron}, followed by the evaporation of particles, finally leaving behind the excited residual nucleus. In the particle evaporation process each particle must penetrate a barrier, for neutrons this barrier is merely the centrifugal barrier while charged particles see the coulomb barrier as well, this makes neutron emission more probable. Each successive evaporated particle carries energy away from the nucleus until there is insufficient excitation energy for particles to penetrate the emission barrier and the nucleus is left in a state that is stable against particle emission. From this point on the nucleus must dissipate its excess angular momentum and excitation energy via \gr{} emission. A schematic of a (HI, $p3n\gamma{}$) reaction is shown in Fig. \ref{fig:chp3-fus-evap-schem}.
+The fusion evaporation reaction proceeds by the formation of a highly excited compound nucleus, a mechanism first proposed by Neils Bohr\cite{bohr1936neutron}. While it is possible for a compound nucleus to be formed for beam energies below the coulomb barrier the probability is dramatically lower as the beam must quantum mechanically tunnel through same barrier. Therefor for heavy ion fusion to be experimentally feasible the center of momentum energy must exceed the height of the coulomb barrier. The coulomb barrier height can be estimated with
+
+\begin{equation}
+\label{eqn:cb_en}
+E_{CB}=\frac{\alpha \hbar c Z_p Z_t}{1.16 fm (A_p^{1/3} + A_t^{1/3} + 2)}
+\end{equation}
+
+and the non-relativistic limit the center of momentum energy is
+
+\begin{equation}
+\label{eqn:cmf_en}
+E_{cm} = \frac{\mu}{A_{t}}E_{p}
+\end{equation}
+
+Here the subscripts $p$ and $t$ denote projectile and target respectively, $A$ is the mass number, $Z$ represents the nuclear charge, $\alpha{}$ is the fine structure constant, and $\mu = A_{p}A_{t}/(A_{p}+A_{t})$ is the system's reduced mass. After its formation the compound nucleus will have an excitation energy of
+
+\begin{equation}
+\label{eqn:cn_ex}
+E_{ex} = Q + E_{cm}
+\end{equation}
+
+where $Q$ is the reaction's $Q$-value which is,
+
+\begin{equation}
+\label{eqn:cn_form_qvalue}
+Q = (M_t+M_p-M_{CN})c^2
+\end{equation}
+
+The compound nucleus will also carry an angular momentum ranging between $0 \hbar$ and $l_{max} \hbar$, corresponding to head on and peripheral collisions respectively. A non-relativistic approximation of $l_{max}$ is
+
+\begin{equation}
+\label{eqn:cn_lmax}
+l_{max} = \frac{\sqrt{2\mu(E_{cm}-E_{CB})}R}{\hbar}
+\end{equation}
+
+where R is the 
+, followed by either fissioning of the compound nucleus, or the evaporation of particles, finally leaving behind the excited residual nucleus. In the particle evaporation process each particle must penetrate a barrier, for neutrons this barrier is merely the centrifugal barrier while charged particles see the coulomb barrier added on top of that, this makes neutron emission more probable. Each successive evaporated particle carries energy away from the nucleus until there is insufficient excitation energy for particles to penetrate the emission barrier and the nucleus is left in a state that is stable against particle emission. From this point on the nucleus must dissipate its excess angular momentum and excitation energy via \gr{} emission. A schematic of a (HI, $p3n\gamma{}$) reaction is shown in Fig. \ref{fig:chp3-fus-evap-schem}.
 \begin{figure}
 	\centerline{\includegraphics[width=\textwidth]{./img/c3/fusion_evaporation_horizontal.pdf}}
 	\caption{Schematic illustration of heavy-ion fusion-evaporation, adapted from Ref. \cite{gsBooklet}.}
 	\label{fig:chp3-fus-evap-schem}
 \end{figure}
-
-While it is possible for a compound nucleus to be formed for beam energies below the coulomb barrier the probability is dramatically lower as the beam must quantum mechanically tunnel through the barrier. Therefor for use of heavy ion fusion to be experimentally feasible the center of momentum energy must exceed the height of the coulomb barrier. The coulomb barrier height can be estimated with \ref{eqn:cb_en} and the non-relativistic limit the center of momentum energy is given in Eqn. \ref{eqn:cmf_en} (for the relativistic formula see Appendix \ref{app:rel-kin}). 
-
-\begin{equation}
-\label{eqn:cb_en}
-E_{CB}=\frac{\alpha \hbar c Z_b Z_t}{1.16 fm (A_b^{1/3} + A_t^{1/3} + 2)}
-\end{equation}
-
-\begin{equation}
-\label{eqn:cmf_en}
-E_{cm} = \frac{A_{b}}{A_{b}+A_{t}}E_{b}
-\end{equation}
-
-Here the subscripts $b$ and $t$ denote beam and target respectively, $A$ is the mass number, $Z$ represents the nuclear charge, and $\alpha{}$ is the fine structure constant. 
 
 \subsection{Choice of Beam and Target}
 \label{ssec:exp-pr-fus-evap-beam-target}
@@ -46,6 +68,12 @@ When choosing the beam and target for a fusion evaporation one must find the bes
 \label{sec:exp-pr-gamma-spec}
 \subsection{Gamma-ray Interaction with Matter}
 \label{ssec:exp-pr-gamma-spec-interactions}
+As mentioned earlier, the choice of equipment will vary with which signals you need to collect to understand the system. In the case of a residual nucleus at high spin one of the obvious signal choices is the \gr{}s it emits. Detection of gamma-rays is dependent on the interactions of electromagnetic radiation with matter. At the energies relevant to nuclear physics, $10keV<E_{\gamma}<15MeV$, there are, three primary processes to be considered, photoelectric absorption, Compton scattering, and pair production. These three processes compete with each dominating in a different energy range.
+\begin{figure}
+	\centerline{\includegraphics[height=0.5\textheight]{./img/c3/gamma_interactions_scan.eps}}
+	\caption{Gamma-ray attenuation coefficients for various processes in NaI, adapted from Ref. \cite{knollBook}. Here we can see the dominance of photoelectric absorption at lower energies, Compton scattering at intermediate energies and pair production at high energies. While the slopes of these processes changes from material to material the trends remain the same.}
+	\label{fig:chp3-gamma-interactions}
+\end{figure}
 \subsection{High Purity Germanium (HPGe) Detectors}
 \label{ssec:exp-pr-gamma-spec-hpge}
 \subsection{Escape Suppression with BGO detectors}
