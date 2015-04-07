@@ -86,7 +86,31 @@ The final process to be considered is pair production. In pair production the ph
 \label{ssec:exp-pr-gamma-spec-hpge}
 In detecting gamma-rays there are essentially 3 major classes of detector, scintillator, gas, and semiconductor detectors. In all cases the \gr{} enters the active volume of the detector and deposits energy by at least one of the processes mentioned above, the primary energetic electrons, produced directly by the interactions of the \gr{}, then proceed to ionize or excite other electrons in the material, the secondary electrons are then detected in some manner. In scintillators they cause UV or visible light to be emitted and that is collected via photomultiplier or similar to produce a voltage pulse. In gas and semiconductor detectors the charge of the secondary electrons (and their corresponding ions or holes) is collected directly, albeit via different mechanisms, to produce the voltage pulse.
 
-It is desirable that \gr{} detectors have both good detection efficiency and energy resolution. Unfortunately, in the \gr{} detectors presently available there is a conflict between these goals and so one must decide which parameter is more important. For high spin experiments where the spectrum is dense with peaks the energy resolution is the top priority as broad peaks would be indistinguishable from each other. Amongst the available detectors semiconductor detectors, particularly High Purity Germanium (HPGe) detectors offer the best energy resolution.
+It is desirable that \gr{} detectors have both good detection efficiency and energy resolution. Unfortunately, in the \gr{} detectors presently available there is a conflict between these goals and so one must decide which parameter is more important. For high spin experiments where the spectrum is dense with peaks the energy resolution is the top priority as broad peaks would be indistinguishable from each other. Amongst the available detectors, semiconductor detectors, particularly High Purity Germanium (HPGe) detectors offer the best energy resolution.
+
+\begin{figure}
+	\centerline{\includegraphics[width=\textwidth]{./img/c3/pn-diode.eps}}
+	\caption{Above: Diagramatic view of the depletion zone's with varying bias voltage. Below: Voltage difference across the depletion zone for each bias voltage shown above}
+	\label{fig:chp3-pn_diode}
+\end{figure}
+
+
+Semiconductor detectors are reversed bias diodes with either a p-n or a p-i-n junction. At the boundaries between the types of materials there is a so called contact potential. This potential gives rise to an electric field which causes the migration of charges between the two materials until there is an area bridging the boundary called the depletion zone. In this zone there is an electric field which gives rise to a potential that counters the contact potential. By applying reverse bias to the diode the contact potential is effectively increased causing the depletion zone to expand (schematic in Fig. \ref{fig:chp3-pn_diode}.) This is desirable because the depletion zone(s) are the only regions of the semiconductor where an electric field will exist. This means that electron hole pairs formed in the within it are swept away from each other before they can recombine so that they can be collected. In contrast, electron hole pairs formed outside the depletion zone are not pulled away from each other and recombine, preventing their collection. Due to this, the depletion zone of the detector is the region that is active. That is to say that the passage of ionizing radiation through the that region is detectable as electron hole pairs it produces will be collected.
+
+The higher the purity of the semiconductor, the higher the reverse bias voltage that can be applied without reaching the breakdown of the semiconductor (usually catastrophic event.) In HPGe detectors the purity is sufficiently high that the whole crystal of Ge can be depleted yielding a very large active region, an advantage for \gr{}s given their low interaction probabilities compared to charged particles. When a gamma interacts in an HPGe detectors it produces at least one high energy secondary electron or positron (more if there are multiple interactions). These secondary electrons lose energy quickly as they pass through the detector, leaving a trail of electron hole pairs in their wake. The electrons and holes are then swept to their respective contacts by the applied potential and collected.
+
+The intrinsic resolution of a semiconductor detector stems from statistical fluctuations in how many electrons and holes are collected at the terminals. As these arise from simple counting statistics one can estimate the resolution of the detectors.
+\begin{equation}
+\label{eqn:hpge-res-est} 
+\%Res \propto N^{-\frac{-1}{2}}
+\end{equation}
+Where N is the number of charge carriers produced and is approximately $E_{\gamma}/\epsilon$ where $\epsilon$ is the average energy to make an electron hole pair ($2.96eV$ for Ge). In a more careful examination we define the detector resolution to be the Full Width at Half Maximum (FWHM) of a peak. The resolution then becomes:
+\begin{equation}
+\label{eqn:hpge-res} 
+FWHM(E) = 2\sqrt{2 Ln(2)}\frac{E_{\gamma{}}F}{\sqrt{E_{\gamma{}}/\epsilon{}}}\\
+        = 2.355\sqrt{F\epsilon{}E_{\gamma{}}}
+\end{equation}
+Here $F$ is the Fano factor. This value, intrinsic to the detector material, ranges across $(0,1]$ and takes into account energy loss mechanisms available to the secondary electron(s) that do not generate electron hole pairs. The inquiring reader can find a more thorough explanation in Refs. \cite{knollBook,fano_factor1}.
 \subsection{Escape Suppression with BGO detectors}
 \label{ssec:exp-pr-gamma-spec-escape-supress}
 \subsection{Gammasphere}
