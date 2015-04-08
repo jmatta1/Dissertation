@@ -95,24 +95,63 @@ It is desirable that \gr{} detectors have both good detection efficiency and ene
 \end{figure}
 
 
-Semiconductor detectors are reversed bias diodes with either a p-n or a p-i-n junction. At the boundaries between the types of materials there is a so called contact potential. This potential gives rise to an electric field which causes the migration of charges between the two materials until there is an area bridging the boundary called the depletion zone. In this zone there is an electric field which gives rise to a potential that counters the contact potential. By applying reverse bias to the diode the contact potential is effectively increased causing the depletion zone to expand (schematic in Fig. \ref{fig:chp3-pn_diode}.) This is desirable because the depletion zone(s) are the only regions of the semiconductor where an electric field will exist. This means that electron hole pairs formed in the within it are swept away from each other before they can recombine so that they can be collected. In contrast, electron hole pairs formed outside the depletion zone are not pulled away from each other and recombine, preventing their collection. Due to this, the depletion zone of the detector is the region that is active. That is to say that the passage of ionizing radiation through the that region is detectable as electron hole pairs it produces will be collected.
+Semiconductor detectors are reversed bias diodes with either a p-n or a p-i-n junction. At the boundary between the types of materials there is a so called contact potential. This potential gives rise to an electric field which causes the migration of charges between the two materials until there is an area bridging the boundary called the depletion zone. In this zone there is an electric field which gives rise to a potential that counters the contact potential. By applying reverse bias to the diode the contact potential is effectively increased causing the depletion zone to expand (schematic in Fig. \ref{fig:chp3-pn_diode}.) This is desirable because the depletion zone(s) are the only regions of the semiconductor where an electric field will exist. This means that electron hole pairs formed in the within it are swept away from each other before they can recombine so that they can be collected. In contrast, electron hole pairs formed outside the depletion zone are not pulled away from each other and recombine, preventing their collection. Due to this, the depletion zone of the detector is the region that is active. That is to say that the passage of ionizing radiation through the that region is detectable as electron hole pairs it produces will be collected.
 
 The higher the purity of the semiconductor, the higher the reverse bias voltage that can be applied without reaching the breakdown of the semiconductor (usually catastrophic event.) In HPGe detectors the purity is sufficiently high that the whole crystal of Ge can be depleted yielding a very large active region, an advantage for \gr{}s given their low interaction probabilities compared to charged particles. When a gamma interacts in an HPGe detectors it produces at least one high energy secondary electron or positron (more if there are multiple interactions). These secondary electrons lose energy quickly as they pass through the detector, leaving a trail of electron hole pairs in their wake. The electrons and holes are then swept to their respective contacts by the applied potential and collected.
 
-The intrinsic resolution of a semiconductor detector stems from statistical fluctuations in how many electrons and holes are collected at the terminals. As these arise from simple counting statistics one can estimate the resolution of the detectors.
+A detectors resolution is defined the FWHM for a given peak. The intrinsic resolution of a semiconductor detector stems from statistical fluctuations in how many electrons and holes are collected at the terminals. As these fluctuations arise from simple counting statistics one their form can be deduced to be:
 \begin{equation}
 \label{eqn:hpge-res-est} 
-\%Res \propto N^{-\frac{-1}{2}}
+\Delta{}E_{in} \propto \frac{E_{\gamma}}{\sqrt{N}}
 \end{equation}
-Where N is the number of charge carriers produced and is approximately $E_{\gamma}/\epsilon$ where $\epsilon$ is the average energy to make an electron hole pair ($2.96eV$ for Ge). In a more careful examination we define the detector resolution to be the Full Width at Half Maximum (FWHM) of a peak. The resolution then becomes:
+Where N is the number of charge carriers produced and is approximately $E_{\gamma}/\epsilon$ where $\epsilon$ is the average energy to make an electron hole pair ($2.96eV$ for Ge). In a more careful examination we see that the intrinsic component of the FWHM is:
 \begin{equation}
-\label{eqn:hpge-res} 
-FWHM(E) = 2\sqrt{2 Ln(2)}\frac{E_{\gamma{}}F}{\sqrt{E_{\gamma{}}/\epsilon{}}}\\
-        = 2.355\sqrt{F\epsilon{}E_{\gamma{}}}
+\label{eqn:hpge-in-res} 
+\begin{split}
+\Delta{}E_{in}(E) & = 2\sqrt{2 Ln(2)}\frac{E_{\gamma{}}F}{\sqrt{E_{\gamma{}}/\epsilon{}}}\\
+       & = 2.355\sqrt{F\epsilon{}E_{\gamma{}}}
+\end{split}
 \end{equation}
 Here $F$ is the Fano factor. This value, intrinsic to the detector material, ranges across $(0,1]$ and takes into account energy loss mechanisms available to the secondary electron(s) that do not generate electron hole pairs. The inquiring reader can find a more thorough explanation in Refs. \cite{knollBook,fano_factor1}.
+
+Unfortunately, the detector's intrinsic resolution is not the only contributor to the detector's resolution. There are also contributions from such sources as electronic noise, charge carrier collection / trapping, and Doppler broadening. If one assumes that these components are independent and normally distributed one gets the actual resolution to be:
+\begin{equation}
+\label{eqn:hpge-res} 
+\Delta{}E_{T}^2 = \Delta{}E_{in}^2 + \Delta{}E_{E}^2 + \Delta{}E_{C/T}^2 + \Delta{}E_{D}^2
+\end{equation}
+Where $\Delta{}E_{E}$ is the electronic noise contribution, $\Delta{}E_{C/T}$ is the charge collection / trapping term, and $\Delta{}E_{D}$ is the Doppler broadening term. Ref. \cite{trappingResolution} gives the FWHM forms of the noise and collection / trapping terms to be:
+\begin{equation}
+\label{eqn:hpge-res-noise} 
+\Delta{}E_{E} = N_{1/2}
+\end{equation}
+\begin{equation}
+\label{eqn:hpge-res-ct} 
+\Delta{}E_{C/T} = 2.355\sqrt{\epsilon{} K E_{\gamma{}} [1-\eta{}(r)]}
+\end{equation}
+Where $N_{1/2}$ is the FWHM of the electronic noise, $K$ is a constant of a given detector, and $\eta{}(r)$ is the total charge collection efficiency of electrons and holes of the detector as a function of the interaction site's radius.
+
+\begin{figure}
+	\centerline{\includegraphics[height=0.3\textheight]{./img/c3/split_contact.eps}}
+	\caption{Diagram showing the uncertainty inherent in the \gr{}'s angle of emission, as well as Gammasphere's segmented electrode scheme to reduce this.}
+	\label{fig:chp3-doppler-split-contact}
+\end{figure}
+
+The final term, $\Delta{}E_{D}$, of this equation comes from uncertainty in the angle at which the gamma ray was emitted from the recoiling nucleus due to the detectors finite size (shown in Fig. \ref{fig:chp3-doppler-split-contact}. The shift in gamma energy due to the nuclear recoil is:
+\begin{equation}
+\label{eqn:doppler_formula} 
+E_{o} = E_{e}\frac{\sqrt{1+\beta{}Cos(\theta)}}{\sqrt{1-\beta{}Cos(\theta)}}
+\end{equation}
+here, the subscripts o and e refer to observed and emitted, $\beta$ is the speed of the recoiling nucleus and theta is the angle between the nucleus' line of a flight and the emitted \gr{}. If the detector has an angular acceptance such that $\theta{}_{0}-\delta{}\theta{}\leq{}\theta{}\leq{}\theta{}_{0}+\delta{}\theta{}$ with $\theta{}_{0}$ the central angle of the detector; we find that, to first order, the contribution of Doppler broadening is:
+\begin{equation}
+\label{eqn:res-doppler-term} 
+\Delta{}E_{D} = 2\beta{}Sin(\theta{})Sin(\delta{}\theta{})E_{\gamma}
+\end{equation}
+There are two strategies to combat this term. The first is geometrical. By increasing the granularity of the array, either by using more, smaller detectors, or by using more detectors at a longer distance from the source. This in turn would shrink the opening angle of detectors and therefor reduce the Doppler broadening. The second method is electrical in nature, by segmenting the outer contact of the detector, even roughly, one can localize within the detector where the interaction occurred, therefor effectively reducing the opening angle. Gammasphere uses this strategy as shown in Fig. \ref{fig:chp3-doppler-split-contact}. The split outer contact lets one reduce the effective opening angle from $14.9^{\deg}$ to $7.45^{\deg}$ \cite{TheGS}.
 \subsection{Escape Suppression with BGO detectors}
 \label{ssec:exp-pr-gamma-spec-escape-supress}
+The primary contribution to the background in \gr{} spec is the incomplete deposition of energy in the detector. Two of the mechanisms discussed in section \ref{ssec:exp-pr-gamma-spec-interactions} can be the cause. Compton scattering will result in incomplete energy deposition when the secondary photon yielded by the process may escape the HPGe crystal without depositing the rest of its energy. This mode results in a smooth background from the maximum energy transferable to an electron in the process down to zero energy. Pair production will yield incomplete energy deposition when one or both of the photons from the annihilation of the positron escape the detector. This mode results in 2 new peaks forming, the first $511keV$ below the photopeak, corresponding to one annihilation photon escaping, and a second $1022keV$ below the photopeak, corresponding to both escaping.
+
+To ameliorate this the principal detector is surrounded by a secondary detector and the electronics are set such that the detectors are in anti-coincidence. That is to say that if both detectors had energy deposited, the event is discarded. In order for this to be practical, the second detector must be highly efficient at detecting gammas so that it need not be overly large. Given this constraint, the scintillator Bismuth Germanate (BGO) is an excellent choice for compton suppression. While BGO's energy resolution is quite poor, it has excellent timing characteristics, quite high density, and is made of fairly high $Z$ materials. The latter two facts grant it the desired high detection efficiency (substantially higher than the HPGe it is shielding in fact.)
 \subsection{Gammasphere}
 \label{ssec:exp-pr-gamma-gammasphere}
 \subsection{Indian National Gamma Array (INGA)}
