@@ -41,14 +41,13 @@ where $Q$ is the reaction's $Q$-value which is,
 Q = (M_t+M_p-M_{CN})c^2
 \end{equation}
 
-The compound nucleus will also carry an angular momentum ranging between $0 \hbar$ and $l_{max} \hbar$, corresponding to head on and peripheral collisions respectively. A non-relativistic approximation of $l_{max}$ is
+The compound nucleus will also carry an angular momentum ranging between $0 \hbar$ and $l_{max} \hbar$, corresponding to head on and peripheral collisions respectively. $l_{max}$ can be estimated classically as
 
 \begin{equation}
 \label{eqn:cn_lmax}
-l_{max} = \frac{\sqrt{2\mu(E_{cm}-E_{CB})}R}{\hbar}
+l_{max} = \frac{\sqrt{2\mu(E_{cm}-E_{CB})}}{4}(A^{1/3}_p + A^{1/3}_p)\hbar
 \end{equation}
 
-where R is the 
 , followed by either fissioning of the compound nucleus, or the evaporation of particles, finally leaving behind the excited residual nucleus. In the particle evaporation process each particle must penetrate a barrier, for neutrons this barrier is merely the centrifugal barrier while charged particles see the coulomb barrier added on top of that, this makes neutron emission more probable. Each successive evaporated particle carries energy away from the nucleus until there is insufficient excitation energy for particles to penetrate the emission barrier and the nucleus is left in a state that is stable against particle emission. From this point on the nucleus must dissipate its excess angular momentum and excitation energy via \gr{} emission. A schematic of a (HI, $p3n\gamma{}$) reaction is shown in Fig. \ref{fig:chp3-fus-evap-schem}.
 \begin{figure}
 	\centerline{\includegraphics[width=\textwidth]{./img/c3/fusion_evaporation_horizontal.pdf}}
@@ -146,115 +145,65 @@ here, the subscripts o and e refer to observed and emitted, $\beta$ is the speed
 \label{eqn:res-doppler-term} 
 \Delta{}E_{D} = 2\beta{}Sin(\theta{})Sin(\delta{}\theta{})E_{\gamma}
 \end{equation}
-There are two strategies to combat this term. The first is geometrical. By increasing the granularity of the array, either by using more, smaller detectors, or by using more detectors at a longer distance from the source. This in turn would shrink the opening angle of detectors and therefor reduce the Doppler broadening. The second method is electrical in nature, by segmenting the outer contact of the detector, even roughly, one can localize within the detector where the interaction occurred, therefor effectively reducing the opening angle. Gammasphere uses this strategy as shown in Fig. \ref{fig:chp3-doppler-split-contact}. The split outer contact lets one reduce the effective opening angle $2\delta{}\theta{}$ from $14.9^{\circ}$ to $7.45^{\circ}$ \cite{TheGS}.
+There are two strategies to combat this term. The first is geometrical. By increasing the granularity of the array, either by using more, smaller detectors, or by using more detectors at a longer distance from the source. This in turn would shrink the opening angle of detectors and therefor reduce the Doppler broadening. The second method is electrical in nature, by segmenting the outer contact of the detector, even roughly, one can localize within the detector where the interaction occurred, therefor effectively reducing the opening angle. Gammasphere uses this strategy as shown in Fig. \ref{fig:chp3-doppler-split-contact}. The split outer contact lets one reduce the effective opening angle, $2\delta{}\theta{}$, from $14.9^{\circ}$ to $7.45^{\circ}$ \cite{TheGS}.
 
 \subsection{Escape Suppression with BGO detectors}
 \label{ssec:exp-pr-gamma-spec-escape-supress}
-\begin{figure}[h]
+The primary contribution to the background in \gr{} spec is the incomplete deposition of energy in the detector. Two of the mechanisms discussed in section \ref{ssec:exp-pr-gamma-spec-interactions} can lead to this. Compton scattering will result in incomplete energy deposition when the secondary photon yielded by the process may escape the HPGe crystal without depositing the rest of its energy. This mode results in a smooth background from the maximum energy transferable to an electron in the process down to zero energy. Pair production will yield incomplete energy deposition when one or both of the photons from the annihilation of the positron escape the detector. This mode results in 2 new peaks forming, the first $511keV$ below the photopeak, corresponding to one annihilation photon escaping, and a second $1022keV$ below the photopeak, corresponding to both escaping.
+\begin{figure}[h!]
 	\centerline{\includegraphics[height=0.25\textheight]{./img/c3/BGO_schematic.pdf}}
 	\caption{Schematic of BGO escape suppression around an HPGE crystal.}
 	\label{fig:chp3-supression-schematic}
 \end{figure}
-The primary contribution to the background in \gr{} spec is the incomplete deposition of energy in the detector. Two of the mechanisms discussed in section \ref{ssec:exp-pr-gamma-spec-interactions} can be the cause. Compton scattering will result in incomplete energy deposition when the secondary photon yielded by the process may escape the HPGe crystal without depositing the rest of its energy. This mode results in a smooth background from the maximum energy transferable to an electron in the process down to zero energy. Pair production will yield incomplete energy deposition when one or both of the photons from the annihilation of the positron escape the detector. This mode results in 2 new peaks forming, the first $511keV$ below the photopeak, corresponding to one annihilation photon escaping, and a second $1022keV$ below the photopeak, corresponding to both escaping.
-
-\begin{figure}[h]
-	\centerline{\includegraphics[height=0.3\textheight]{./img/c3/suppressed_spectra.eps}}
+\begin{figure}[h!]
+	\centerline{\includegraphics[height=0.25\textheight]{./img/c3/suppressed_spectra.eps}}
 	\caption{Superimposed spectra of an escape suppressed and unsuppressed detector. Adapted from Ref.\cite{gsBooklet}}
 	\label{fig:chp3-supression-improvement}
 \end{figure}
-
-To ameliorate this the principal detector is surrounded by a secondary detector and the electronics are set to be in anti-coincidence (see Fig. \ref{fig:chp3-supression-schematic} for a schematic.) If both detectors had energy deposited, the event is discarded. In practical application, the second detector must be highly efficient at detecting gammas so that it need not be overly large. Given this constraint, the scintillator Bismuth Germanate (BGO) is an excellent choice for escape suppression. While BGO's energy resolution is quite poor, it has excellent timing characteristics, quite high density, and is made of fairly high $Z$ materials. The latter two facts grant it the desired high detection efficiency (substantially higher than the HPGe it is shielding in fact.) Improvements up to a factor of $2.48$ in the peak-to-total ratio (P/T) can be seen for some designs. A bare HPGE detector having a (P/T) of $0.270\pm0.002$ has been see to improve to $0.669\pm0.002$\cite{GSComptonSuppression} with a escape suppression shield around the sides and part of the back (some space needs to be left for cables to exit the HPGe.) Example spectra showing this improvement can be seen in Fig. \ref{fig:chp3-supression-improvement}.
+To ameliorate this the principal detector is surrounded by a secondary detector and the electronics are set to be in anti-coincidence (see Fig. \ref{fig:chp3-supression-schematic} for a schematic.) If both detectors had energy deposited, the event is discarded.In practical application, the second detector must be highly efficient at detecting gammas so that it need not be overly large. Given this constraint, the scintillator Bismuth Germanate (BGO) is an excellent choice for escape suppression. While BGO's energy resolution is quite poor, it has excellent timing characteristics, quite high density, and is made of fairly high $Z$ materials. The latter two facts grant it the desired high detection efficiency (substantially higher than the HPGe it is shielding in fact.) Improvements up to a factor of $2.48$ in the peak-to-total ratio (P/T) can be seen for some designs. A bare HPGE detector having a (P/T) of $0.270\pm0.002$ has been see to improve to $0.669\pm0.002$\cite{GSComptonSuppression} with a escape suppression shield around the sides and part of the back (some space needs to be left for cables to exit the HPGe.) Example spectra showing this improvement can be seen in Fig. \ref{fig:chp3-supression-improvement}.
 
 \subsection{The Gammasphere Detector Array}
 \label{ssec:exp-pr-gamma-gammasphere}
+Gammasphere (partially pictured in Fig. \ref{fig:chp3-gs-hemisphere}) is an array of $110$ escape suppressed HPGe detectors arranged in a sphere around a target. A cross sectional view of part of the array can be seen in Fig. \ref{fig:chp3-gs_det_schem}. The BGO shields are arranged in hexagonal shapes around each detector plus a backplug covering the majority of behind the detector. Gammasphere's spherical geometry is comprised of 17 rings of detectors, each ring at a distinct angle to the beam axis. Using a scheme called honeycomb suppression, Gammasphere has a total efficiency of $~0.09$ at $1MeV$ and a singles P/T of $0.69$.
+
 \begin{figure}[h]
 	\centerline{\includegraphics[height=0.3\textheight]{./img/c3/gammasphere_hemi.jpg}}
-	\caption{View of scattering chamber and interior of one of Gammasphere's hemispheres drawn back from the chamber. The copper plates are x-ray absorbers.}
+	\caption{View of scattering chamber and interior of one of Gammasphere's hemispheres drawn back from the chamber. The hexagonal copper foils are x-ray absorbers.}
 	\label{fig:chp3-gs-hemisphere}
 \end{figure}
 
-Gammasphere (partially pictured in Fig. \ref{fig:chp3-gs-hemisphere}) is an array of $110$ escape suppressed HPGe detectors arranged in a sphere around a target. A cross sectional view of part of the array can be seen in Fig. \ref{fig:chp3-gs_det_schem}. The BGO shields are arranged in hexagonal shapes around each detector plus a backplug covering the majority of behind the detector. Gammasphere's spherical geometry is comprised of 17 rings of detectors, each ring at a distinct angle to the beam axis. The HPGe detectors cover $\sim0.5$ of $4\pi$ and, using a scheme called honeycomb suppression, give a total efficiency of $~0.089$ at $1MeV$ and a singles P/T of $0.69$.
 
-\begin{figure}
+\begin{figure}[h]
 	\centerline{\includegraphics[height=0.3\textheight]{./img/c3/gammasphere_detector.eps}}
 	\caption{Cross-section schematic of part of Gammasphere. Adapted from Ref.\cite{gsBooklet}}
 	\label{fig:chp3-gs_det_schem}
 \end{figure}
 
-Honeycomb suppression is an escape suppression scheme that uses the BGO shields of adjacent detector modules to effectively double the thickness of a detector's shields. As seen in Fig. \ref{fig:chp3-gs_det_schem} almost every module will have additional modules immediately adjacent to it. If the HPGe detector for a given module do not register energy deposition the 6 side segments of its BGO shield are used to double the thickness of the shields they are adjacent to. Without this measure the singles P/T is $\sim0.62$; using honeycomb spupression improves this to $\sim0.69$ though it reduces the total efficiency at 1MeV from $\sim0.095$ to $\sim0.089$.
+
+Honeycomb suppression is an escape suppression scheme that uses the BGO shields of adjacent detector modules to effectively double the thickness of a detector's shields. As seen in Fig. \ref{fig:chp3-gs_det_schem} almost every module will have additional modules immediately adjacent to it. If the HPGe detector for a given module do not register energy deposition the 6 side segments of its BGO shield are used to double the thickness of the shields they are adjacent to. Without this measure the singles P/T is $\sim0.62$; using honeycomb suppression improves this to $\sim0.69$ though it reduces the total efficiency at 1.332MeV from $\sim0.095$ to $\sim0.089$\cite{TheGS}.
 
 \begin{table}
-\label{tbl:chp3-gs-rings}
-\caption{Gammasphere ring characteristics, $\theta$ is the polar angle of the ring.}
 \begin{center}
-\begin{tabular}{|c|c|c|c|c|c|c|c|}
+\begin{tabular}{|c|c|}
 \hline
-\hline
-Ring ID & $\theta$ ($^{\circ}$) & No. Det&\multicolumn{5}{|c|}{Constituent Detector IDs}\\ 
-\hline{}$1$&$17.27465$&$5$&$1$&$3$&$2$&$4$&$6$\\
-\hline{}$2$&$31.71747$&$5$&$5$&$7$&$9$&$8$&$10$\\
-\hline{}$3$&$37.37737$&$5$&$11$&$13$&$12$&$14$&$16$\\
-\hline{}\multirow{2}{*}{$4$}&\multirow{2}{*}{$50.06504$}&\multirow{2}{*}{$10$}&$15$&$17$&$19$&$21$&$23$\\
-&&&$18$&$20$&$22$&$24$&$26$\\
-\hline{}$5$&$58.28253$&$5$&$25$&$27$&$28$&$35$&$37$\\
-\hline{}\multirow{2}{*}{$6$}&\multirow{2}{*}{$69.82033$}&\multirow{2}{*}{$10$}&$29$&$31$&$33$&$35$&$37$\\
-&&&$34$&$36$&$38$&$40$&$42$\\
-\hline{}$7$&$79.18768$&$5$&$39$&$41$&$44$&$46$&$48$\\
-\hline{}$8$&$80.70960$&$5$&$43$&$45$&$47$&$50$&$52$\\
-\hline{}\multirow{2}{*}{$9$}&\multirow{2}{*}{$90.00000$}&\multirow{2}{*}{$10$}&$49$&$51$&$53$&$55$&$57$ \\
-&&&$54$&$56$&$58$&$60$&$62$\\
-\hline{}$10$&$99.29040$&$5$&$59$&$61$&$64$&$66$&$68$\\
-\hline{}$11$&$100.81232$&$5$&$63$&$65$&$67$&$70$&$72$\\
-\hline{}\multirow{2}{*}{$12$}&\multirow{2}{*}{$110.17967$}&\multirow{2}{*}{$10$}&$69$&$71$&$73$&$75$&$77$\\
-&&&$74$&$76$&$78$&$80$&$82$\\
-\hline{}$13$&$121.71747$&$5$&$79$&$81$&$83$&$84$&$86$\\
-\hline{}\multirow{2}{*}{$14$}&\multirow{2}{*}{$129.93496$}&\multirow{2}{*}{$10$}&$85$&$87$&$89$&$91$&$93$\\
-&&&$88$&$90$&$92$&$94$&$96$\\
-\hline{}$15$&$142.62263$&$5$&$95$&$97$&$99$&$98$&$100$\\
-\hline{}$16$&$148.28253$&$5$&$101$&$103$&$102$&$104$&$106$\\
-\hline{}$17$&$162.72535$&$5$&$105$&$107$&$109$&$108$&$110$\\
-\hline
-\hline
+\hline \multicolumn{2}{|c|}{Gammasphere Feature Summary}  \\ 
+\hline No. Detectors             & 110 \\ 
+No. Segmented Detectors   & 70 \\ 
+HPGe Detector Size        & $7.1$cm (D) $\times$ $8.22$cm (L) \\ 
+HPGe Target to Front      & $24.6$cm\\ 
+Total HPGE Solid Angle    & $0.46 \times 4\pi$\\ 
+Total Peak Efficiency     & $0.094$ at $1.3 MeV$\\ 
+Singles P/T               & $0.6$ at $1.3 MeV$ \\ 
+Energy Resolution (MeV)   & $2.1keV$ at $1.3 MeV$ \\ 
+\hline 
+\hline 
 \end{tabular}
 \end{center}
+\caption{Summary of Gammasphere features and characteristics, drawn from Refs. \cite{TheGS,SimulatedResGS,GSComptonSuppression,largeArrays}}
+\label{tbl:gs-summary}
 \end{table}
 
-\begin{table}
-\label{tbl:chp3-gs-detectors}
-\caption{Detector azimuthal angles for Gammasphere.}
-\begin{center}
-\begin{tabular}{|c|c|c|c|c|c|c|c|c|c|c|c|c|c|}
-\hline
-\hline
-ID & $\phi$ ($^{\circ}$) & & ID & $\phi$ ($^{\circ}$) & & ID & $\phi$ ($^{\circ}$) & & ID & $\phi$ ($^{\circ}$) & & ID & $\phi$ ($^{\circ}$)\\
-
-\hline{}  $1$& $72.00$& &  $3$&$144.00$& &  $2$&$216.00$& &  $4$&$288.00$& &  $6$&$360.00$\\
-\hline{}  $5$& $36.00$& &  $7$&$108.00$& &  $9$&$180.00$& &  $8$&$252.00$& & $10$&$324.00$\\
-\hline{} $11$& $72.00$& & $13$&$144.00$& & $12$&$216.00$& & $14$&$288.00$& & $16$&$360.00$\\
-\hline{} $15$& $22.84$& & $17$& $49.16$& & $19$& $94.84$& & $21$&$121.16$& & $23$&$166.84$\\
-\hline{} $18$&$193.16$& & $20$&$238.84$& & $22$&$265.16$& & $24$&$310.84$& & $26$&$337.16$\\
-\hline{} $25$& $72.00$& & $27$&$144.00$& & $28$&$216.00$& & $35$&$288.00$& & $37$&$360.00$\\ 
-\hline{} $29$& $18.49$& & $31$& $53.51$& & $33$& $90.49$& & $35$&$125.51$& & $37$&$162.49$\\
-\hline{} $34$&$197.51$& & $36$&$234.49$& & $38$&$269.51$& & $40$&$306.49$& & $42$&$341.51$\\
-\hline{} $39$& $72.00$& & $41$&$144.00$& & $44$&$216.00$& & $46$&$288.00$& & $48$&$360.00$\\ 
-\hline{} $43$& $36.00$& & $45$&$108.00$& & $47$&$180.00$& & $50$&$252.00$& & $52$&$324.00$\\ 
-\hline{} $49$& $18.00$& & $51$& $54.00$& & $53$& $90.00$& & $55$&$126.00$& & $57$&$162.00$\\
-\hline{} $54$&$198.00$& & $56$&$234.00$& & $58$&$270.00$& & $60$&$306.00$& & $62$&$342.00$\\
-\hline{} $59$& $72.00$& & $61$&$144.00$& & $64$&$216.00$& & $66$&$288.00$& & $68$&$360.00$\\
-\hline{} $63$& $36.00$& & $65$&$108.00$& & $67$&$180.00$& & $70$&$252.00$& & $72$&$324.00$\\
-\hline{} $69$& $17.51$& & $71$& $54.49$& & $73$& $89.51$& & $75$&$126.49$& & $77$&$161.51$\\
-\hline{} $74$&$198.49$& & $76$&$233.51$& & $78$&$270.49$& & $80$&$305.51$& & $82$&$342.49$\\
-\hline{} $79$& $36.00$& & $81$&$108.00$& & $83$&$180.00$& & $84$&$252.00$& & $86$&$324.00$\\
-\hline{} $85$& $13.16$& & $87$& $58.84$& & $89$& $85.16$& & $91$&$130.84$& & $93$&$157.16$\\
-\hline{} $88$&$202.84$& & $90$&$229.16$& & $92$&$274.84$& & $94$&$301.16$& & $96$&$346.84$\\
-\hline{} $95$& $36.00$& & $97$&$108.00$& & $99$&$180.00$& & $98$&$252.00$& &$100$&$324.00$\\
-\hline{}$101$& $72.00$& &$103$&$144.00$& &$102$&$216.00$& &$104$&$288.00$& &$106$&$360.00$\\
-\hline{}$105$& $36.00$& &$107$&$108.00$& &$109$&$180.00$& &$108$&$252.00$& &$110$&$324.00$\\
-\hline
-\hline
-\end{tabular}
-\end{center}
-\end{table}
+As mentioned in section \ref{ssec:exp-pr-gamma-spec-hpge} some of Gammasphere's detectors have a split outer electrode to reduce the effective half angle. Detector positions can be found in table \ref{tbl:app1-gs-rings} and table \ref{tbl:app1-gs-detectors} in appendix \ref{app:gs-rings-and-detectors}. Table \ref{tbl:gs-summary} contains a brief summary of Gammasphere's features. Gammasphere's high granularity, good energy resolution, and efficiency make it a boon to high spin coincidence measurements where the \gr{} multiplicity is high.
 
 \subsection{Indian National Gamma Array (INGA)}
 \label{ssec:exp-pr-gamma-spec-inga}
