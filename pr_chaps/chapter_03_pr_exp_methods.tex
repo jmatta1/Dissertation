@@ -179,9 +179,9 @@ Gammasphere (partially pictured in Fig. \ref{fig:chp3-gs-hemisphere}) is an arra
 \end{figure}
 
 
-Honeycomb suppression is an escape suppression scheme that uses the BGO shields of adjacent detector modules to effectively double the thickness of a detector's shields. As seen in Fig. \ref{fig:chp3-gs_det_schem} almost every module will have additional modules immediately adjacent to it. If the HPGe detector for a given module do not register energy deposition the 6 side segments of its BGO shield are used to double the thickness of the shields they are adjacent to. Without this measure the singles P/T is $\sim0.62$; using honeycomb suppression improves this to $\sim0.69$ though it reduces the total efficiency at 1.332MeV from $\sim0.095$ to $\sim0.089$\cite{TheGS}.
+Honeycomb suppression is an escape suppression scheme that uses the BGO shields of adjacent detector modules to effectively double the thickness of a detector's shields. As seen in Fig. \ref{fig:chp3-gs_det_schem} almost every module will have additional modules immediately adjacent to it. If the HPGe detector for a given module do not register energy deposition the 6 side segments of its BGO shield are used to double the thickness of the shields they are adjacent to. Without this measure the singles P/T is $\sim0.62$; using honeycomb suppression improves this to $\sim0.69$ though it reduces the total efficiency at 1.332MeV from $\sim0.095$ to $\sim0.089$\cite{TheGS}. Table \ref{tbl:gs-summary} contains a brief summary of Gammasphere's features drawn from Refs. \cite{TheGS,SimulatedResGS,GSComptonSuppression,largeArrays}.
 
-\begin{table}
+\begin{table}[h]
 \caption{GAMMASPHERE FEATURE SUMMARY\label{tbl:gs-summary}}
 \begin{center}
 \begin{tabular}{|c|c|}
@@ -190,7 +190,7 @@ Honeycomb suppression is an escape suppression scheme that uses the BGO shields 
 No. Segmented Detectors   & 70 \\ 
 HPGe Detector Size        & $7.1 cm$ (D) $\times$ $8.22 cm$ (L) \\
 Detector Volume           & $312.8 cm^3$\\
-HPGe Target to Front      & $24.6 cm$\\ 
+Target to HPGe Front      & $24.6 cm$\\ 
 Total HPGE Solid Angle    & $0.46 \times 4\pi$\\ 
 Total Peak Efficiency     & $0.094$ at $1.3 MeV$\\ 
 Singles P/T               & $0.6$ at $1.3 MeV$ \\ 
@@ -201,11 +201,11 @@ Energy Resolution (MeV)   & $2.1keV$ at $1.3 MeV$ \\
 \end{center}
 \end{table}
 
-As mentioned in section \ref{ssec:exp-pr-gamma-spec-hpge} some of Gammasphere's detectors have a split outer electrode to reduce the effective half angle. Detector positions can be found in table \ref{tbl:app1-gs-rings} and table \ref{tbl:app1-gs-detectors} in appendix \ref{app:gs-rings-and-detectors}. Table \ref{tbl:gs-summary} contains a brief summary of Gammasphere's features drawn from Refs. \cite{TheGS,SimulatedResGS,GSComptonSuppression,largeArrays}. Gammasphere's high granularity, good energy resolution, and efficiency make it a boon for high \gr{} multiplicity coincidence measurements.
+As mentioned in section \ref{ssec:exp-pr-gamma-spec-hpge} some of Gammasphere's detectors have a split outer electrode to reduce the effective half angle. Detector positions can be found in table \ref{tbl:app1-gs-rings} and table \ref{tbl:app1-gs-detectors} in appendix \ref{app:gs-rings-and-detectors}. Gammasphere's high granularity, good energy resolution, and efficiency make it a boon for high \gr{} multiplicity coincidence measurements.
 
 \subsection{Indian National Gamma Array (INGA)}
 \label{ssec:exp-pr-gamma-spec-inga}
-The Indian National Gamma Array (pictured in Fig. \ref{}) is an array of 24 escape suppressed HPGe clover detectors\cite{ingaAtIUAC}. Since INGA utilizes clover detectors it is sensitive to the polarization of \gr{} emitted from nuclei in aligned states.
+The Indian National Gamma Array (pictured in Fig. \ref{fig:chp3-INGA}) is an array of 24 escape suppressed HPGe clover detectors\cite{ingaAtIUAC}. Since INGA utilizes clover detectors it is sensitive to the polarization of \gr{} emitted from nuclei in aligned states\cite{cloverDet}. Additionally, the use of clover detectors make the array more efficient for high energy \gr{} when using add back mode.
 
 \begin{figure}[h!]
 	\centerline{\includegraphics[height=0.25\textheight]{./img/c3/INGA.JPG}}
@@ -213,7 +213,17 @@ The Indian National Gamma Array (pictured in Fig. \ref{}) is an array of 24 esca
 	\label{fig:chp3-INGA}
 \end{figure}
 
-\begin{table}
+INGA's current incarnation utilizes a digital data acquisition system (DAQ) that allows it to run in a triggerless mode producing timestamped gamma data from a $10ns$ clock\cite{IngaDigitalDAQ}. Digital data acquisition systems, because they digitize the preamp signal directly, can operate at higher counting rates than analog because they do not require multiple microseconds of signal shaping time. The downside of this mode, is that coincidence are not prebuilt by the DAQ and instead need to be constructed by moving a sliding window of the desired coincidence time across the timeline of events and selecting sets of gammas that occur within that window. A final advantage of the time stamped events is that isomers can have their lifetime measured using time differences between \gr{}s as seen in Fig. \ref{fig:chp3-INGA-isomer}
+
+\begin{figure}[h!]
+	\centerline{\includegraphics[height=0.35\textheight]{./img/c3/INGA_isomer.eps}}
+	\caption{Example isomer timing spectrum for INGA. From Ref. \cite{IngaDigitalDAQ}.}
+	\label{fig:chp3-INGA-isomer}
+\end{figure}
+
+Using its digital DAQ and add-back on the clover crystals, INGA achieves a total efficiency of $\sim0.05$ and P/T of $0.4$ at $\sim1.33MeV$. Table \ref{tbl:inga-summary} contains summary of INGA's features. INGA's sensitivity to polarization, efficiency, and granularity make it a good system for intermediate \gr{} multiplicity coincidence measurements, reaching its best efficiency at 2- to 3-fold events.
+
+\begin{table}[h]
 \caption{INGA FEATURE SUMMARY\label{tbl:inga-summary}}
 \begin{center}
 \begin{tabular}{|c|c|}
@@ -223,10 +233,10 @@ No. Clover Detectors      & 24\\
 No. Single Crystals       & 96\\ 
 Single Crystal Size       & $5 cm$ (D) $\times$ $7 cm$ (L) \\
 Single Crystal Volume     & $117.5 cm^3$\\
-HPGe Target to Front      & $24 cm$\\ 
+Target to HPGe Front      & $24 cm$\\ 
 Total HPGE Solid Angle    & $0.25 \times 4\pi$\\ 
-Total Peak Efficiency     & $0.05$ at $1.3 MeV$\\ 
-Singles P/T               & $0.45$ at $1.3 MeV$ \\ 
+Total Peak Efficiency     & $0.05$ at $\sim1.0 MeV$\\ 
+Singles P/T               & $0.40$ at $1.3 MeV$ \\ 
 Energy Resolution (MeV)   & $2.2keV$ at $1.3 MeV$ \\ 
 \hline 
 \hline 
@@ -236,6 +246,7 @@ Energy Resolution (MeV)   & $2.2keV$ at $1.3 MeV$ \\
 
 \section{Experimental Details}
 \label{sec:exp-pr-details}
+In the experiments at both facilities the same 
 \subsection{ATLAS/Gammasphere}
 \label{ssec:exp-pr-details-gs}
 \subsection{TIFR - BARC Pelletron LINAC / INGA}
@@ -259,7 +270,11 @@ Energy Resolution (MeV)   & $2.2keV$ at $1.3 MeV$ \\
 Testing 1
 \subsection{Angular Correlations}
 \label{ssec:exp-pr-data-ang-cor}
-Testing 2
+\begin{figure}[h!]
+	\centerline{\includegraphics[height=0.35\textheight]{./img/c3/dco_setup.eps}}
+	\caption{Diagram of the angles in a dirrectional correlation of two successive radiations X$_{1}$ and X$_{2}$ emitted from an axial symmetric oriented source S.}
+	\label{fig:chp3-DCO-Angles}
+\end{figure}
 \subsubsection{Directional Correlation of Gamma-rays from Oriented Nuclei DCO Ratios}
 \label{sssec:exp-pr-data-ang-cor-dco}
 Testing 3
