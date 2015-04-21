@@ -47,37 +47,60 @@ The compound nucleus will also carry an angular momentum ranging between $0 \hba
 \label{eqn:cn_lmax}
 l_{max} = \frac{\sqrt{2\mu(E_{cm}-E_{CB})}}{4}(A^{1/3}_p + A^{1/3}_t)\hbar
 \end{equation}
-\begin{figure}[h!]
-	\centerline{\includegraphics[width=\textwidth]{./img/c3/fission_barrier.eps}}
-	\caption{Isocontours of angular momenta that yield fission barriers of $8MeV$ and $0MeV$ at various masses. Adapted from Ref. \cite{fissionBarrier2}.}
-	\label{fig:chp3-fission-barrier}
-\end{figure}
-, followed by either fissioning of the compound nucleus, or the evaporation of particles, finally leaving behind the excited residual nucleus. In the particle evaporation process each particle must penetrate a barrier, for neutrons this barrier is merely the centrifugal barrier while charged particles see the coulomb barrier added on top of that, this makes neutron emission more probable. Each successive evaporated particle carries energy away from the nucleus until there is insufficient excitation energy for particles to penetrate the emission barrier and the nucleus is left in a state that is stable against particle emission. From this point on the nucleus must dissipate its excess angular momentum and excitation energy via \gr{} emission. A schematic of a (HI, $p3n\gamma{}$) reaction is shown in Fig. \ref{fig:chp3-fus-evap-schem}.
+
+Following its formation a compound nucleus will be left in a state of high excitation energy. The two primary ways the compound nucleus rids itself of this excess energy are fission or particle evaporation followed by \gr{} emission. A schematic of of a fusion evaporation reaction can be found in Fig. \ref{fig:chp3-fus-evap-schem}.
+
 \begin{figure}[h!]
 	\centerline{\includegraphics[width=\textwidth]{./img/c3/fusion_evaporation_horizontal.pdf}}
 	\caption{Schematic illustration of heavy-ion fusion-evaporation, adapted from Ref. \cite{gsBooklet}.}
 	\label{fig:chp3-fus-evap-schem}
 \end{figure}
 
+The probability of the compound nucleus fissioning is governed by the height of the fission barrier relative to the its excitation energy. The height of the fission barrier is a function of the $A$ of the nucleus and is inversely proportional to the compound nucleus' angular momentum, as can be seen in Fig. \ref{fig:chp3-fission-barrier}. It should be noted, that even the complete disappearance of the fission barrier does not guarantee fission as there are, a few, observed cases of spins above those required to reduce the barrier to zero\cite{hyperdef,hyperdef2}.
+
 \begin{figure}[h!]
-	\centerline{\includegraphics[width=\textwidth]{./img/c3/135Pr_calc_plot.eps}}
-	\caption{Residual nucleus cross-section calculations at a variety of beam energies as calculated by PACE4.}
-	\label{fig:chp3-pace4-calc}
+	\centerline{\includegraphics[height=0.3\textheight]{./img/c3/fission_barrier.eps}}
+	\caption{Isocontours of angular momenta that yield fission barriers of $8MeV$ and $0MeV$ at various masses. Adapted from Ref. \cite{fissionBarrier2}.}
+	\label{fig:chp3-fission-barrier}
 \end{figure}
+
+If the compound nucleus does not fission then it will instead evaporate particles. Particle evaporation is the emission of protons, neutrons, or alpha particles over or through an emission barrier. For charged particles this emission barrier is composed both of a centrifugal term which grows with increasing angular momentum and a coulomb term. For neutrons the emission barrier is solely the centrifugal barrier. As charged particles see a higher barrier due to the coulomb term, neutron evaporation is more probable in most cases. The exception occurs for very neutron deficient nuclei where the reduced proton separation energies make it possible for charged particle emission to compete with, or even dominate charged particle emission. Each successive evaporated particle carries energy, but little angular momentum away from the nucleus until there is insufficient excitation energy for particles to penetrate the emission barrier and the nucleus is left in a state that is stable against particle emission. From this point on the nucleus must dissipate its excess angular momentum and excitation energy via \gr{} emission. A schematic of this can be seen in Fig. \ref{fig:chp3-emission-schematic}.
+
+\begin{figure}[h!]
+	\centerline{\includegraphics[height=0.3\textheight]{./img/c3/evaporation_chans.eps}}
+	\caption{Schematic of the compound nuclear decay assuming that a rotational nucleus is being formed. Adapted from Ref. \cite{danielDissertation}.}
+	\label{fig:chp3-emission-schematic}
+\end{figure}
+
+Initially the nucleus is in a state with such high level density that it decays by the emission of statistical \gr{}s\cite{cnCooling}. These statistical \gr{}s are almost purely dipole in nature and form a continuum as the notion of a discrete state is not a good one at such high level densities. As the nucleus approaches the yrast line (the states with the minimum excitation energy for a given angular momentum) the level density drops. This allows the emission sequences of discrete \gr{}s which feed the yrast line.
 
 \subsection{Choice of Beam and Target}
 \label{ssec:exp-pr-fus-evap-beam-target}
-When choosing the beam and target for a fusion evaporation one must find the best compromise for 
-\subsubsection{Channel Selection}
-\label{sssec:exp-pr-fus-evap-beam-target-channel}
-\subsubsection{PACE4}
-\label{sssec:exp-pr-fus-evap-beam-pace4}
+When choosing the beam and target for a fusion evaporation one must consider several factors: What is the production cross-section of the desired residual nucleus? How clean is the production of the desired residual nucleus relative to the other residuals? What is the spin range one wishes to study? What is the availability of the isotopes desired? What is the suitability of the material for beam production? While beam target combinations are usually chosen to maximize the cross-section for the desired residual, in some cases there are other channels open which will have large cross-sections themselves. In these cases the beam-target combination might be chosen to drastically lower the relative yield in competing channels at the cost of lowering the cross-section for the desired residual. For lower spins one usually chooses lighter projectiles. While Eqn. \ref{eqn:cn_lmax} clearly shows that it is possible to increase the angular momentum transfer with higher beam energies, this also increases the excitation energy of the compound nucleus, causing particle evaporation to be more probable. In the end, the decision is based on what combination yields the nucleus one wishes to study in the spins one wishes to study with the highest absolute and relative cross-sections possible.
+
+Ref \cite{nucSpecAndReacPartC} gives the empirical estimate for $A_{CN}>100$ for obtaining the optimum beam energy for producing a specific residual nucleus in a (HI,xn) reaction which can be found in Eqn. \ref{eqn:fe_peak_selection}.
+\begin{equation}
+\label{eqn:fe_peak_selection}
+E_{pk}(x)=(-Q_{x} + \alpha{}x)(1+\frac{A_p}{A_t})
+\end{equation}
+Here $Q_x$ is the Q-value for the production of the residual nucleus given by:
+\begin{equation}
+\label{eqn:res_qvalue}
+Q = (M_t+M_p-M_{res}-x M_n)c^2
+\end{equation}
+and $\alpha$ is $\sim6MeV$. Of course, the reaction will only have a reasonable cross-section if $E_{pk}(x)$ is greater than $E_{CB}$, which is the height of the coulomb barrier, given in Eqn. \ref{eqn:cb_en}. In more modern times computer codes that employ statistical models such as PACE4\cite{PACE4,PACE4_2} can be used to calculate the cross-sections of products from these reactions allowing one to estimate peak beam energies and optimal beam-target combinations. A plot of cross-sections yielded by calculations such as these can be found in Fig. \ref{fig:chp3-pace4-calc}
+
+\begin{figure}[h!]
+	\centerline{\includegraphics[width=\textwidth]{./img/c3/135Pr_calc_plot.eps}}
+	\caption{Cross-sections of various residual nuclei for a $^{16}$O beam on $^{123}$Sb at a variety of beam energies as calculated by PACE4 \cite{PACE4}. As $^{139}$Pr is the compound nucleus produced all products that are not isotopes of Pr require the evaporation of a charged particle.}
+	\label{fig:chp3-pace4-calc}
+\end{figure}
 
 \section{Gamma-ray Spectroscopy}
 \label{sec:exp-pr-gamma-spec}
 \subsection{Gamma-ray Interaction with Matter}
 \label{ssec:exp-pr-gamma-spec-interactions}
-As mentioned earlier, the choice of equipment will vary with which signals you need to collect to understand the system. In the case of a residual nucleus at high spin one of the obvious signal choices is the \gr{}s it emits. Detection of gamma-rays is dependent on the \gr{} depositting energy in a detector which in turn depends on the interactions of electromagnetic radiation with matter. At the energies relevant to nuclear physics, $10keV<E_{\gamma}<15MeV$, there are three primary processes to be considered, photoelectric absorption, Compton scattering, and pair production. These three processes compete with each dominating in a different energy range.
+As mentioned earlier, the choice of equipment will vary with which signals you need to collect to understand the system. In the case of a residual nucleus at high spin one of the obvious signal choices is the \gr{}s it emits. Detection of gamma-rays is dependent on the \gr{} depositing energy in a detector which in turn depends on the interactions of electromagnetic radiation with matter. At the energies relevant to nuclear physics, $10keV<E_{\gamma}<15MeV$, there are three primary processes to be considered, photoelectric absorption, Compton scattering, and pair production. These three processes compete with each dominating in a different energy range.
 
 In photoelectric absorption the photon interacts with a bound electron in the detector material and is fully absorbed\cite{einstein-PE}. The total energy of the photon is then used to overcome the binding energy of the electron and to provide the electron with kinetic energy, giving $E_{e^-}=E_{\gamma}-E_b$. The electron then proceeds to lose energy as it passes through the detector material. In \gr{} spectra the full energy peak corresponds to the deposition of the photon's full energy in the detector medium. For that to occur either the primary photon, or all the secondary photons (generated by the processes below), must undergo photoelectric absorption. As can be seen in Fig. \ref{fig:chp3-gamma-interactions} the photoelectric effect is dominant at low energies and the energy at which the photoelectric effect ceases to dominate increases with the Z of the material.
 
@@ -256,12 +279,17 @@ Energy Resolution (MeV)   & $2.2keV$ at $1.3 MeV$ \\
 
 \section{Experimental Details}
 \label{sec:exp-pr-details}
-In the experiments at both facilities the $^{16}O(^{123}Sb,4n)^{135}Pr$ reaction was used. As mentioned in section \ref{sec:exp-pr-fus-evap} the choice of beam and target affects both the most probable channel, the excitation energy, and the maximum angular momentum of the compound (and residual) nucleus. In previous in-beam \gr{} spectroscopy literature the following heavy ion fusion evaporation reactions have been used to reach yield the \pr{} residual nucleus: $^{120}Sn(^{19}F @ 91MeV,4n)^{135}Pr$\cite{Semkow135Pr}, $^{123}Sb(^{16}O @ 76MeV,4n)^{135}Pr$\cite{135PrLifetimes}, and  $^{116}Cd(^{23}Na @ 115MeV,4n)^{135}Pr$\cite{EPaul135Pr}. The \nuc{o} and \nuc{sb} projectile-target combination was chosen for its lighter projectile. By these means
+The work on \pr{} presented in this dissertation was performed at two different facilities, the ATLAS (Argonne Tandem Linear Accelerator System) facility with the Gammasphere detector system, and the TIFR-BARC Pelletron LINAC with the INGA detector system. At both facilities the $^{16}O(^{123}Sb,4n)^{135}Pr$ reaction was used. As mentioned in section \ref{sec:exp-pr-fus-evap} the choice of beam and target affects both the most probable channel, the excitation energy, and the maximum angular momentum of the compound (and residual) nucleus. In previous in-beam \gr{} spectroscopy literature the following heavy ion fusion evaporation reactions have been used to reach yield the \pr{} residual nucleus: $^{120}Sn(^{19}F @ 91MeV,4n)^{135}Pr$\cite{Semkow135Pr}, $^{123}Sb(^{16}O @ 76MeV,4n)^{135}Pr$\cite{135PrLifetimes}, and  $^{116}Cd(^{23}Na @ 115MeV,4n)^{135}Pr$\cite{EPaul135Pr}. The $^{16}$O and $^{123}$Sb projectile-target combination was chosen for its lighter projectile to optimize for the population of states further from the yrast line.
+
 \subsection{ATLAS/Gammasphere}
 \label{ssec:exp-pr-details-gs}
+ATLAS is located at the Physics Division at Argonne National Laboratory in Illinois. ATLAS is the world's first superconducting ac linear accellerator (linac) for projectiles heavier than an electron and consists of 3 sections. The first of these sections is the injector accellerator which can be either a 9 Megavolt (MV) tandem Van de Graff accellerator or an electron cyclotron resonance (ECR) ion source coupled to a 12 MV low velocity LINAC. The beam from the chosen injector is sent the 20 MV ``booster'' linac and finally to the 20 MV ``ATLAS'' linac. This system produces pulsed beams with spot diameter $\leq1mm$, pulse length $\leq500ps$, and interval $82ns$ which range across all elements from Hydrogen to Uranium with energies of $7-17MeV$ per nucleon.
+
+For the experiment performed at ATLAS the Gammasphere detector system was used in the FMA (Fragment Mass Analyzer) position though the FMA itself was not used. This configuration requires that the first ring of detectors at $\theta{}=17.27465^{\circ}$ be removed from the array due to a lack of space. Additionally there were several other detectors removed from the array due to various issues. A complete listing of the detector numbers missing from the array is presented in Table \ref{tbl:app1-gs-missing-det}
+
 \subsection{TIFR - BARC Pelletron LINAC / INGA}
 \label{ssec:exp-pr-details-inga}
-
+The TIFR-BARC pelletron linac is a collaborative project between the Bhabha Atomic Research Centre (BARC) and the Tata Institute of Fundamental Research (TIFR) and is the first superconducting heavy ion accelerator in India. The first section of the system is a 14MV tandem Van de Graaf accelerator. The beam emitted from the pelletron is then bunched and then injected into the 
 \section{Data Processing}
 \label{sec:exp-pr-data-proc}
 \subsection{Calibration}
@@ -282,7 +310,7 @@ Testing 1
 \label{ssec:exp-pr-data-ang-cor}
 \begin{figure}[h!]
 	\centerline{\includegraphics[height=0.35\textheight]{./img/c3/dco_setup.eps}}
-	\caption{Diagram of the angles in a dirrectional correlation of two successive radiations X$_{1}$ and X$_{2}$ emitted from an axial symmetric oriented source S.}
+	\caption{Diagram of the angles in a directional correlation of two successive radiations X$_{1}$ and X$_{2}$ emitted from an axial symmetric oriented source S.}
 	\label{fig:chp3-DCO-Angles}
 \end{figure}
 \subsubsection{Directional Correlation of Gamma-rays from Oriented Nuclei DCO Ratios}
