@@ -16,14 +16,6 @@
 % Define a few commands for conveniences sake
 \newcommand{\gr}{$\gamma$-ray}
 \newcommand{\pr}{$^{135}$Pr}
-\newcommand{\li}{$^{6}$Li}
-\newcommand{\nuc}[1]{ %
-	\IfEqCase{#1}{%
-        {sb}{$^{123}$Sb}%
-        {pr}{$^{135}$Pr}%
-        {o}{$^{16}$O}%
-    }[\PackageError{nuc}{Undefined option to nuc: #1}{}]%
-}
 \newcommand{\uvec}[1]{\boldsymbol{\hat{\textbf{#1}}}}
 
 
@@ -94,7 +86,7 @@ THE TRANSVERSE WOBBLING MODE IN \pr{}}
 %
 % Chapter 1 - General Introduction
 %
-%\include{cmn_chaps/chapter_01_introduction}
+\include{cmn_chaps/chapter_01_introduction}
 
 %
 % Seperator for part 1
@@ -104,7 +96,7 @@ THE TRANSVERSE WOBBLING MODE IN \pr{}}
 %
 % Chapter 2 - Nuclear Models
 %
-%\include{pr_chaps/chapter_02_nuclear_models}
+\include{pr_chaps/chapter_02_nuclear_models}
 
 %
 % Chapter 3 - 135Pr exp methods
