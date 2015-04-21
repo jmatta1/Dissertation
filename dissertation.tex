@@ -19,15 +19,9 @@
 \newcommand{\li}{$^{6}$Li}
 \newcommand{\nuc}[1]{ %
 	\IfEqCase{#1}{%
-        {ni}{$^{58}$Ni}%
-        {zr}{$^{90}$Zr}%
-        {sn}{$^{116}$Sn}%
-        {pb}{$^{208}$Pb}%
         {sb}{$^{123}$Sb}%
-        {li}{$^{6}$Li}%
         {pr}{$^{135}$Pr}%
         {o}{$^{16}$O}%
-        {c}{$^{12}$C}%
     }[\PackageError{nuc}{Undefined option to nuc: #1}{}]%
 }
 \newcommand{\uvec}[1]{\boldsymbol{\hat{\textbf{#1}}}}
