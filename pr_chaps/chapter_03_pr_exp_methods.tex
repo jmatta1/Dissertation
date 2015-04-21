@@ -24,7 +24,7 @@ and the non-relativistic limit the center of momentum energy is
 
 \begin{equation}
 \label{eqn:cmf_en}
-E_{cm} = \frac{\mu}{A_{t}}E_{p}
+E_{cm} = \frac{\mu}{A_{p}}E_{p}
 \end{equation}
 
 Here the subscripts $p$ and $t$ denote projectile and target respectively, $A$ is the mass number, $Z$ represents the nuclear charge, $\alpha{}$ is the fine structure constant, and $\mu = A_{p}A_{t}/(A_{p}+A_{t})$ is the system's reduced mass. After its formation the compound nucleus will have an excitation energy of
@@ -45,14 +45,24 @@ The compound nucleus will also carry an angular momentum ranging between $0 \hba
 
 \begin{equation}
 \label{eqn:cn_lmax}
-l_{max} = \frac{\sqrt{2\mu(E_{cm}-E_{CB})}}{4}(A^{1/3}_p + A^{1/3}_p)\hbar
+l_{max} = \frac{\sqrt{2\mu(E_{cm}-E_{CB})}}{4}(A^{1/3}_p + A^{1/3}_t)\hbar
 \end{equation}
-
+\begin{figure}[h!]
+	\centerline{\includegraphics[width=\textwidth]{./img/c3/fission_barrier.eps}}
+	\caption{Isocontours of angular momenta that yield fission barriers of $8MeV$ and $0MeV$ at various masses. Adapted from Ref. \cite{fissionBarrier2}.}
+	\label{fig:chp3-fission-barrier}
+\end{figure}
 , followed by either fissioning of the compound nucleus, or the evaporation of particles, finally leaving behind the excited residual nucleus. In the particle evaporation process each particle must penetrate a barrier, for neutrons this barrier is merely the centrifugal barrier while charged particles see the coulomb barrier added on top of that, this makes neutron emission more probable. Each successive evaporated particle carries energy away from the nucleus until there is insufficient excitation energy for particles to penetrate the emission barrier and the nucleus is left in a state that is stable against particle emission. From this point on the nucleus must dissipate its excess angular momentum and excitation energy via \gr{} emission. A schematic of a (HI, $p3n\gamma{}$) reaction is shown in Fig. \ref{fig:chp3-fus-evap-schem}.
 \begin{figure}[h!]
 	\centerline{\includegraphics[width=\textwidth]{./img/c3/fusion_evaporation_horizontal.pdf}}
 	\caption{Schematic illustration of heavy-ion fusion-evaporation, adapted from Ref. \cite{gsBooklet}.}
 	\label{fig:chp3-fus-evap-schem}
+\end{figure}
+
+\begin{figure}[h!]
+	\centerline{\includegraphics[width=\textwidth]{./img/c3/135Pr_calc_plot.eps}}
+	\caption{Residual nucleus cross-section calculations at a variety of beam energies as calculated by PACE4.}
+	\label{fig:chp3-pace4-calc}
 \end{figure}
 
 \subsection{Choice of Beam and Target}
@@ -246,7 +256,7 @@ Energy Resolution (MeV)   & $2.2keV$ at $1.3 MeV$ \\
 
 \section{Experimental Details}
 \label{sec:exp-pr-details}
-In the experiments at both facilities the same 
+In the experiments at both facilities the $^{16}O(^{123}Sb,4n)^{135}Pr$ reaction was used. As mentioned in section \ref{sec:exp-pr-fus-evap} the choice of beam and target affects both the most probable channel, the excitation energy, and the maximum angular momentum of the compound (and residual) nucleus. In previous in-beam \gr{} spectroscopy literature the following heavy ion fusion evaporation reactions have been used to reach yield the \pr{} residual nucleus: $^{120}Sn(^{19}F @ 91MeV,4n)^{135}Pr$\cite{Semkow135Pr}, $^{123}Sb(^{16}O @ 76MeV,4n)^{135}Pr$\cite{135PrLifetimes}, and  $^{116}Cd(^{23}Na @ 115MeV,4n)^{135}Pr$\cite{EPaul135Pr}. The \nuc{o} and \nuc{sb} projectile-target combination was chosen for its lighter projectile. By these means
 \subsection{ATLAS/Gammasphere}
 \label{ssec:exp-pr-details-gs}
 \subsection{TIFR - BARC Pelletron LINAC / INGA}
