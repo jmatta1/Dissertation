@@ -92,7 +92,7 @@ and $\alpha$ is $\sim6MeV$. Of course, the reaction will only have a reasonable 
 
 \begin{figure}[h!]
 	\centerline{\includegraphics[width=\textwidth]{./img/c3/135Pr_calc_plot.eps}}
-	\caption{Cross-sections of various residual nuclei for a $^{16}$O beam on $^{123}$Sb at a variety of beam energies as calculated by PACE4 \cite{PACE4}. As $^{139}$Pr is the compound nucleus produced all products that are not isotopes of Pr require the evaporation of a charged particle.}
+	\caption{Cross-sections of various residual nuclei for a $^{16}$O beam on $^{123}$Sb at a variety of beam energies as calculated by PACE4. As $^{139}$Pr is the compound nucleus produced all products that are not isotopes of Pr require the evaporation of a charged particle.}
 	\label{fig:chp3-pace4-calc}
 \end{figure}
 
@@ -299,8 +299,21 @@ The two self supporting targets used in the Gammasphere experiment were given a 
 
 \section{Data Processing}
 \label{sec:exp-pr-data-proc}
+ As stated earlier, this work was performed at two different facilities. In the experiment using Gammasphere $\sim{}185$Gb of data spread across $104$ files were collected. This data was comprised of $3.57\times{}10^9$ three- and higher-fold events with the distribution across folds shown in Fig. \ref{fig:chp3-gs_event_pattern}. While the system was set to not trigger for less than three-fold events, lower events still make it through due to honeycomb suppression. Because, honeycomb suppression is applied after the system has triggered it effectively remove gammas from an event, reducing its fold, even to below the threshold set in the trigger system. The data from this experiment was used for the reconstruction of the level scheme and extraction of angular distributions and DCO Ratios.
+ 
+ \begin{figure}[h!]
+ 	\centerline{\includegraphics[height=0.25\textheight]{./img/c3/gs_event_plot.eps}}
+ 	\caption{Histogram of the number of events in each multiplicity for the experiment at Gammasphere.}
+ 	\label{fig:chp3-gs_event_pattern}
+ \end{figure}
+ 
+ In the experiment utilizing INGA $\sim{}550$Gb of data spread across $\sim800$ files were collected. As INGA was run in a triggerless mode each module of electronics output timestamped events in each detector to a file. Afterwards the data are merged into an order according to their timestamp, yielding $\sim{}503$Gb spread across $185$ files. Construction of events then proceeds by setting a coincidence time window and ``scanning'' the window across the merged events looking for sets of events whose timestamps all fall within that window. This process yielded $3.52\times{}10^9$ two- and higher-fold events. This data was used for the extraction of polarizations using the scattering asymmetry at $90^{\circ{}}$. This, coupled with requiring that the energy be seen in two and \emph{only} two of the crystals of a $90^{\circ{}}$ detector, reduced the number of eligible two- and higher-fold events to $3.47\times{}10^8$.
+ 
 \subsection{Calibration}
 \label{ssec:exp-pr-data-proc-cal}
+Prior to working with the actual data in an experiment it is necessary to perform energy and efficiency calibration of the detectors. For \gr{} detection experiments of this kind calibration involves placing a radioactive source with known lines in the same position that the beam would strike the target. If absolute efficiency is desired as opposed to relative efficiency the activity of the source must be known as well so that one know exactly how many gamma's passed through one's detector. In this case however, only relative efficiency was necessary so this information was neglected.
+
+At Gammasphere this was accomplished by placing a $^{152}$Eu source into the center of the array and changing the multiplicity threshold of the trigger system to one.
 \subsection{Background Subtraction}
 \label{ssec:exp-pr-data-proc-bg-sub}
 \subsubsection{Symmetric Gates}
