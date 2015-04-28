@@ -48,7 +48,7 @@ The compound nucleus will also carry an angular momentum ranging between $0 \hba
 l_{max} = \frac{\sqrt{2\mu(E_{cm}-E_{CB})}}{4}(A^{1/3}_p + A^{1/3}_t)\hbar
 \end{equation}
 
-Following its formation a compound nucleus will be left in a state of high excitation energy. The two primary ways the compound nucleus rids itself of this excess energy are fission or particle evaporation followed by \gr{} emission. A schematic of of a fusion evaporation reaction can be found in Fig. \ref{fig:chp3-fus-evap-schem}.
+Following its formation a compound nucleus will be left in a state of high excitation energy. The two primary ways the compound nucleus rids itself of this excess energy are fission\cite{fastFission} or particle evaporation followed by \gr{} emission. A schematic of of a fusion evaporation reaction can be found in Fig. \ref{fig:chp3-fus-evap-schem}.
 
 \begin{figure}[h!]
 	\centerline{\includegraphics[width=\textwidth]{./img/c3/fusion_evaporation.pdf}}
@@ -287,13 +287,13 @@ ATLAS is located at the Physics Division at Argonne National Laboratory in Argon
 
 The Gammasphere detector system was used in the FMA (Fragment Mass Analyzer) position though the FMA itself was not used. This configuration requires that the first ring of detectors at $\theta{}=17.27465^{\circ}$ be removed from the array due to a lack of space. Additionally there were several other detectors removed from the array due to various issues. A complete listing of the detector numbers missing from the array is presented in Table \ref{tbl:app1-gs-missing-det} in Appendix \ref{app:gs-rings-and-detectors}.
 
-Multiple self supporting $^{123}$Sb targets were prepared for the experiment using 98.28\% enriched powder from ISOFLEX USA (PO Box 29475, San Francisco, CA 94129 USA)\cite{sbTargets}. Due to the low thermal conductivity ($0.243W/cm/K$ at $300K$\cite{thermalCond}) and high vapor pressure\cite{sbPartialP,sbTargets} of Sb a thin layer ($14\mu{}g/cm^2$) of Al was deposited on the front surface of several of the targets created. This served the dual purpose of helping to dissipate the heat deposited in the target by the beam and of inhibiting sputtering of the target. Of the targets that had the Al layer, two ($630\mu{}g/cm^2$ and $634\mu{}g/cm^2$) were placed on the target ladder for Gammasphere (as well as a beam viewer). An oxygen beam of $3pnA$ at $81.2MeV$ was then impinged on the $634\mu{}g/cm^2$ target (the other target served as an unnecessary backup in case of failure of the primary target.) To further reduce the risk of evaporating a hole in the target, the beam was wobbled by $\pm{}3mm$. \emph{Note to self: Get the correct values for wobbling distance and beam current from logbook to replace these approximate values}
+Multiple self supporting $^{123}$Sb targets were prepared for the experiment using 98.28\% enriched powder from ISOFLEX USA (PO Box 29475, San Francisco, CA 94129 USA)\cite{sbTargets}. Due to the low thermal conductivity ($0.243W/cm/K$ at $300K$\cite{thermalCond}) and high vapor pressure\cite{sbPartialP,sbTargets} of Sb a thin layer ($14\mu{}g/cm^2$) of Al was deposited on the front surface of several of the targets created. This served the dual purpose of helping to dissipate the heat deposited in the target by the beam and of inhibiting sputtering of the target. Of the targets that had the Al layer, two ($630\mu{}g/cm^2$ and $634\mu{}g/cm^2$) were placed on the target ladder for Gammasphere (as well as a beam viewer). An oxygen beam of $3pnA$ at $81.2MeV$ was then impinged on the $634\mu{}g/cm^2$ target (the other target served as an unnecessary backup in case of failure of the primary target.) To further reduce the risk of evaporating a hole in the target, the beam was wobbled by placing a sinusoidal voltage on vertically and horizontally positioned plates upstream of the target. The amplitudes were $1.0V$ for the $\uvec{x}$-axis and $1.1V$ for the $\uvec{y}$-axis.
 
 \subsection{TIFR - BARC Pelletron LINAC / INGA}
 \label{ssec:exp-pr-details-inga}
 The TIFR-BARC pelletron linac is located at the Tata Institute of Fundamental Research (TIFR), Mumbai, India. It is a collaborative project between TIFR and the Bhabha Atomic Research Centre (BARC) and is the first superconducting heavy ion accelerator in India. The first section of the system is a 14MV tandem Van de Graaf accelerator. The beam emitted from the pelletron is then bunched and injected into a linac yielding beam pulses with a width of $\sim{}600ps$ ranging across most of the elements from hydrogen to chlorine at $5-10MeV/\mu{}$.
 
-The INGA detector system was used in its standard position at the facility, however a few detectors were not present due to various problems. A summary of the electronics connections and which detectors were and were not present is in Table \ref{tbl:app2-inga-detectors}. Two of the pockets of INGA had Ce activated LaBr$_3$ detectors though they were not used. \emph{Note to self: Get the pocket numbers from the logbook}.
+The INGA detector system was used in its standard position at the facility, however a few detectors were not present due to various problems. A summary of the electronics connections and which detectors were and were not present is in Table \ref{tbl:app2-inga-detectors}.
 
 The two self supporting targets used in the Gammasphere experiment were given a thick gold backings of $20.3mg/cm^2$ for the $630\mu{}g/cm^2$ target and $22.8mg/cm^2$ for the $634\mu{}g/cm^2$\cite{sbTargets}. This served several purposes: First and foremost the thick backing helped the delicate Sb targets survive transport to India. Second, there was hope it would be possible to extract lifetimes for transverse wobbling states (this unfortunately proved impossible.) Finally, the thick gold backing allowed heat deposited in the target by the beam to be easily dissipated, negating the need for a beam wobbling system.
 
@@ -308,6 +308,8 @@ The two self supporting targets used in the Gammasphere experiment were given a 
 \end{figure}
  
  In the experiment utilizing INGA $\sim{}550$Gb of data spread across $\sim800$ files were collected. As INGA was run in a triggerless mode each module of electronics output timestamped events in each detector to a file. Afterwards the data are merged into an order according to their timestamp, yielding $\sim{}503$Gb spread across $185$ files. Construction of events then proceeds by setting a coincidence time window and ``scanning'' the window across the merged events looking for sets of events whose timestamps all fall within that window. This process yielded $3.52\times{}10^9$ two- and higher-fold events. This data was used for the extraction of polarizations using the scattering asymmetry at $90^{\circ{}}$. This, coupled with requiring that the energy be seen in two and \emph{only} two of the crystals of a $90^{\circ{}}$ detector, reduced the number of eligible two- and higher-fold events to $3.47\times{}10^8$.
+ 
+ These data were processed using both histogram mode\cite{radware} and list mode\cite{blue,ROOT} systems. The histograms mode analyses used to extract level schemes with symmetric gates. List mode was used when asymmetric gates were necessary, as for the extraction of angular distributions and polarizations.
  
 \subsection{Calibration}
 \label{ssec:exp-pr-data-proc-cal}
@@ -390,28 +392,75 @@ Here $A$, $B$, $C$ are parameters that control the low energy part of the effici
 \label{eqn:eff_x_and_y}
 x=ln(\frac{E_{\gamma{}}}{100~keV}) && y=ln(\frac{E_{\gamma{}}}{1000~keV})
 \end{align*}
-A plot of extracted relative efficiencies and the fit to them for a Gammasphere detector can be found in Fig. \ref{fig:chp3-gs-eff_plot}. A listing of the relative efficiency calibration parameters used for Gammasphere can be found in table \ref{tbl:app1-gs-en-cal}.
+A plot of extracted relative efficiencies and the fit to them for a Gammasphere detector can be found in Fig. \ref{fig:chp3-gs-eff-plot}. A listing of the relative efficiency calibration parameters used for Gammasphere can be found in table \ref{tbl:app1-gs-en-cal}.
 
 \begin{figure}[h!]
 	\centerline{\includegraphics[width=0.9\textwidth]{./img/c3/gs_eff_plot.eps}}
 	\caption{$^{152}$Eu extracted relative efficiencies and fit.}
-	\label{fig:chp3-gs-eff_plot}
+	\label{fig:chp3-gs-eff-plot}
 \end{figure}
 
 As it was unnecessary for the asymmetry analysis performed on the INGA data a relative efficiency calibration was not performed. If one had been necessary one would need to know the ratio of the $^{133}$Ba and $^{152}$Eu source activities or include that ratio as an eighth parameter of the fit. This would allow one to normalize the relative efficiencies of the peaks from the two sources to the same scale.
 
 \subsection{Level Scheme Scheme Determination}
 \label{ssec:exp-pr-data-proc-lvl-scheme}
+The analysis of the Gammasphere thin target data involved extending know portions of the level scheme using the Radware software package\cite{radware}. Radware uses symmetrized multi-dimensional histograms to store high fold events. In these multidimensional arrays each axis corresponds to a \gr{} energy and each bin in the array corresponds to a event with that particular combination of \gr{} energies seen within a $1\mu{}s$ window. The histograms are symmetrized by sorting the \gr{} energies of each event so that $E_1\leq{}...\leq{}E_d$. In doing this number of bins in the histogram can be reduced from $n^d$, where $n$ is the number of bins per axis and $d$ is the number of axes, to:
+\begin{equation}
+\label{eqn:chp3-hist-size}
+Size=\frac{1}{d!}\prod\limits_{i=1}^{d}(n+i)
+\end{equation}
+While this still scales with $n^d$ it somewhat reduces the large storage requirements. Events that are of lower dimensionality that the histogram are ignored and events that are of higher fold than the histogram, $f$, are ``unfolded'' into $f \choose d$ unique events.
+
+Reconstruction of a nucleus' level scheme involves gating on one or more transitions and examining the resultant spectra which will show what transitions are in coincidence with the gates. A gate on a symmetrized histogram is essentially a projection of the histogram along one of its axes with restrictions on the summation of the other axes. As an example, equation \ref{eqn:chp3-matrix-proj}, shows a gateless projection of a matrix ($2-d$ histogram). Equation \ref{eqn:chp3-matrix-single-gate} shows a single gate on a matrix.
+\begin{equation}
+\label{eqn:chp3-matrix-proj}
+S_i = \sum\limits_{j=0}^{n-1}M_{ij}
+\end{equation}
+\begin{equation}
+\label{eqn:chp3-matrix-single-gate}
+S_i = \sum\limits_{j=g_{lo}}^{g_{hi}}M_{ij}
+\end{equation}
+Here $S_i$ is the counts bin $i$ in the resultant spectrum, $M_{ij}$ is the counts at bin $i,j$ in the matrix, $g_{lo}$ and $g_{hi}$ are the bounds of the gate, and $n$ is the number of bins per axis of the matrix. Expressions for higher-order gates and higher dimensional histograms follow logically from these expressions.
+
+The peaks in the spectrum resulting from gating on one or more \gr{}s are the peaks that are in coincidence with those gated upon. If two transitions are in coincidence, they must all be part of the same cascade through the level scheme. Therefor, at \emph{least} individually, each of the peaks in the gated spectrum will be part of the same cascades as the \gr{} that were chosen for the gate. By varying which \gr{} are gated upon and observing the intensity of the gated transitions it is possible to determine the placement of essentially all the \gr{} transitions in the level scheme.
 
 \subsection{Background Subtraction}
 \label{ssec:exp-pr-data-proc-bg-sub}
-Any time one places a gate on \gr{} they need to account for background counts.
+A spectrum can be thought of as having two components, the background part and the peak part. Any given segment of this background is made from \gr{}s that were in random/``accidental'' coincidence and \gr{} that were in true coincidence and only deposited part of their energy in the detector. When one places a gate on an energy range this gate is on both peak and background components. In addition to this the \gr{}s that are in coincidence with a gate are, themselves, composed of background and peak themselves. The removal of these backgrounds is vital in the analysis of \gr{} coincidence data.
+
 \subsubsection{Symmetric Gates}
 \label{sssec:exp-pr-data-proc-bg-sub-sym}
+For symmetric gates where all the axes can be taken to be equivalent, one uses the background developed by Radford in Ref. \cite{symBGSub}. For a cube ($3-d$ histogram) this background is taken to be:
+\begin{equation}
+\label{eqn:chp3-cube-bg}
+B_{ijk}=\frac{1}{T}\left(M_{ij}b_{k} + M_{ik}b_{j} + M_{jk}b_{i}\right) + \frac{1}{T^{2}}\left(b_{i}b_{j}b_{k} - P_{i}b_{j}b_{k} - b_{i}P_{j}b_{k} - b_{i}b_{j}P_{k}\right)
+\end{equation} 
+Here $M_{ij}$ is two dimensional projection of the cube, $P_{i}$ is the projection of the cube and $b_{i}$ is the smooth background component of the cube's projection, and T is the total counts in the cube.
+\begin{align}
+\label{eqn:chp3-cube-bg-defs}
+M_{ij} &= \sum\limits_{k}^{}C_{ijk} \\
+P_i &= p_i + b_i = \sum\limits_{jk}^{}C_{ijk}\\
+T &= \sum\limits_{ijk}^{}C_{ijk}
+\end{align}
+
+Similar expressions are derived for gates on matrices and hypercubes ($4-d$ histograms) in Ref \cite{symBGSub}. The extraction of the smooth background component $b_{i}$ from the total projection $P_{i}$ can be seen in  Fig. \ref{fig:chp3-smooth-bg}. An example of the background from this procedure and the results of the subtraction can be seen in Fig. \ref{fig:chp3-sym-bg-sub}. 
+\begin{figure}[h!]
+	\centerline{\includegraphics[width=0.6\textwidth]{./img/c3/smth_bg.eps}}
+	\caption{Total projection spectrum and its smooth background drawn below it.}
+	\label{fig:chp3-smooth-bg}
+\end{figure}
+
+\begin{figure}[h!]
+	\centerline{\includegraphics[width=0.6\textwidth]{./img/c3/bg_sub_ex.eps}}
+	\caption{Spectra of a symmetric triple gate on a hypercube showing the components of the gates spectrum. Top: The unsubtracted gated spectrum. Middle: The background spectrum for the gate. Bottom: The final background subtracted spectrum.}
+	\label{fig:chp3-sym-bg-sub}
+\end{figure}
+
 \subsubsection{Asymmetric Gates}
 \label{sssec:exp-pr-data-proc-bg-sub-asym}
+Some types of data analysis, such as those examined in section \ref{sec:exp-pr-data-ang}, require asymmetric gates where the $\uvec{x}$-axis of the spectrum produced is not the same as the axes that were gated on/summed across. \emph{eg} the projection axis is gammas seen in a specific ring of the array while the gate is placed on all the rings of the array. In such cases the background subtraction method developed by Starosta et. al. in Ref \cite{asymBGSub} is necessary.
 
-\section{Angular Distributions, Correlations, and Polarization}
+\section{Angular Distribution, Correlation, and Polarization Analysis}
 \label{sec:exp-pr-data-ang}
 \subsection{Angular Distributions}
 \label{ssec:exp-pr-data-ang-dist}
