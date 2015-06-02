@@ -1,0 +1,226 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 8.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       157,          7]
+NotebookDataLength[      7327,        217]
+NotebookOptionsPosition[      7013,        201]
+NotebookOutlinePosition[      7356,        216]
+CellTagsIndexPosition[      7313,        213]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"SetDirectory", "[", 
+   RowBox[{"NotebookDirectory", "[", "]"}], "]"}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"WSFunction", "[", 
+   RowBox[{"r_", ",", "\[Rho]0_", ",", "c_", ",", "a_"}], "]"}], ":=", 
+  FractionBox["\[Rho]0", 
+   RowBox[{"1", "+", 
+    SuperscriptBox["\[ExponentialE]", 
+     FractionBox[
+      RowBox[{"(", 
+       RowBox[{"r", "-", "c"}], ")"}], "a"]]}]]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"radArray", "=", 
+   RowBox[{"Array", "[", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"(", 
+       FractionBox["#", "10.0"], ")"}], "&"}], ",", "201", ",", "0"}], 
+    "]"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"calc\[Rho]0", "[", 
+   RowBox[{"c_", ",", "a_", ",", "A_"}], "]"}], ":=", 
+  RowBox[{"\[Rho]0", "/.", 
+   RowBox[{"(", 
+    RowBox[{
+     RowBox[{"Solve", "[", 
+      RowBox[{
+       RowBox[{
+        RowBox[{
+         RowBox[{"-", "4"}], "*", "\[Pi]", "*", "2", " ", 
+         SuperscriptBox["a", "3"], " ", "\[Rho]0", " ", 
+         RowBox[{"PolyLog", "[", 
+          RowBox[{"3", ",", 
+           RowBox[{"-", 
+            SuperscriptBox["\[ExponentialE]", 
+             FractionBox["c", "a"]]}]}], "]"}]}], "\[Equal]", "A"}], ",", 
+       "\[Rho]0"}], "]"}], "[", 
+     RowBox[{"[", "1", "]"}], "]"}], ")"}]}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"paramSets", "=", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"2.59", ",", "0.564", ",", "19", ",", "\"\<19F\>\""}], "}"}], 
+     ",", 
+     RowBox[{"{", 
+      RowBox[{"3.53", ",", "0.542", ",", "40", ",", "\"\<40Ar\>\""}], "}"}], 
+     ",", 
+     RowBox[{"{", 
+      RowBox[{"4.44", ",", "0.585", ",", "70", ",", "\"\<70Ge\>\""}], "}"}], 
+     ",", 
+     RowBox[{"{", 
+      RowBox[{"5.359", ",", "0.550", ",", "116", ",", "\"\<116Sn\>\""}], 
+      "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"5.930", ",", "0.522", ",", "156", ",", "\"\<156Gd\>\""}], 
+      "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"6.61", ",", "0.545", ",", "206", ",", "\"\<206Pb\>\""}], "}"}],
+      ",", 
+     RowBox[{"{", 
+      RowBox[{"6.8054", ",", "0.605", ",", "238", ",", "\"\<238U\>\""}], 
+      "}"}]}], "}"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"normParamSets", "=", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"(", 
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{"#", "[", 
+         RowBox[{"[", "4", "]"}], "]"}], ",", 
+        RowBox[{"calc\[Rho]0", "[", 
+         RowBox[{
+          RowBox[{"#", "[", 
+           RowBox[{"[", "1", "]"}], "]"}], ",", 
+          RowBox[{"#", "[", 
+           RowBox[{"[", "2", "]"}], "]"}], ",", 
+          RowBox[{"#", "[", 
+           RowBox[{"[", "3", "]"}], "]"}]}], "]"}], ",", 
+        RowBox[{"#", "[", 
+         RowBox[{"[", "1", "]"}], "]"}], ",", 
+        RowBox[{"#", "[", 
+         RowBox[{"[", "2", "]"}], "]"}]}], "}"}], ")"}], "&"}], "/@", 
+    "paramSets"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"genPlotSet", "[", 
+   RowBox[{"{", 
+    RowBox[{"name_", ",", "\[Rho]0_", ",", "c_", ",", "a_"}], "}"}], "]"}], ":=", 
+  RowBox[{"Module", "[", "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"dataSet", "=", 
+       RowBox[{"{", "}"}]}], ",", "mappedData", ",", "i"}], "}"}], ",", 
+    "\[IndentingNewLine]", 
+    RowBox[{
+     RowBox[{"AppendTo", "[", 
+      RowBox[{"dataSet", ",", 
+       RowBox[{"{", 
+        RowBox[{"\"\<r\>\"", ",", "name"}], "}"}]}], "]"}], ";", 
+     "\[IndentingNewLine]", 
+     RowBox[{"mappedData", "=", " ", 
+      RowBox[{
+       RowBox[{
+        RowBox[{"(", 
+         RowBox[{"{", 
+          RowBox[{"#", ",", 
+           RowBox[{"WSFunction", "[", 
+            RowBox[{"#", ",", "\[Rho]0", ",", "c", ",", "a"}], "]"}]}], "}"}],
+          ")"}], "&"}], "/@", "radArray"}]}], ";", "\[IndentingNewLine]", 
+     RowBox[{"For", "[", 
+      RowBox[{
+       RowBox[{"i", "=", "1"}], ",", 
+       RowBox[{"i", "\[LessEqual]", "201"}], ",", 
+       RowBox[{"++", "i"}], ",", "\[IndentingNewLine]", 
+       RowBox[{
+        RowBox[{"AppendTo", "[", 
+         RowBox[{"dataSet", ",", 
+          RowBox[{"mappedData", "[", 
+           RowBox[{"[", "i", "]"}], "]"}]}], "]"}], ";"}]}], 
+      "\[IndentingNewLine]", "]"}], ";", "\[IndentingNewLine]", 
+     RowBox[{"Return", "[", "dataSet", "]"}]}]}], "\[IndentingNewLine]", 
+   "]"}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"data", "=", 
+   RowBox[{"genPlotSet", "/@", "normParamSets"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"temp1", "=", 
+   RowBox[{"{", "}"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{"For", "[", 
+  RowBox[{
+   RowBox[{"k", "=", "1"}], ",", 
+   RowBox[{"k", "\[LessEqual]", "201"}], ",", 
+   RowBox[{"++", "k"}], ",", "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"temp2", "=", 
+     RowBox[{"{", "}"}]}], ";", "\[IndentingNewLine]", 
+    RowBox[{
+     RowBox[{"For", "[", 
+      RowBox[{
+       RowBox[{"j", "=", "1"}], ",", 
+       RowBox[{"j", "\[LessEqual]", 
+        RowBox[{"Length", "[", "normParamSets", "]"}]}], ",", 
+       RowBox[{"++", "j"}], ",", "\[IndentingNewLine]", 
+       RowBox[{
+        RowBox[{"AppendTo", "[", 
+         RowBox[{"temp2", ",", 
+          RowBox[{"data", "[", 
+           RowBox[{"[", 
+            RowBox[{"j", ",", "k", ",", "1"}], "]"}], "]"}]}], "]"}], ";", 
+        "\[IndentingNewLine]", 
+        RowBox[{"AppendTo", "[", 
+         RowBox[{"temp2", ",", 
+          RowBox[{"data", "[", 
+           RowBox[{"[", 
+            RowBox[{"j", ",", "k", ",", "2"}], "]"}], "]"}]}], "]"}], ";"}]}],
+       "\[IndentingNewLine]", "]"}], "\[IndentingNewLine]", 
+     RowBox[{"AppendTo", "[", 
+      RowBox[{"temp1", ",", "temp2"}], "]"}]}], ";"}]}], 
+  "\[IndentingNewLine]", "]"}], "\[IndentingNewLine]", 
+ RowBox[{"Export", "[", 
+  RowBox[{"\"\<density_dists.xlsx\>\"", ",", "temp1"}], "]"}]}], "Input",
+ CellChangeTimes->{{3.642175950489357*^9, 3.6421760647483587`*^9}, {
+  3.6421761614239297`*^9, 3.6421762956621656`*^9}, {3.6421763689978943`*^9, 
+  3.6421764943129144`*^9}, {3.642176562639436*^9, 3.6421768785555906`*^9}, {
+  3.642176930410082*^9, 3.6421770010782056`*^9}, {3.642193217987694*^9, 
+  3.642193218143694*^9}, {3.642193251867354*^9, 3.642193330631892*^9}, {
+  3.642193367369957*^9, 3.6421935263030357`*^9}, {3.642193860330823*^9, 
+  3.6421938608924236`*^9}}],
+
+Cell[BoxData["\<\"density_dists.xlsx\"\>"], "Output",
+ CellChangeTimes->{3.6421938695036387`*^9}]
+}, Open  ]]
+},
+WindowSize->{609, 647},
+WindowMargins->{{0, Automatic}, {Automatic, 0}},
+FrontEndVersion->"8.0 for Microsoft Windows (64-bit) (February 23, 2011)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[579, 22, 6318, 173, 710, "Input"],
+Cell[6900, 197, 97, 1, 30, "Output"]
+}, Open  ]]
+}
+]
+*)
+
+(* End of internal cache information *)
