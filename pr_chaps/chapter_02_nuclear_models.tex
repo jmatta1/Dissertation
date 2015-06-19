@@ -214,10 +214,44 @@ The pairing interaction is the force that couples two identical nucleons in time
 M. Goeppert gave the first theoretical tool to calculate this interaction in 1950 \cite{pairingFirstTheory} describing the pairing force as a delta function multiplied by some interaction strength.
 \begin{equation}
 \label{eqn:chp2-pairing-first-function}
-V_{pair}=-g\delta(\phi_1-\phi_2)\delta(Cos(\theta_1)-Cos(\theta_2))\frac{\delta(r_1-r_2)}{r^2}
+V_{pair}=-G\delta(\phi_1-\phi_2)\delta(Cos(\theta_1)-Cos(\theta_2))\frac{\delta(r_1-r_2)}{r^2}
 \end{equation}
-Here $\delta(x)$ is the Dirac delta function and g is the pairing interaction strength.
+Here $\delta(x)$ is the Dirac delta function and g is the pairing interaction strength. Calculations were performed using this interaction to explore its effects \cite{pairingCorrEffectOnProperties} and then later analogies between nuclear pairing and BCS superconductivity theory were discovered and explored \cite{pairingAnalogyToBCS,pairingSuperfluidity,bcsTheory}. The pairing strength $G$ has been determined to have different values for the protons and neutron. For protons the pairing strength is approximately $G_p=\sfrac{17}{A} MeV$ and for neutrons the pairing strength is approximately $G_p=\sfrac{23}{A} MeV$. This result is expected given the repulsive interaction between protons which works counter to the pairing force. The expectation value for this interaction is:
+\begin{equation}
+\label{eqn:chp2-pairing-expectation}
+\Braket{j_1j_2J|V_{pair}|j3j4J'}=-G\sqrt{\left(j_1+\sfrac{1}{2}\right)\left(j_3+\sfrac{1}{2}\right)}\delta_{j_1j_2}\delta_{j_3j_4}\delta_{J0}\delta_{J'0}
+\end{equation}
+In the second quantization formalism the pairing Hamiltonian is usually written in the form:
+\begin{equation}
+\label{eqn:chp2-pairing-hamil}
+H_{pair} = -GP^+P-\lambda{}\uvec{N}
+\end{equation}
+Where $P^+$ and $P$ are the pair creation and annihilation operators, $\lambda$ is the chemical potential, and $\uvec{N}$ is the particle number operator.
 
+If the spacing between levels near the Fermi surface is small relative to $G$ then the pairing interaction scatters pairs of nucleons with $J^{\pi}=0^+$ from occupied levels to empty levels above the Fermi level. This results in the ``smeared'' nucleon distribution shown in the dashed line of Fig. \ref{fig:chp2-pairing-fermi-surface}. If the level spacing is large near the Fermi surface then the pairing interaction cannot scatter pairs into unoccupied levels and the Fermi surface has a sharp cutoff as seen in the solid line of Fig. \ref{fig:chp2-pairing-fermi-surface}.
+\begin{figure}[t!]
+\centerline{\includegraphics[height=0.3\textheight]{./img/c2/pairinginteraction.png}}
+	\caption{Schematic of the occupancy of single particle states with and without pairing. Figure adapted from: Ref. \cite{xfwangDissertation}.\label{fig:chp2-pairing-fermi-surface}}
+\end{figure}
+
+The energy range that this ``smearing'' of level occupancies covers is equal to the gap parameter ($\Delta$) which can be defined as follows:
+\begin{equation}
+\label{eqn:chp2-pairing-gap-param}
+\Delta = G\sum\limits_{ij}^{}U_iV_j
+\end{equation}
+Where $U$ is the emptiness factor (the probability that a state will be occupied by a hole) and $V$ is the fullness factor (the probability that a state will be occupied by a particle. $U$ and $V$ are defined as follows
+\begin{align}
+\label{eqn:chp2-pairing-gap-param-defs}
+V_i &= \sqrt{\frac{1}{2}\left(1+\frac{\epsilon_1-\lambda}{\sqrt{(\epsilon_1-\lambda)^2+\Delta^2}}\right)}\\
+U_i &= \sqrt{\frac{1}{2}\left(1-\frac{\epsilon_1-\lambda}{\sqrt{(\epsilon_1-\lambda)^2+\Delta^2}}\right)}
+\end{align}
+Here $\epsilon_i$ represents the single particle energies, and $\lambda$ is the chemical potential for a given number of particles. The probabilities are normalized such that $U_i^2+V_i^2=1$. Far below the Fermi surface the probability that an orbit will be occupied is $V_i=1$ while the probability that the orbit is unoccupied $U_i=0$. This situation reverses itself far above the Fermi surface. Close to the Fermi surface both probabilities will have a finite value. BCS theory \cite{bcsTheory} tells us that the quasiparticle energy is expressed by:
+\begin{equation}
+\label{eqn:chp2-pairing-qp-en}
+E_{qp}(n,p)=\sqrt{(\epsilon_i-\lambda)^2+\Delta^2}
+\end{equation}
+
+As the nucleus rotates the induced Coriolis force competes with the pairing interaction. This competition attempts to break the pairs and align the individual angular momenta of the nucleons with the rotation axis. In general rotational motion weakens the pairing strength in the nucleus. While some pairs break and align at specific rotational frequencies, all pairs will feel the effects. This phenomenon is called the Coriolis anti-pairing effect (CAP) \cite{bohrMottelsonRotationWeakensPairing}.
 
 \section{Quasiparticle + Triaxial Rotor (QTR)}
 \label{sec:models-qtr}
@@ -231,7 +265,7 @@ H_{int}&= \sum\limits_{\mu}^{}q^*_{\mu}Q_{\mu} = f r^2 \left(\epsilon Cos(\gamma
 Here $H_{sqp}$ is the single quasiparticle Hamiltonian accounting for the presence of the central potential and the pairing interaction, $H_{rot}$ is the rotor model Hamiltonian, $H_{int}$ is the interaction of the quasiparticle to the triaxial core, $\uvec{J}_k$ is the total angular momentum of the system along the $k^{th}$ axis, $\uvec{j}_k$ is the angular momentum of the quasiparticle along the $k^{th}$ axis, $\bar{Y}^l_m$ is the result of applying the spherical harmonic operator $Y^l_m$ to the basis state, and $f$ is a scaling factor obtained in the following manner:
 \begin{align}
 \label{eqn:chp2-qtr-int-hamil-scaling}
-\kappa f &= \frac{2}{3}\sqrt{\frac{4\pi}{5}}\hbar\omega_{\circ}
+\kappa f &= \frac{2}{3}\sqrt{\frac{4\pi}{5}}\hbar\omega_{\circ}\\
 \kappa \Bra{0}|Q|\Ket{2} & = \hbar\omega_{\circ} \epsilon Cos(\gamma)
 \end{align}
 Here $\Bra{0}|Q|\Ket{2}$ is the reduced matrix element of the core quadrupole operator between the  $0^+$ ground state and the first $2^+$ state. This is related to the reduced quadrupole transition probability as follows:
@@ -368,9 +402,11 @@ With the breaking of this symmetry, $\alpha$ ceases to be a good quantum number 
 
 Since 1993 when Frauendorf found a set of self-consistent Hartree-Fock mean-field solutions for uniform rotation about a tilted axis \cite{frauendorfTiltedCranking} TAC has turned out to be a reliable approximation to calculate and investigate the properties of the various types of rotational bands. Details of TAC not covered in this section can be found in Refs. \cite{frauendorfTiltedCranking,frauendorfTACMultiQPBands,frauendorfChirality,frauendorfTAC}
 
-\section{Wobbling Mode in Nuclei}
+\section{The Wobbling Mode in Nuclei}
 \label{sec:models-wobbling}
-\subsection{Simple Wobbling}
+\subsection{Models of the Wobbling Mode}
+The wobbling mode in nuclei was first predicted by Bohr and Mottelson in the second volume of their textbook on nuclear structure \cite{bohrMottelson2}. Their formulation of wobbling was formulated for even even nuclei using only the triaxial rotor model. what is now known as simple wobbling
+\subsubsection{Simple Wobbling}
 \label{ssec:models-simple-wobbling}
 The rotational kinetic energy of the system is:
 \begin{equation}
@@ -388,10 +424,15 @@ we can find the classical orbit of $\vec{J}$ at the intersection of the angular 
 	\caption{Intersections of the angular momentum and energy surfaces with $A_1=6*A_3$ and $A_2=3A_3$ for $J=2$ taken at progressively larger various energies from a to c. Figure adapted from: Ref. \cite{frauendorfTransverseWobbling}.\label{fig:chp2-classical-am-orbits}}
 \end{figure} the unstable rotation about the axis with intermediate MOI, this orbit the boundary between rotation about the axis with the maximum MOI (axis 3) and the axis with minimum MOI (axis 1). Image c gives an example of an orbit corresponding to rotation about axis 1.
 
-
-\subsection{Longitudinal Wobbling}
-\label{ssec:models-long-wobbling}
-\subsection{Longitudinal Wobbling}
+\subsubsection{Transverse Wobbling}
 \label{ssec:models-transverse-wobbling}
+\begin{figure}[t!]
+\centerline{\includegraphics[height=0.25\textheight]{./img/c2/simple_am_orbits.png}}
+	\caption{Intersections of the angular momentum and energy surfaces with $A_1=6*A_3$ and $A_2=3A_3$ for $J=2$ taken at progressively larger various energies from a to c. Figure adapted from: Ref. \cite{frauendorfTransverseWobbling}.\label{fig:chp2-transverse-am-orbits}}
+\end{figure}
+
+\subsubsection{Longitudinal Wobbling}
+\label{ssec:models-long-wobbling}
+
 \subsection{Signatures of Wobbling}
 \label{sec:models-sig}
