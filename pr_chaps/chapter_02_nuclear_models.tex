@@ -118,12 +118,14 @@ Here $\omega_{x,y,z}$ are the oscillator frequencies in each of the three dimens
 \end{align}
 Here $\omega_0$ is the oscillator frequency for the spherical case, defined as $\hbar\omega_0 = (\omega_x \omega_y \omega_z )^{1/3}$. In the case of axial symmetry the oscillator frequencies are defined in terms of the deformation parameter $\epsilon_2$ as follows.
 \begin{align}
+\label{eqn:chp2-nilsson-oscilator-freq-components}
 \omega_{x}=\omega_{y}=\omega_{\bot}&=\omega(\epsilon_2)\left(1+\frac{1}{3}\epsilon_2 \right)\\
 \omega_{z}=\omega_{\parallel}&=\omega(\epsilon_2)\left(1-\frac{1}{3}\epsilon_2 \right)\\
 \omega(\epsilon_2) &= \omega_0\left(1-\frac{1}{3}\epsilon_2^2-\frac{2}{27}\epsilon_2^3\right)^{-1/6}
 \end{align}
 Here the deformation $\beta$ is defined with respect to $\epsilon_2$ using the following series:
 \begin{align}
+\label{eqn:chp2-nilsson-beta-from-epsilon}
 \beta = \sqrt{\frac{16 \pi}{5}}\left( \frac{1}{3}\epsilon_2 + \frac{1}{9}\epsilon_2^2 + \frac{1}{27}\epsilon_2^3 +  \frac{1}{81}\epsilon_2^4...\right)
 \end{align}
 
@@ -139,40 +141,257 @@ Here $i$ represents the complete set of asymptotic quantum numbers used to speci
 \end{equation}
 $\Omega$ is projection of the particle's total angular momentum onto the symmetry axis, $\pi$ is the parity defined as $\pi=(-1)^{l}=(-1)^{N}$, $N$ is the oscillator quantum number, $n_z$ is the number of oscillator quanta (number of nodes in the wavefunction), and $\Lambda$ is the projection of the particle's orbital angular momentum onto the symmetry axis. Some of these quantum numbers are shown schematically in Fig. \ref{fig:chp2-nillson-qn}. 
 
-\begin{figure}
-\centerline{\includegraphics[height=0.3\textheight]{./img/c2/nilsondescr.png}}
+\begin{figure}[hb!]
+\centerline{\includegraphics[height=0.22\textheight]{./img/c2/nilsondescr.png}}
 	\caption{Schematic of an axially symmetric nucleus and the various quantum numbers that are used in the description of the system. Here R is the angular momentum of collective rotation, J is the total nuclear angular momentum, j is the total angular momentum of the particle, l is the orbital angular momentum of the particle, s is the spin of the particle, M is the projection of J onto the non-symmetry axis, K is the projection of J onto the symmetry axis, $\Omega$ is the projection of j onto the symmetry axis, $\Lambda$ is the projection of l onto the symmetry axis, and $\Sigma$ is the projection of s onto the symmetry axis. Figure adapted from: Ref. \cite{danielDissertation}.\label{fig:chp2-nillson-qn}}
 \end{figure}
 
 The deformation dependence of Nilsson orbitals is usually summarized in a Nilsson diagram. In these diagrams energy levels for various sets of asymptotic quantum numbers are plotted versus the deformation parameter $\epsilon$. A Nilsson diagram for protons in the $40\leq{}Z\leq82$ region is shown in Fig. \ref{fig:chp2-nillson-protons}. A diagram for neutrons in the $40\leq{}Z\leq82$ region is shown in Fig. \ref{fig:chp2-nillson-neutrons}. Together these diagrams cover the $A\sim 130$ region where \pr{} lies.
 
-\begin{figure}[h]
-\centerline{\includegraphics[height=0.9\textheight,clip=true,trim=10 100 10 100]{./img/c2/nilsson_proton_diagram.pdf}}
+\begin{figure}[h!]
+\centerline{\includegraphics[height=0.8\textheight,clip=true,trim=10 100 10 100]{./img/c2/nilsson_proton_diagram.pdf}}
 	\caption{Nilsson diagram for protons in the $50\leq Z \leq 82$ region with $\epsilon_4=\epsilon_2/6$. Solid lines represent positive parity orbitals and dashed lines represent negative parity orbitals. Labels follow the $\Omega$[N $n_z$ $\Lambda$] convention. Figure adapted from: Ref. \cite{nilssonDiagrams}.\label{fig:chp2-nillson-protons}}
 \end{figure}
 
-\begin{figure}[h]
-\centerline{\includegraphics[height=0.9\textheight,clip=true,trim=10 100 10 100]{./img/c2/nilsson_neutron_diagram.pdf}}
+\begin{figure}[h!]
+\centerline{\includegraphics[height=0.8\textheight,clip=true,trim=10 100 10 100]{./img/c2/nilsson_neutron_diagram.pdf}}
 	\caption{Nilsson diagram for neutrons in the $50\leq N \leq 82$ region with $\epsilon_4=\epsilon_2/6$. Solid lines represent positive parity orbitals and dashed lines represent negative parity orbitals. Labels follow the $\Omega$[N $n_z$ $\Lambda$] convention. Figure adapted from: Ref. \cite{nilssonDiagrams}.\label{fig:chp2-nillson-neutrons}}
 \end{figure}
-WRITE A BIT MORE ABOUT NILSSON
 
 \section{Collective Rotation}
 \label{sec:models-rigid-rotor}
 A model of collective nuclear motion was developed by Bohr and Mottleson \cite{bohrMottelson2,bohrMottelsonArticle} due to several observations that could not be explained with single particle motion. Among these are: \emph{1.} Fission, many of the features of which are successfully explained with the liquid drop model \cite{meitnerFissionProducts,fissionMechanism}. \emph{2.} Deformation of the nuclear surface by particle structure \cite{deformationPrediction} giving rise to quadrupole moments which exceed single particle estimates in many nuclei \cite{casimirQuadMoments,nuclearQuadMomentsAndShellStruc}. \emph{3.} The occurrence of electric quadrupole \gr{} transitions with lifetimes much shorter than single particle estimates \cite{nuclearIsomerClassification} which is a characteristic feature of the excitation spectra of strong deformed nuclei \cite{QuadIsomerInterp}.
 \subsection{Rigid Triaxial Rotor}
 \label{sec:models-triaxial-rotor}
-The Hamiltonian for a rigid triaxial rotor is:
-\begin{equation}
+One of the simplest forms of excitation a nucleus can experience is rotation. However, in quantum mechanics, rotation is can only occur about axes that are not symmetry axes (where the symmetry axis is denoted the $\uvec{z}$-axis. This is because the wave function that describes this system is an eigenfunction of $\uvec{J}_z$, and thus, is symmetrical about the $\uvec{z}$-axis. Due to its symmetrically any rotation of this wave function about the symmetry axis generates only phase shift and has a wave function identical to that of the ground state. Thus, a system cannot collectively rotate about symmetry axes. As spherical nuclei are symmetric about all axes, they cannot exhibit collective rotation at all.
+
+In rotating nuclei there are two primary components of the angular momentum. The first is the rotational angular momentum, $\vec{R}$, generated by the collective motion of many nucleons about some axis. The second component is found when there are unpaired valence nucleons. In these cases their angular momentum, $\vec{j}$, must be accounted for as well. This yields a situation like that in Figure \ref{fig:chp2-nillson-qn} which schematically illustrates the total angular momentum of the nucleus, $\vec{J}$, as the sum of $\vec{R}$ and $\vec{j}$.
+
+While it is often the case that the shape (and thus the moments of inertia (MOI)) of a nucleus change somewhat as spin increases accounting for this can be quite difficult. By approximating the system as a rigid rotor with unchanging MOI the problem can be simplified dramatically while maintaining descriptive power. Here each axis has a fixed MOI and the rotational component of the Hamiltonian depends only on the MOIs and the components of the spin along each axis. In the case of a triaxial nucleus with no unpaired valence particles, (thus $\vec{J}=\vec{R}$) the Hamiltonian can be written as follows \cite{triaxRotorSol,wobblingGeometry}:
+\begin{align}
 \label{eqn:chp2-triaxial-rotor-hamiltonian}
-H=A_3\uvec{J}_3^2 + A_1\uvec{J}_1^2 + A_2\uvec{J}_2^2
+H &= H_{rot} + H_{intr} \\
+H_{rot}&=A_3\uvec{J}_3^2 + A_1\uvec{J}_1^2 + A_2\uvec{J}_2^2
+\end{align}
+Here $H_{intr}$ is the intrinsic component of the Hamiltonian accounting for the internal state of the nucleus, $A_i = \frac{\hbar^2}{2 \mathcal{J}_i}$ where $\mathcal{J}_i$ is the MOI of rotation about the $i^{th}$ axis, and $\uvec{J}_i$ is the operator for the component of the angular momentum along the $i^{th}$ axis. Rewriting the rotational Hamiltonian to a form that uses the operators $\uvec{J}^2$, $\uvec{J}^2_3$, and $\uvec{J}^2_{\pm}$ yields:
+\begin{align}
+\label{eqn:chp2-triaxial-rotor-hamiltonian-rewrite}
+H_{rot}=& H_{r}^{Diag} + H_{r}^{OffDiag}\\
+H_{rd}=&\left[\frac{1}{2}\left(A_1+A_2\right)\uvec{J}^2 + \left(A_3-\frac{1}{2}\left(A_1+A_2\right)\right)\uvec{J}^2_3\right]\nonumber\\
+H_{r}^{OffDiag}=&\frac{1}{4}\left(A_1-A_2\right)\left(\uvec{J}^2_++\uvec{J}^2_-\right) \nonumber
+\end{align}
+Here $H_{r}^{Diag}$ is the diagonal component of the Hamiltonian, $H_{r}^{OffDiag}$ is the off diagonal component, $\uvec{J}^2$ is the total angular momentum operator, and $\uvec{J}^2_{\pm}$ are the angular momentum raising and lowering operators $\uvec{J}_{\pm} = \uvec{J}_1\pm\mathit{i}\uvec{J}_2$. Taking the basis states of the wave function to be \cite{triaxRotorSol}:
+\begin{equation}
+\label{eqn:chp2-triaxial-rotor-basis}
+\Ket{IMK}= \sqrt{\frac{2I+1}{16\pi^{2}(1+\delta_{K0})}} \left[\mathcal{D}^{J}_{MK} + (-1)^J \mathcal{D}^{J}_{-KM}\right]
 \end{equation}
-Here $A_i = \frac{\hbar^2}{2 \mathcal{J}_i}$
-\subsection{Quasiparticle + Triaxial Rotor (QTR)}
+Where $\delta_{K0}$ is the Kronecker delta function and $\mathcal{D}^{J}_{MK}$ are the Wigner D-functions which are functions of the three Euler angles that determine the orientation of the nucleus' principal axes in space. With these basis states the diagonal portion of the Hamiltonian matrix are:
+\begin{equation}
+\label{eqn:chp2-triaxial-diagonal-hamil}
+\Bra{IMK}H_{rot}\Ket{IMK}=\frac{1}{2}\left(A_1+A_2\right)\left(J(J+1)-K^2\right) + A_3K^2
+\end{equation}
+Similarly the off diagonal components are:
+\begin{equation}
+\label{eqn:chp2-triaxial-offdiagonal-hamil}
+\Bra{IMK}H_{rot}\Ket{IMK\pm{}2}=\frac{1}{4}\left(A_1-A_2\right)\sqrt{(I\mp{}K)(I\pm{}K+1)(I\mp{}K-1)(I\pm{}K+2)}
+\end{equation}
+With these, finding the energy eigenvalues and eigenstates for a given spin I is a matter of diagonalizing the matrix. The reduced transition probabilities for $E2$ transitions of the triaxial rotor model are given by \cite{wobblingGeometry}:
+\begin{align}
+\label{eqn:chp2-triaxial-rotor-reduced-transitions}
+B\left(E2,I\rightarrow{}I'\right) &=\sum\limits_{\mu{},K,K'}^{}|\Bra{I'M'K'}\mathcal{M}^E_{2\mu}\Ket{IMK}|^2\\
+\mathcal{M}^E_{2\mu} &= \sqrt{\frac{5}{16\pi}}\left[\mathcal{D}^{2*}_{\mu{}0}\uvec{Q}'_{20}+\left(\mathcal{D}^{2*}_{\mu{}2}+\mathcal{D}^{2*}_{\mu{}-2}\right)\uvec{Q}'_{22}\right] \nonumber\\
+Q'_{20} &= Q Cos(\gamma) ~~~~~~~ Q'_{22} = \frac{1}{\sqrt{2}}Q Sin(\gamma) \nonumber
+\end{align}
+
+\section{Pairing}
+The pairing interaction is the force that couples two identical nucleons in time reversed orbits (opposite spin projections). Evidence for this force can be seen in a variety of experimental results. Among them: 1) The staggering seen in the single neutron (or proton) separation energies between even and odd neutron (or proton) number (see Fig. \ref{fig:chp2-s1n-staggering}). 2) The ground state of \emph{every} even-even nucleus has $J^{\pi}=0^+$. 3) The ground states of the odd-A nuclei always have $J^{\pi}$ determined by the orbital of the last unpaired nucleon.
+
+\begin{figure}[t!]
+\centerline{\includegraphics[height=0.3\textheight]{./img/c2/S1n_MassChains.eps}}
+	\caption{One neutron separation energies vs neutron number for the five isotopes from $Z=51$ to $Z=55$. The staggering between even and odd masses gives strong evidence for the pairing interaction. Additionally the $N=82$ shell gap can be seen. Figure adapted from: Ref. \cite{nilssonDiagrams}.\label{fig:chp2-s1n-staggering}}
+\end{figure}
+
+M. Goeppert gave the first theoretical tool to calculate this interaction in 1950 \cite{pairingFirstTheory} describing the pairing force as a delta function multiplied by some interaction strength.
+\begin{equation}
+\label{eqn:chp2-pairing-first-function}
+V_{pair}=-g\delta(\phi_1-\phi_2)\delta(Cos(\theta_1)-Cos(\theta_2))\frac{\delta(r_1-r_2)}{r^2}
+\end{equation}
+Here $\delta(x)$ is the Dirac delta function and g is the pairing interaction strength.
+
+
+\section{Quasiparticle + Triaxial Rotor (QTR)}
 \label{sec:models-qtr}
+The QTR model is an extension of the particle + rotor model which was put forth in its most primitive form in 1952 by Aage Bohr in Ref. \cite{bohrParticlePlusRotor}. This model allows the calculation of the effect of coupling the odd quasiparticle to the triaxial even-even core. The Hamiltonian of this model is given in Ref. \cite{frauendorfTransverseWobbling} to be:
+\begin{align}
+\label{eqn:chp2-qtr-hamil}
+H&=H_{sqp}+H_{rot}-H_{int}\\
+H_{rot}&=A_3(\uvec{J}_3-\uvec{j}_3)^2+A_1(\uvec{J}_1-\uvec{j}_1)^2+A_2(\uvec{J}_2-\uvec{j}_2)^2\\
+H_{int}&= \sum\limits_{\mu}^{}q^*_{\mu}Q_{\mu} = f r^2 \left(\epsilon Cos(\gamma) \bar{Y}^2_0 + \frac{\epsilon Cos(\gamma)}{\sqrt{2}}\left(\bar{Y}^2_2 + \bar{Y}^2_{-2}\right)\right)
+\end{align}
+Here $H_{sqp}$ is the single quasiparticle Hamiltonian accounting for the presence of the central potential and the pairing interaction, $H_{rot}$ is the rotor model Hamiltonian, $H_{int}$ is the interaction of the quasiparticle to the triaxial core, $\uvec{J}_k$ is the total angular momentum of the system along the $k^{th}$ axis, $\uvec{j}_k$ is the angular momentum of the quasiparticle along the $k^{th}$ axis, $\bar{Y}^l_m$ is the result of applying the spherical harmonic operator $Y^l_m$ to the basis state, and $f$ is a scaling factor obtained in the following manner:
+\begin{align}
+\label{eqn:chp2-qtr-int-hamil-scaling}
+\kappa f &= \frac{2}{3}\sqrt{\frac{4\pi}{5}}\hbar\omega_{\circ}
+\kappa \Bra{0}|Q|\Ket{2} & = \hbar\omega_{\circ} \epsilon Cos(\gamma)
+\end{align}
+Here $\Bra{0}|Q|\Ket{2}$ is the reduced matrix element of the core quadrupole operator between the  $0^+$ ground state and the first $2^+$ state. This is related to the reduced quadrupole transition probability as follows:
+\begin{equation}
+\label{eqn:chp2-red-mat-el-to-red-trans-prob}
+B(E2,J_I\rightarrow{}J_F)=\frac{|\Bra{J_F}|Q|\Ket{J_I}|^2}{2J_I+1}
+\end{equation}
+
+Qualitatively, the $H_{int}$ works as follows. A high j quasiparticle with predominantly particle nature will align its $\vec{j}$ to the short axis of the core. This orientation results in the maximum overlap of the torus-like density distribution of the quasiparticle and the triaxial core which minimizes the energy of the attractive interaction between the two. For a high j quasiparticle with hole nature the $\vec{j}$ aligns to the long axis which minimizes the overlap of the torus with the triaxial core which in turn minimizes the energy of the repulsive interaction between the two. Finally a quasiparticle from the middle of the shell, possessing particle and hole nature in roughly equal measure would align the medium axis of the triaxial core.
+
+The reduced transition probabilities of this system can be extracted in a manner similar to that in the triaxial rotor model (equation \ref{eqn:chp2-triaxial-rotor-reduced-transitions}) however the operator $\mathcal{M}^E_{2\mu}$ will change to account for the quadrupole moment of both the core ($Q$) and the quasiparticle ($q$).
+
 \section{Tilted Axis Cranking}
 \label{sec:models-tac}
-\section{Wobbling Vibrations in Nuclei}
+The tilted axis cranking (TAC) model \cite{frauendorfTAC} is a generalization of the cranked shell model introduced by Inglis in 1954 \cite{crankedShellModel}. In this model, nucleons are individual particles independently moving in an average potential, which in turn rotates about some axis. As expected of a rotating frame, the Coriolis and centrifugal forces play an important role in the TAC model with consequences for shape and pairing correlations. The Hamiltonian for this model has two terms, the cranking component $-\omega\uvec{J}_x$ which represents the centrifugal and Coriolis forces from the rotating reference frame and a component in the rotating frame, $H_0$.
+\begin{equation}
+\label{eqn:chp2-TAC-Hamiltonian}
+H'=H_0-\omega\uvec{J}_x
+\end{equation}
+If the deformation is small and quadrupole nature the component in the rotating frame is given in Ref. \cite{frauendorfTAC} to be:
+\begin{equation}
+\label{eqn:chp2-TAC-invar-Hamiltonian}
+H_0=H_{sph}-\frac{\chi}{2}\sum\limits_{\mu=-2}^{2}Q_{\mu}^+Q_{\mu} - GP^+P-\lambda\uvec{N}
+\end{equation}
+Here the spherical potential is simply parameterized as by the energy $\epsilon_k$ for a state labeled $k$ and then constructed in second quantization to be:
+\begin{equation}
+\label{eqn:chp2-TAC-spherical}
+H_{sph}=\sum\limits_{k}^{}\epsilon_kc^+_kc_k
+\end{equation}
+The short range pair correlations are accounted for using the monopole pair operator:
+\begin{equation}
+\label{eqn:chp2-TAC-pairing}
+P^+=\sum\limits_{k>0}^{}c^+_kc^+_{\bar{k}}
+\end{equation}
+Here $\bar{k}$ represents the time reversed state of $k$, \emph{i.e.} spin-up $\rightarrow$ spin-down. The quadrupole interaction operator accounts for the long range particle-hole interaction:
+\begin{equation}
+\label{eqn:chp2-TAC-quad}
+Q_{\mu}=\sum\limits_{k,k'}^{}\sqrt{\frac{4\pi}{5}}\Bra{k}r^2Y_{2\mu}\Ket{k'}c^+_kc_{k'}
+\end{equation}
+Finally, the term $\lambda\uvec{N}$ accounts for the number of particles (N) using the chemical potential $\lambda$. As written the Hamiltonian of equation \ref{eqn:chp2-TAC-Hamiltonian} only accounts for one type of particles, protons or neutron, thus in all the expressions should be understood as sums across neutron and proton parts.
+
+To determine the system wave functions,  $\ket{}$, the eigenstates of the Hartree-Fock-Bogoliubov (HFB) are determined. In the adiabatic limit, where it is assumed that the frequency of intrinsic motion is large compared to the frequency of rotation, the HFB Routhian is:
+\begin{equation}
+\label{eqn:chp2-TAC-HFB-Routhian}
+h'=h - \sum\limits_{\mu=-2}^{2}(q_{mu}Q^+_{\mu}+q^*_{mu}Q_{\mu}) - \Delta(P^++P) - \lambda{}N-\omega\uvec{J}_z
+\end{equation}
+Applying the self-consistency conditions: $q_{\mu}=\chi{}\braket{Q_{\mu}}$, $\Delta=G\braket{P}$, and conservation of particle number $N=\braket{\uvec{N}}$ gives the deformed potential $h$. For further information regarding operator definitions and procedures for self-consistent solutions can be found in References: \cite{frauendorfTACMultiQPBands,frauendorfTAC,nuclearManyBodyProblem}
+
+As stated in Refs. \cite{frauendorfTACMultiQPBands,timeDepVarMethodForRotation}, self consistent solutions must have their angular frequency and angular momentum vectors be parallel \emph{i.e.} $\vec{\omega}\parallel\vec{J}$. Additionally, self consistent solutions to the total Routhian ($E'=\braket{H'}$) satisfy the extremum conditions of:
+\begin{equation}
+\label{eqn:chp2-tac-extrema-cond}
+\left. \frac{\partial{}E'}{\partial{}q_{\mu}} \right|_{\omega}=0 ~~~~~ \left. \frac{\partial{}E'}{\partial{}\Delta} \right|_{\omega}=0
+\end{equation}
+and have total energy and angular momentum:
+\begin{align}
+E(J)=E'(\omega)+\omega{}J(\omega) & & J(\omega) = \braket{\uvec{J}_z}
+\end{align}
+
+The orientation intrinsic frame is chosen such that the components of the quadrupole tenser satisfy $q'_{-1}=q'_1=0$ and $q'_{-2}=q'_2$. With this the principal axes of the intrinsic frame coincide with the principal axes of the quadrupole tensor and both are related to the lab frame by the three Euler angles $\psi$, $\theta$, and $\phi$, shown in Fig. \ref{fig:chp2-TAC-euler-angles}. The component quadrupole moments of the lab frame, $q_{\mu}$, are related to the quadrupole moments of the intrinsic frame, $q_{\mu}'$, as follows:
+\begin{equation}
+\label{eqn:chp2-intrin-quad-to-lab-quad}
+q_{\mu} = \mathcal{D}^2_{\mu{}0}(\psi,\theta,\phi)q'_0+\left[\mathcal{D}^2_{\mu{}2}+\mathcal{D}^2_{\mu{}-2}(\psi,\theta,\phi)(\psi,\theta,\phi)\right]q'_2
+\end{equation}
+With the intrinsic quadrupole moments expressed using the standard deformation parameters of the Lund convention:
+\begin{equation}
+\label{eqn:chp2-lund-conv-quad-moments}
+q'_0=K\beta{}*Cos(\gamma) ~~~~~~~~~~~ q'_2 = -K\frac{\beta{}Sin(\gamma)}{\sqrt{2}}
+\end{equation}
+where $K$ sets the energy scale for the deformed potential \cite{frauendorfTAC}.
+\begin{figure}[t!]
+\centerline{\includegraphics[height=0.3\textheight]{./img/c2/tiltorientation.png}}
+	\caption{Orientation of the rotational axis with respect to the principal axes of the deformed density distribution. Figure taken from: Ref. \cite{danielDissertation}.\label{fig:chp2-TAC-euler-angles}}
+\end{figure}
+
+As the rotation angle $\psi$ is about the cranking axis the intrinsic states are invariant with respect to it and it is set to zero. With this, in the intrinsic frame, the mean-field Routhian is fixed by $\beta$, $\gamma$, $\theta$, and $\phi$, the two parameters of the deformation and the two parameters of the orientation of $\vec{\omega}$ relative to the principal axes. If we take the angular velocity as:
+\begin{equation}
+\label{eqn:chp2-ang-vel-vec}
+\vec{\omega}=(\omega_1,\omega_2,\omega_3)=\omega(Sin(\theta)Sin(\phi),Sin(\theta)Cos(\phi),Cos(\theta))
+\end{equation}
+then the HFB Routhian becomes:
+\begin{align}
+\label{eqn:chp2-TAC-HFB-intrin-routh-rewrite}
+h'=h& -q'_0Q'_0-q'_2(Q'_2+Q'_{-2})-\Delta(P^++P)-\lambda\uvec{N} \\
+&- \omega(J_1Sin(\theta)Sin(\phi)+J_2Sin(\theta)Cos(\phi)+J_3Cos(\theta)) \nonumber
+\end{align}
+With this $\beta$ and $\gamma$ are determined from the self-consistency equations
+\begin{equation}
+\label{eqn:chp2-TAC-beta-gamma-self-consist}
+q'_0=\kappa\Braket{Q'_0}~~~~~~~~~~q'_2=\kappa\Braket{Q'_2}
+\end{equation}
+The remaining Euler angles $\theta$ and $\phi$ are determined from the self-consistency requirement of $\vec{J}\parallel\vec{\omega}$. These parameter sets correspond to extrema of the total Routhian:
+\begin{equation}
+\label{eqn:chp2-tac-extrema-cond2}
+\left. \frac{\partial{}E'}{\partial{}q'_{0}} \right|_{\omega}=0 ~~~~ \left. \frac{\partial{}E'}{\partial{}q'_{2}} \right|_{\omega}=0 ~~~~ \left. \frac{\partial{}E'}{\partial\theta} \right|_{\omega}=0 ~~~~ \left. \frac{\partial{}E'}{\partial\phi} \right|_{\omega}=0
+\end{equation}
+Of these extrema, only the minima are interpreted as bands.
+
+Due to the invariance of the intrinsic quadrupole moments $Q'_0$ and $(Q'_2+Q'_{-2})/\sqrt{2}$ with respect to the rotations $\mathscr{R}_1(\pi)$, $\mathscr{R}_2(\pi)$, and $\mathscr{R}_3(\pi)$ restrictions can be placed on the Euler angles as follows: $0\leq\psi\leq{}2\pi$, $0\leq\theta\leq\pi/2$, and $0\leq\phi\leq\pi$. With these restrictions in mind we can see that there are three possible TAC solutions. They are: the axial solution which is shown in top panel of Fig. \ref{fig:chp2-TAC-solution-types}, the planar solution, found in the middle panel of Fig. \ref{fig:chp2-TAC-solution-types}, and finally, the aplanar solution, which is in the bottom panel of Fig. \ref{fig:chp2-TAC-solution-types}. The axial and planar solutions of the TAC model will be discussed in greater depth in the subsequent sections. The aplanar solution, as it is unimportant to the work in this dissertation, will not be discussed further save to say that it gives rise to one of the two unique signatures of nuclear triaxiality, chirality. Ref. \cite{frauendorfTAC} and Ref. \cite{frauendorfChirality} both have very good discussions of this solution and its implications.
+\begin{figure}[t!]
+\centerline{\includegraphics[height=0.6\textheight]{./img/c2/tacsolutions.png}}
+	\caption{Discrete symmetries of the mean field of a rotating triaxial nucleus for each of the TAC solutions along with schematics of the band structures that arise from each solution. The axis of rotation ($z$), which coincides with the $\vec{J}$, is marked with a circular arrow. The operators are: $\mathscr{P}$: Parity inversion, $\mathscr{R}_{y,z}$: Rotation by $\pi$ about the $y$ or $z$ axis, and $\mathscr{T}$: Time reversal. Figure adapted from: Ref. \cite{frauendorfTAC}.\label{fig:chp2-TAC-solution-types}}
+\end{figure}
+
+\subsection{Rotation About A Principal Axis}
+If the axis of rotation, ($z$), coincides with one of the principal axes of the self consistent solution, then the solution is called Principal Axis Cranking (PAC) and the orientation angles satisfy:
+\begin{equation}
+\label{eqn:chp2-PAC-angle-conditions}
+\theta = 0, \sfrac{\pi}{2}~~~~~~~ \phi= 0, \sfrac{\pi}{2}
+\end{equation}
+The upper panel of Fig. \ref{fig:chp2-TAC-solution-types} shows the PAC case where $\vec{J}$ has the direction of the principal axis 3. In this case the solution has the following properties:
+\begin{equation}
+\label{eqn:chp2=TAC-PAC-sol-prop}
+\mathscr{R}_z(\pi)\Ket{}=e^{-i\alpha\pi}\Ket{}
+\end{equation}
+Here $\alpha$ is the quantum number called signature. In this situation $\alpha$ is a good quantum number and the values that the total spin take on follow the selection rule:
+\begin{equation}
+\label{eqn:chp2=TAC-PAC-spin-sel-rule}
+I=\alpha+2n ~~~~~n\in{}\mathds{Z}
+\end{equation}
+This selection rule shows that the PAC solution represents a single $\Delta{}I=2$ band, as is illustrated on the right side of the upper panel of Fig. \ref{fig:chp2-TAC-solution-types}.
+
+\subsection{Rotation About A Tilted Axis}
+If the axis of rotation does not coincide with one of the principal axes but still lies within the planes defined by them, then the solution is called the Planar Tilted Axis Cranking (TAC) solution. In this case the orientation angles satisfy:
+\begin{align}
+\theta &\neq{} 0, \sfrac{\pi}{2} ~~~~~~ \phi=0, \sfrac{\pi}{2}\\
+\theta &= 0, \sfrac{\pi}{2} ~~~~~~ \phi\neq{}0, \sfrac{\pi}{2}
+\end{align}
+This situation in the middle panel of Fig. \ref{fig:chp2-TAC-solution-types} shows a case of this situation where the axis of rotation lies in the principal planes spanned by axes 1 and 3. As shown in the middle panel of Fig. \ref{fig:chp2-TAC-solution-types} invariance with respect to rotation about the z-axis by $\pi$ is lost, yielding:
+\begin{equation}
+\label{eqn:chp2=TAC-TAC-sol-prop}
+\mathscr{R}_z(\pi)\Ket{}\neq{}e^{-i\alpha\pi}\Ket{}
+\end{equation}
+With the breaking of this symmetry, $\alpha$ ceases to be a good quantum number and there is no longer a selection rule on the total spin. This can be seen schematically on the right side of the middle panel of Fig. \ref{fig:chp2-TAC-solution-types}.
+
+Since 1993 when Frauendorf found a set of self-consistent Hartree-Fock mean-field solutions for uniform rotation about a tilted axis \cite{frauendorfTiltedCranking} TAC has turned out to be a reliable approximation to calculate and investigate the properties of the various types of rotational bands. Details of TAC not covered in this section can be found in Refs. \cite{frauendorfTiltedCranking,frauendorfTACMultiQPBands,frauendorfChirality,frauendorfTAC}
+
+\section{Wobbling Mode in Nuclei}
 \label{sec:models-wobbling}
+\subsection{Simple Wobbling}
+\label{ssec:models-simple-wobbling}
+The rotational kinetic energy of the system is:
+\begin{equation}
+\label{eqn:chp2-rot-kin-en}
+E_{rot} = A_3J_3^2 + A_1J_1^2 + A_2J_2^2
+\end{equation}
+By combining this with the conservation of angular momentum:
+\begin{equation}
+\label{eqn:chp2-am-cons}
+J^3 = J_1^2 + J_2^2 + J_3^2 = I(I+1)
+\end{equation}
+we can find the classical orbit of $\vec{J}$ at the intersection of the angular momentum sphere and energy ellipsoid. Assuming $A_1>A_2>A_3$ ($\mathcal{J}_1<\mathcal{J}_2<\mathcal{J}_3$) the yrast line then corresponds to the two surfaces touching at $J=J_3$ with rotational energy $E(J)=A_3J^2$. These orbits are illustrated in Figure \ref{fig:chp2-classical-am-orbits}. Here image a is an orbit slightly above the yrast line which is harmonic wobbling motion described by Bohr and Mottelson \cite{bohrMottelson2} (more on this in section \ref{sec:models-wobbling}). Image b is the separatrix, representing
+\begin{figure}[t!]
+\centerline{\includegraphics[height=0.25\textheight]{./img/c2/simple_am_orbits.png}}
+	\caption{Intersections of the angular momentum and energy surfaces with $A_1=6*A_3$ and $A_2=3A_3$ for $J=2$ taken at progressively larger various energies from a to c. Figure adapted from: Ref. \cite{frauendorfTransverseWobbling}.\label{fig:chp2-classical-am-orbits}}
+\end{figure} the unstable rotation about the axis with intermediate MOI, this orbit the boundary between rotation about the axis with the maximum MOI (axis 3) and the axis with minimum MOI (axis 1). Image c gives an example of an orbit corresponding to rotation about axis 1.
+
+
+\subsection{Longitudinal Wobbling}
+\label{ssec:models-long-wobbling}
+\subsection{Longitudinal Wobbling}
+\label{ssec:models-transverse-wobbling}
 \subsection{Signatures of Wobbling}
 \label{sec:models-sig}
