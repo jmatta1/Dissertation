@@ -9,12 +9,15 @@
 \usepackage{dcolumn}    % use to align table columns on decimal point
 \usepackage{epstopdf}   % allows use of eps figures
 \epstopdfsetup{update}  % only regenerate pdf files when eps file is newer
-\usepackage{xstring}    % for \IfEqCase
+%\usepackage{xstring}    % for \IfEqCase
 \usepackage{amssymb}    % for a few symbols
 \usepackage{multirow}   % for the multirow command
 \usepackage{booktabs}   % for nice lines in tables
 \usepackage{longtable}  % for super long tables (I'm looking at you calibration parameter sets)
 \usepackage{xfrac}      % for sfrac
+\usepackage{braket}     % for good looking bra-ket notation
+\usepackage{mathrsfs}   % for math script symbols like those used for rotation operators
+\usepackage{ dsfont }   % for fancy integer symbols
 % % % % % % % % % % % % % % % % % %
 % Define a few commands for conveniences sake
 \newcommand{\gr}{$\gamma$ ray}
@@ -93,11 +96,6 @@ THE TRANSVERSE WOBBLING MODE IN \pr{}}
 % Chapter 1 - General Introduction
 %
 %\include{cmn_chaps/chapter_01_introduction}
-
-%
-% Seperator for part 1
-%
-%\unnumchapter{PART I: TRANSVERSE WOBBLING IN $^{135}$Pr}
 
 %
 % Chapter 2 - Nuclear Models
