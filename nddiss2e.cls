@@ -152,7 +152,10 @@
             linktocpage=true,%
             breaklinks=true,%
             bookmarkstype=toc,%
-            colorlinks=false,%
+            colorlinks=true,%
+			linkcolor={blue},
+            citecolor={blue},
+            urlcolor={blue},
             pdfpagemode=UseOutlines]{hyperref}
 \fi
 }
