@@ -630,4 +630,24 @@ $R_{DCO}$ and $r$ are typically used to distinguish stretched quadrupole transit
 
 \subsection{Polarization}
 \label{ssec:exp-pol}
-Directional correlations can be generalized to examine the polarization of gamma-ray transitions. 
+A transition can have a polarization of either electric or magnetic in nature, giving rise to $EL$ and $ML$ transitions, if $L$ is even electric transitions leave the parity of the nucleus unchanged and magnetic transitions change the parity. If $L$ is odd, this is reversed. The polarization of a transition can be measured via the scattering asymmetry \cite{expPolDCO}:
+\begin{equation}
+\label{eqn:chp3-scat-asym}
+A=\frac{a(E_{\gamma})N_{\perp}-N_{\parallel}}{a(E_{\gamma})N_{\perp}+N_{\parallel}}
+\end{equation}
+Here $N_{\perp}$ and $N_{\parallel}$ are the number of coincidence counts between segments of a clover detector in the direction perpendicular and parallel to the emission plane (defined by the beam axis and the gamma ray emission direction), respectively. The parameter $a(E_{\gamma})$ is the correction for any natural asymmetry in the response of the clover segments as a function of gamma-ray energy. This correction is defined as:
+\begin{equation}
+\label{eqn:chp3-nat-asym-corr}
+a(E_{\gamma})=\frac{N_{\parallel}(unpolarized)}{N_{\perp}(unpolarized)}
+\end{equation}
+As a radioactive source has no spin alignment it can serve as a source of unpolarized gamma-rays for measuring this value. For the INGA experiment this natural asymmetry was measured using the energy calibration data, Fig. \ref{fig:chp3-nat-asyms} has a plot of the extracted natural asymmetries and the linear fit to them (as in Ref. \cite{expPolDCO}.
+\begin{figure}[hb!]
+	\centerline{\includegraphics[height=0.35\textheight]{./img/c3/naturalAsymPlot.eps}}
+	\caption{Natural asymmetries and the linear fit to them. \label{fig:chp3-nat-asyms}}
+\end{figure}
+The linear fit was:
+\begin{equation}
+\label{eqn:chp3-nat-asym-fit}
+a(E_{\gamma}(keV)) = 0.92\pm0.02 + 8.2\pm3.7\times{}10^{-5}
+\end{equation}
+With the fit to the natural asymmetries one is ready to calculate the polarization asymmetry $A$. If $A>0$ the transitions in question is predominantly electric in nature, if $A<0$ the transition is predominantly magnetic in nature.
