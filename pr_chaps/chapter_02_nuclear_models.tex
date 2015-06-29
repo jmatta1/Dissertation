@@ -10,14 +10,14 @@
 
 \section{Introduction}
 \label{sec:models-into}
-The atomic nucleus, discovered in $1911$ by Ernest Rutherford \cite{rutherfordNuclearModel}, is a tiny concentration of matter at the heart of an atom. The nucleus is approximately $1-10$fm across, contains more than $99.94\%$ of an atom's mass and is composed of protons and neutrons (collectively called nucleons). The force between nucleons is a powerful short range force that overcomes the Coulomb repulsion to produce a bound system. This force's range is quite limited, to perhaps nearest neighbors only, as can be seen in the saturation of binding energy per nucleon around $A\sim60$ at a value close to $8.5$MeV.
+The atomic nucleus, discovered in $1911$ by Ernest Rutherford \cite{rutherfordNuclearModel}, is a tiny concentration of matter at the heart of an atom. The nucleus is approximately $1-10$ fm across, contains more than $99.94\%$ of an atom's mass, and is composed of protons and neutrons (collectively called nucleons). The force between nucleons is a powerful short range force that overcomes the Coulomb repulsion to produce a bound system. The range of this force is quite limited, to perhaps nearest neighbors only, as can be seen in the saturation of binding energy per nucleon around $A\sim60$ at a value close to $8.5$MeV.
 
 \begin{figure}[h!]
 \centerline{\includegraphics[width=\textwidth]{./img/c2/binding_plot.eps}}
 	\caption{Binding energies per nucleon plotted versus mass number. Values calculated from Ref. \cite{AME20031,AME20032}.\label{fig:chp2-binding}}
 \end{figure}
 
-Examination of the two proton and two neutron separation energies (Fig. \ref{fig:chp2-masses}) shows several distinct discontinuities at specific numbers of protons or neutrons. Further examination of the energies of the first $2^+$ (Fig. \ref{fig:chp2-two-plus-energies}) states shows peaks at the same numbers. These ``magic numbers'' occur at numbers of protons and neutrons where there is a dramatic drop off in the nucleon separation energy with the addition of another nucleon. Further evidence for magic numbers of protons and neutrons can be found in the near zero quadrupole moments of nuclei located at these magic numbers, substantially decreased neutron absorption cross-sections at neutron magic numbers, and in the enhanced abundance of nuclides where N and Z are magic numbers. The magic numbers are $2$, $8$, $20$, $28$, $50$, $82$, and $126$, with $40$ and $64$ also weakly magic over certain ranges of N and Z.
+Examination of the two proton and two neutron separation energies (Fig. \ref{fig:chp2-masses}) shows several distinct discontinuities at specific numbers of protons or neutrons. Further examination of the energies of the first $2^+$ (Fig. \ref{fig:chp2-two-plus-energies}) states shows peaks at the same numbers. These ``magic numbers'' occur at numbers of protons and neutrons where there is a dramatic drop off in the nucleon separation energy with the addition of another nucleon. Further evidence for magic numbers of protons and neutrons can be found in the increase first excited state energies located at these magic numbers, substantially decreased neutron absorption cross-sections at neutron magic numbers, and in the enhanced abundance of nuclides where N and Z are magic numbers. The magic numbers are $2$, $8$, $20$, $28$, $50$, $82$, and $126$, with $40$ and $64$ also weakly magic over certain ranges of N and Z.
 
 \begin{figure}[h!]
 \centerline{\includegraphics[width=\textwidth]{./img/c2/2nuc_sep_en.eps}}
@@ -38,7 +38,7 @@ The nucleus also exhibits collective excitations such as rotation and vibration 
 The nuclear shell model, in its simplest form, seeks to explain the shell structure observed in nuclei by describing them and independent particles in a mean field potential produced by the other nucleons. While the short range nature of the nuclear force might lead to the use of a square well potential or similar as the mean field, the Simple Harmonic Oscillator (SHO) potential is a reasonable first order approximation (seen in Figure \ref{fig:chp2-SHOPot}), which happens to be much simpler to solve. Placing a single particle in the SHO potential gives the first few magic numbers observed; however, to reproduce all the magic numbers it is necessary to add an $\vec{l}^2$ potential and a strong spin-orbit ($\vec{l}\cdot\vec{s}$) potential. The Hamiltonian for such a potential is as follows:
 \begin{equation}
 \label{eqn:chp2-sm-sho-hamil}
-\mathbf{\mathit{H}} = \frac{-\hbar^2}{2m}\nabla^2 + \frac{1}{2}m(\omega r)^2 + \beta \uvec{l}^2 + \alpha \uvec{l}\cdot{}\uvec{s}
+\mathbf{\mathit{H}} = \frac{-\hbar^2}{2m}\nabla^2 + \frac{1}{2}m(\omega r)^2 + B \uvec{l}^2 + A \uvec{l}\cdot{}\uvec{s}
 \end{equation}
 The progression of shell gaps from $SHO$ to $SHO + \vec{l}^2$ to $SHO + \uvec{l}^2 + \uvec{l}\cdot\uvec{s}$ is shown in Figure \ref{fig:chp2-shell-model}.
 
@@ -59,7 +59,7 @@ In more realistic shell model calculations a Woods-Saxon potential is adopted. H
 \label{eqn:chp2-sm-ws-hamil}
 \mathbf{\mathit{H}} = \frac{-\hbar^2}{2m}\nabla^2 + \frac{V}{1+e^{(r-R)/a}} - \alpha(r)\uvec{l}\cdot\uvec{s}
 \end{equation}
-where $R=r_0A^{1/3}$, $r_0\sim1.2$fm, $a\sim0.5$fm, and $V\sim50$MeV. In addition to the central term, a spin orbit term is necessary to reproduce the observed shell gaps. The central flatness of the Woods-Saxon potential reflects the saturation of the nuclear force better than an SHO potential. This increased realism comes at the cost of increased difficulty in calculations, with this Hamiltonian the Sch\"odinger equation is no longer analytically solvable and must instead be solved with numerical methods.
+where $R=r_0A^{1/3}$, $r_0\sim1.2$fm, $a\sim0.5$fm, and $V\sim50$MeV. In addition to the central term, a spin orbit term is necessary to reproduce the observed shell gaps. The central flatness of the Woods-Saxon potential reflects the saturation of the nuclear force better than an SHO potential. This increased realism comes at the cost of increased difficulty in calculations--with this Hamiltonian the Sch\"odinger equation is no longer analytically solvable and must instead be solved with numerical methods.
 %and the loss of quantum numbers; in this model the only good quantum numbers are $J=\mathit{l}+\mathit{s}$ and $\pi = (-1)^\mathit{l}$.
 
 Up to now in this chapter, the nucleons were considered as independent particles within a mean field which was the average potential produced by the other particles. This description, while powerful, is not accurate, especially for nuclei away from the closed shells. The missing piece is the interactions between nuclei that are not accounted for in the mean field, often called ``residual interactions.'' Residual interactions must be accounted for to produce an accurate description of the nucleus.
@@ -73,7 +73,7 @@ In the standard shell model the potentials are spherically symmetric, depending 
 \label{eqn:surface-full-expansion}
 R(\theta, \phi) = R_{o}\left \lgroup 1 + \sum_{\lambda = 2}^{\infty}\sum_{\mu = -\lambda}^{\lambda}\alpha_{\lambda \mu} Y_{\lambda \mu}(\theta, \phi)\right \rgroup
 \end{equation} 
-Here $R_0$ is the radius of a sphere with the same volume as the deformed nucleus, $Y_{\lambda \mu}(\theta, \phi)$ are the spherical harmonic functions, and $\alpha_{\lambda \mu}$ are the coefficients of the expansion. The expansion starts at $\lambda = 2$ because the $\lambda = 1$ corresponds to the translation of the center of mass, a term easily eliminated by requiring the nuclear center of mass to coincide with the coordinate's origin. The first of the non-trivial terms, $\lambda = 2$, corresponds to the components of quadrupole deformation, $\lambda = 3$ gives octupole deformation, $\lambda = 4$ gives hexadecapole deformation, so on. As $\lambda = 2$ is the most important component in this work, only quadrupole deformation terms will be considered henceforth.
+Here $R_0$ is the radius of a sphere with the same volume as the deformed nucleus, $Y_{\lambda \mu}(\theta, \phi)$ are the spherical harmonic functions, and $\alpha_{\lambda \mu}$ are the coefficients of the expansion. The expansion starts at $\lambda = 2$ because the $\lambda = 1$ corresponds to the translation of the center of mass, a term easily eliminated by requiring the nuclear center of mass to coincide with the coordinate's origin. The first of the non-trivial terms, $\lambda = 2$, corresponds to the components of quadrupole deformation, $\lambda = 3$ gives octupole deformation, $\lambda = 4$ gives hexadecapole deformation, and so on. As $\lambda = 2$ is the most important component in this work, only quadrupole deformation terms will be considered henceforth.
 
 The quadrupole shapes cover oblate spheres (two semi-major axes, like a doorknob), prolate spheres (two semi-minor axes, like an American football), and triaxial shapes (all three axes are different lengths, like a potato). Because the rotation of the nucleus is not fixed, \emph{i.e.} the nucleus can be rotated such that its principal axes coincide with the axes of the coordinate system, the five quadrupole shape parameters are reduced to two independent parameters $a_{2 0}$ and $a_{2 2}$, with the conditions: $a_{2 -2}=a_{2 2}$ and $a_{2 1}=a_{2 -1}=0$. Further, it is common to parameterize the remaining expansion coefficients using the Hill-Wheeler variables, $\beta$ and $\gamma$, as follows \cite{wongBook}:
 \begin{align}
@@ -111,7 +111,7 @@ In 1955, to treat deformed nuclei, S.G. Nilsson introduced a modified version of
 \label{eqn:chp2-nilsson-hamil}
 H_{nil}=-\frac{\hbar^{2}}{2m}\nabla^{2} + \frac{m}{2}\left(\omega_{x}^{2}x^{2} + \omega_{y}^{2}y^{2} + \omega_{z}^{2}z^{2}\right) + 2\kappa \hbar \omega_{o}\left[\vec{l}\cdot \vec{s} - \mu \left(l^{2} - \left \langle l^{2} \right \rangle_{N} \right) \right]
 \end{equation} 
-Here $\omega_{x,y,z}$ are the oscillator frequencies in each of the three dimensions, $\kappa$ controls the strength of the spin orbit, and $\mu$ controls the strength of the correction term. The correction term $l^2 - \left \langle l^{2} \right \rangle_{N}$ originally had the form of $\mu l^2$ \cite{nilsson}. It served the purpose of suppressing the energy of the higher laying shells, however it was noted in Ref. \cite{nilssonCorrection} that this shift was too large for large N quantum numbers. Thus the correction term was modified to its current form to compensate. The three oscillator frequencies are chosen to be inversely proportional to the axis lengths of the ellipsoid $a_x$, $a_y$, and $a_z$ as follows:
+Here $\omega_{x,y,z}$ are the oscillator frequencies in each of the three dimensions, $\kappa$ controls the strength of the spin orbit part of the potential, and $\mu$ controls the strength of the correction term. The correction term, $l^2 - \left \langle l^{2} \right \rangle_{N}$, originally had the form of $\mu l^2$ \cite{nilsson}. It served the purpose of suppressing the energy of the higher lying shells; however, it was noted in Ref. \cite{nilssonCorrection} that this shift was too large for large N quantum numbers. Thus the correction term was modified to its current form to compensate. The three oscillator frequencies are chosen to be inversely proportional to the axis lengths of the ellipsoid $a_x$, $a_y$, and $a_z$ as follows:
 \begin{align}
 \label{eqn:chp2-nilsson-oscilator-freq}
 \omega_i = \omega_0\frac{R_0}{a_i} &  & i=x,y,z
@@ -160,7 +160,7 @@ The deformation dependence of Nilsson orbitals is usually summarized in a Nilsso
 
 \section{Collective Rotation}
 \label{sec:models-rigid-rotor}
-A model of collective nuclear motion was developed by Bohr and Mottleson \cite{bohrMottelsonArticle,bohrMottelson2} due to several observations that could not be explained with single particle motion. Among these are: \emph{1.} Fission, many of the features are successfully explained with the liquid drop model \cite{meitnerFissionProducts,fissionMechanism}. \emph{2.} Deformation of the nuclear surface by particle structure \cite{deformationPrediction} giving rise to quadrupole moments which exceed single particle estimates in many nuclei \cite{casimirQuadMoments,nuclearQuadMomentsAndShellStruc}. \emph{3.} The occurrence of electric quadrupole \gr{} transitions with lifetimes much shorter than single particle estimates \cite{nuclearIsomerClassification} which is a characteristic feature of the excitation spectra of strong deformed nuclei and most importantly: rotational bands \cite{QuadIsomerInterp}.
+A model of collective nuclear motion was developed by Bohr and Mottleson \cite{bohrMottelsonArticle,bohrMottelson2} due to several observations that could not be explained with single particle motion. Among these are: \emph{1.} Fission, many of the features are successfully explained with the liquid drop model \cite{meitnerFissionProducts,fissionMechanism}. \emph{2.} Deformation of the nuclear surface by particle structure \cite{deformationPrediction} giving rise to quadrupole moments which exceed single particle estimates in many nuclei \cite{casimirQuadMoments,nuclearQuadMomentsAndShellStruc}. \emph{3.} The occurrence of electric quadrupole gamma ray transitions with lifetimes much shorter than single particle estimates \cite{nuclearIsomerClassification} which is a characteristic feature of the excitation spectra of strong deformed nuclei and most importantly: rotational bands \cite{QuadIsomerInterp}.
 \subsection{Rigid Triaxial Rotor Model (TRM)}
 \label{ssec:models-triaxial-rotor}
 One of the simplest forms of excitation a nucleus can experience is rotation. However, in quantum mechanics rotation is can only occur about axes that are not symmetry axes (where the symmetry axis is denoted the $\uvec{z}$-axis). This is because the wave function that describes this system is an eigenfunction of $\uvec{J}_z$, and thus, is symmetrical about the $\uvec{z}$-axis. Due to this symmetry any rotation of this wave function about the symmetry axis generates only phase shift and has a wave function identical to that of the ground state. A system cannot collectively rotate about symmetry axes. Since spherical nuclei are symmetric about all axes, they cannot exhibit collective rotation.
@@ -177,7 +177,7 @@ Here $H_{intr}$ is the intrinsic component of the Hamiltonian accounting for the
 \begin{align}
 \label{eqn:chp2-triaxial-rotor-hamiltonian-rewrite}
 H_{rot}=& H_{r}^{Diag} + H_{r}^{OffDiag}\\
-H_{r}^{OffDiag}=&\left[\frac{1}{2}\left(A_1+A_2\right)\uvec{J}^2 + \left(A_3-\frac{1}{2}\left(A_1+A_2\right)\right)\uvec{J}^2_3\right]\nonumber\\
+H_{r}^{Diag}=&\left[\frac{1}{2}\left(A_1+A_2\right)\uvec{J}^2 + \left(A_3-\frac{1}{2}\left(A_1+A_2\right)\right)\uvec{J}^2_3\right]\nonumber\\
 H_{r}^{OffDiag}=&\frac{1}{4}\left(A_1-A_2\right)\left(\uvec{J}^2_++\uvec{J}^2_-\right) \nonumber
 \end{align}
 Here $H_{r}^{Diag}$ is the diagonal component of the Hamiltonian, $H_{r}^{OffDiag}$ is the off diagonal component, $\uvec{J}^2$ is the total angular momentum operator, and $\uvec{J}^2_{\pm}$ are the angular momentum raising and lowering operators $\uvec{J}_{\pm} = \uvec{J}_1\pm\mathit{i}\uvec{J}_2$. Taking the basis states of the wave function to be \cite{triaxRotorSol}:
@@ -213,12 +213,16 @@ The QTR model is an extension of the particle + rotor model which was put forth 
 H&=H_{sqp}+H_{rot}-H_{int}\\
 %H_{rot}&=A_3(\uvec{J}_3-\uvec{j}_3)^2+A_1(\uvec{J}_1-\uvec{j}_1)^2+A_2(\uvec{J}_2-\uvec{j}_2)^2\\
 H_{rot}&=A_3\uvec{R}_3^2+A_1\uvec{R}_1^2+A_2\uvec{R}_2^2\\
-H_{int}&= \sum\limits_{\mu}^{}q^*_{\mu}Q_{\mu} = f r^2 \left(\epsilon \cos(\gamma) \bar{Y}^2_0 + \frac{\epsilon \cos(\gamma)}{\sqrt{2}}\left(\bar{Y}^2_2 + \bar{Y}^2_{-2}\right)\right)
+H_{int}&=\kappa \sum\limits_{\mu}^{}q^*_{\mu}Q_{\mu} = \kappa{} f r^2 \left(\epsilon \cos(\gamma) \bar{Y}^2_0 + \frac{\epsilon \cos(\gamma)}{\sqrt{2}}\left(\bar{Y}^2_2 + \bar{Y}^2_{-2}\right)\right)
 \end{align}
-Here $H_{sqp}$ is the single quasiparticle Hamiltonian accounting for the presence of the central potential and the pairing interaction, $H_{rot}$ is the rotor model Hamiltonian, $H_{int}$ is the interaction of the quasiparticle to the triaxial core, $\uvec{J}_k$ is the total angular momentum of the system along the $k^{th}$ axis, $\uvec{j}_k$ is the angular momentum of the quasiparticle along the $k^{th}$ axis, $\bar{Y}^l_m$ is the result of applying the spherical harmonic operator $Y^l_m$ to the basis state, and $f$ is a scaling factor obtained from the following relations:
+Here $H_{sqp}$ is the single quasiparticle Hamiltonian accounting for the presence of the central potential and the pairing interaction, $H_{rot}$ is the rotor model Hamiltonian, $H_{int}$ is the interaction of the quasiparticle to the triaxial core, $\uvec{J}_k$ is the total angular momentum of the system along the $k^{th}$ axis, $\uvec{j}_k$ is the angular momentum of the quasiparticle along the $k^{th}$ axis, $\bar{Y}^l_m$ is the result of applying the spherical harmonic operator $Y^l_m$ to the basis state, $f$ is the scaling factor obtained from the following:
 \begin{align}
 \label{eqn:chp2-qtr-int-hamil-scaling}
-\kappa f &= \frac{2}{3}\sqrt{\frac{4\pi}{5}}\hbar\omega_{\circ}\\
+\kappa f = \frac{2}{3}\sqrt{\frac{4\pi}{5}}\hbar\omega_{\circ}\\
+\end{align}
+and $\kappa$ is the coupling strength, which is related to the deformation of the system by:
+\begin{align}
+\label{eqn:chp2-qtr-int-hamil-coupling}
 \kappa \Bra{0}|Q|\Ket{2} & = \hbar\omega_{\circ} \epsilon \cos(\gamma)
 \end{align}
 Here $\Bra{0}|Q|\Ket{2}$ is the reduced matrix element of the core quadrupole operator between the  $0^+$ ground state and the first $2^+$ state. This is related to the reduced quadrupole transition probability as follows:
@@ -227,7 +231,7 @@ Here $\Bra{0}|Q|\Ket{2}$ is the reduced matrix element of the core quadrupole op
 B(E2,J_I\rightarrow{}J_F)=\frac{|\Bra{J_F}|Q|\Ket{J_I}|^2}{2J_I+1}
 \end{equation}
 
-Qualitatively, the $H_{int}$ works as follows. A high j quasiparticle with predominantly particle nature will align its $\vec{j}$ to the short axis of the core. This orientation results in the maximum overlap of the torus like density distribution of the quasiparticle and the triaxial core which minimizes the energy of the attractive interaction between the two. For a high j quasiparticle with hole nature, the $\vec{j}$ aligns to the long axis which minimizes the overlap of the torus with the triaxial core which minimizes the energy of the repulsive interaction between the two. Finally a quasiparticle from the middle of the shell, possessing particle and hole nature in roughly equal measure would align the medium axis of the triaxial core.
+Qualitatively, the $H_{int}$ works as follows. A high j quasiparticle with predominantly particle nature will align its $\vec{j}$ to the short axis of the core. This orientation results in the maximum overlap of the torus like density distribution of the quasiparticle and the triaxial core which minimizes the energy of the attractive interaction between the two. For a high j quasiparticle with hole nature, the $\vec{j}$ aligns to the long axis which minimizes the overlap of the torus with the triaxial core and minimizes the energy of the repulsive interaction between the two. Finally a quasiparticle from the middle of the shell, possessing particle and hole nature in roughly equal measure, would align the medium axis of the triaxial core.
 
 The reduced transition probabilities of this system can be extracted similarly to those of the triaxial rotor model (equation \ref{eqn:chp2-triaxial-rotor-reduced-transitions}); however the operator $\mathcal{M}^E_{2\mu}$ will change to account for the quadrupole moment of both the core ($Q$) and the quasiparticle ($q$).
 
@@ -245,7 +249,7 @@ The pairing interaction is the force that couples two identical nucleons in time
 %\label{eqn:chp2-pairing-first-function}
 %V_{pair}=-G\delta(\phi_1-\phi_2)\delta(\cos(\theta_1)-\cos(\theta_2))\frac{\delta(r_1-r_2)}{r^2}
 %\end{equation}
-In 1950, M. Goeppert suggested describing the pairing force as a delta function multiplied by some interaction strength \cite{pairingFirstTheory}. Calculations were performed using this interaction to explore its effects \cite{pairingCorrEffectOnProperties} and then later analogies between nuclear pairing and BCS superconductivity theory \cite{bcsTheory} were discovered and examined \cite{pairingAnalogyToBCS,pairingSuperfluidity}. The pairing interaction strength $G$ has been determined to have different values for the protons and neutron. For protons the pairing strength is approximately $G_p=\sfrac{17}{A} MeV$ and for neutrons the pairing strength is approximately $G_n=\sfrac{23}{A} MeV$. The Hamiltonian to describe this interaction is usually written as:
+In 1950, M. Goeppert suggested describing the pairing force as a delta function multiplied by some interaction strength \cite{pairingFirstTheory}. Calculations were performed using this interaction to explore its effects \cite{pairingCorrEffectOnProperties} and then later analogies between nuclear pairing and BCS superconductivity theory \cite{bcsTheory} were discovered and examined \cite{pairingAnalogyToBCS,pairingSuperfluidity}. The pairing interaction strength $G$ has been determined to have different values for the protons and neutron. For protons the pairing strength is approximately $G_p=\frac{17}{A} MeV$ and for neutrons the pairing strength is approximately $G_n=\frac{23}{A} MeV$. The Hamiltonian to describe this interaction is usually written as:
 \begin{equation}
 \label{eqn:chp2-pairing-hamil}
 H_{pair} = -GP^+P-\lambda{}\uvec{N}
@@ -277,8 +281,8 @@ The energy range that this ``smearing'' of level occupancies covers is equal to 
 Where $U$ is the emptiness factor (the probability that a state will be occupied by a hole) and $V$ is the fullness factor (the probability that a state will be occupied by a particle). $U$ and $V$ are defined as follows
 \begin{align}
 \label{eqn:chp2-pairing-gap-param-defs}
-V_i &= \sqrt{\frac{1}{2}\left(1+\frac{\epsilon_1-\lambda}{\sqrt{(\epsilon_1-\lambda)^2+\Delta^2}}\right)}\\
-U_i &= \sqrt{\frac{1}{2}\left(1-\frac{\epsilon_1-\lambda}{\sqrt{(\epsilon_1-\lambda)^2+\Delta^2}}\right)}
+V_i &= \sqrt{\frac{1}{2}\left(1+\frac{\epsilon_i-\lambda}{\sqrt{(\epsilon_1-\lambda)^2+\Delta^2}}\right)}\\
+U_i &= \sqrt{\frac{1}{2}\left(1-\frac{\epsilon_i-\lambda}{\sqrt{(\epsilon_1-\lambda)^2+\Delta^2}}\right)}
 \end{align}
 Here $\epsilon_i$ represents the single particle energies, and $\lambda$ is the chemical potential for a given number of particles. The probabilities are normalized such that $U_i^2+V_i^2=1$. Far below the Fermi surface the probability that an orbit will be occupied is $V_i=1$, while the probability that the orbit is unoccupied $U_i=0$. This situation reverses itself far above the Fermi surface. Close to the Fermi surface both probabilities will have a finite value. In BCS theory \cite{bcsTheory} the quasiparticle energy is expressed as:
 \begin{equation}
@@ -369,7 +373,7 @@ The remaining Euler angles $\theta$ and $\phi$ are determined from the self-cons
 \end{equation}
 Of these extrema, only the minima are interpreted as bands.
 
-We can see that there are three possible TAC solutions. They are: the principal axis solution shown in top panel of Fig. \ref{fig:chp2-TAC-solution-types}, the planar solution found in the middle panel of Fig. \ref{fig:chp2-TAC-solution-types}, and the aplanar solution in the bottom panel of Fig. \ref{fig:chp2-TAC-solution-types}. The axial and planar solutions of the TAC model will be discussed further in the subsequent sections. The aplanar solution is of no consequence in this work beyond it giving rise to one of the two unique signatures of nuclear triaxiality, chirality. Ref. \cite{frauendorfTAC} and Ref. \cite{frauendorfChirality} have good discussions of this solution and its implications.
+We can see that there are three possible TAC solutions. They are: the principal axis solution shown in top panel of Fig. \ref{fig:chp2-TAC-solution-types}, the planar solution found in the middle panel of Fig. \ref{fig:chp2-TAC-solution-types}, and the aplanar solution in the bottom panel of Fig. \ref{fig:chp2-TAC-solution-types}. The axial and planar solutions of the TAC model will be discussed further in the subsequent sections. The aplanar solution is of no consequence in this work beyond it giving rise to one of the two unique signatures of nuclear triaxiality \emph{viz.} chirality. Ref. \cite{frauendorfTAC} and Ref. \cite{frauendorfChirality} have good discussions of this solution and its implications.
 \begin{figure}[t!]
 \centerline{\includegraphics[height=0.6\textheight]{./img/c2/tacsolutions.png}}
 	\caption{Discrete symmetries of the mean field of a rotating triaxial nucleus for each of the TAC solutions along with schematics of the band structures that arise from each solution. The axis of rotation ($z$), which coincides with the $\vec{J}$, is marked with a circular arrow. The operators are: $\mathscr{P}$: Parity inversion, $\mathscr{R}_{y,z}$ Rotation by $\pi$ about the $y$ or $z$ axis, and $\mathscr{T}$: Time reversal. Figure adapted from Ref. \cite{frauendorfTAC}.\label{fig:chp2-TAC-solution-types}}
@@ -392,7 +396,7 @@ Here $\alpha$ is the quantum number called signature. In this situation $\alpha$
 \label{eqn:chp2=TAC-PAC-spin-sel-rule}
 I=\alpha+2n ~~~~~n\in{}\mathds{Z}
 \end{equation}
-This selection rule shows that the PAC solution represents a single $\Delta{}I=2$ band, as illustrated on the right side of the upper panel of Fig. \ref{fig:chp2-TAC-solution-types}.
+here, $\mathds{Z}$ represents the set of integers. This selection rule shows that the PAC solution represents a single $\Delta{}I=2$ band, as illustrated on the right side of the upper panel of Fig. \ref{fig:chp2-TAC-solution-types}.
 
 \subsubsection{Rotation About A Tilted Axis}
 \label{sssec:models-tac-tac}
@@ -408,7 +412,7 @@ The middle panel of Fig. \ref{fig:chp2-TAC-solution-types} shows a case in which
 \end{equation}
 With the breaking of this symmetry, $\alpha$ ceases to be a good quantum number and there is no longer a selection rule on the total spin. This can be seen schematically on the right side of the middle panel of Fig. \ref{fig:chp2-TAC-solution-types}.
 
-Since 1993, when Frauendorf found a set of self-consistent Hartree-Fock mean-field solutions for uniform rotation about a tilted axis \cite{frauendorfTiltedCranking} TAC has turned out to be a reliable approximation to calculate and investigate the properties of the various types of rotational bands. Details of TAC not covered in this section can be found in Refs. \cite{frauendorfTiltedCranking,frauendorfChirality,frauendorfTACMultiQPBands,frauendorfTAC}
+Since 1993, when Frauendorf found a set of self-consistent Hartree-Fock mean-field solutions for uniform rotation about a tilted axis \cite{frauendorfTiltedCranking}, TAC has turned out to be a reliable approximation to calculate and investigate the properties of the various types of rotational bands. Details of TAC not covered in this section can be found in Refs. \cite{frauendorfTiltedCranking,frauendorfChirality,frauendorfTACMultiQPBands,frauendorfTAC}
 
 \section{The Wobbling Mode in Nuclei}
 \label{sec:models-wobbling-mode}
@@ -425,7 +429,7 @@ E_{rot} = A_3J_3^2 + A_1J_1^2 + A_2J_2^2
 Additionally the condition that the squares of the components of the angular momentum sum to the square of the total angular momentum must be met:
 \begin{equation}
 \label{eqn:chp2-am-cons}
-J^3 = J_1^2 + J_2^2 + J_3^2 = I(I+1)
+J^2 = J_1^2 + J_2^2 + J_3^2 = I(I+1)
 \end{equation}
 Together these surfaces give the classical orbits of $\vec{J}$ at the intersection of the angular momentum sphere and energy ellipsoid. Assuming the axes are chosen such that $A_1>A_2>A_3$ ($\mathcal{J}_1<\mathcal{J}_2<\mathcal{J}_3$), the surface equations can be plotted for 3 different situations as in Fig. \ref{fig:chp2-classical-am-orbits}. Here the classic angular momentum orbits can be seen directly in the intersection between the two surfaces. For Fig. \ref{fig:chp2-classical-am-orbits} the rotor parameters were chosen so that $A_1=6*A_3$ and $A_2=3A_3$ and $A_3$ was used to adjust the energy scale of the ellipsoid between the various panels of the plot. The yrast line then corresponds to the two surfaces touching at $J_3=J$ with rotational energy $E(J)=A_3J^2$. This is not plotted in any of the panels of Fig. \ref{fig:chp2-classical-am-orbits} as the energy ellipsoid would be contained within the angular momentum sphere, except for an invisible point of contact at $J_3=J$. In Fig. \ref{fig:chp2-classical-am-orbits} the top panel is an orbit slightly above the yrast line which is the harmonic wobbling motion described by Bohr and Mottelson \cite{bohrMottelson2}. The middle panel is the separatrix, representing the unstable rotation about the axis with intermediate MOI. This orbit is the boundary between rotation about the axis with the maximum MOI (axis 3) and the axis with minimum MOI (axis 1) and has a classical frequency of zero. The bottom panel gives an example of an orbit corresponding to rotation about axis 1.
 \begin{figure}[t!]
@@ -447,13 +451,13 @@ where n is the number of wobbling phonons and the wobbling frequency is:
 Within the Harmonic Approximation (HA) the intraband reduced transition probabilities B(E2) \cite{wobblingGeometry} are:
 \begin{equation}
 \label{eqn:chp2-simple-wobb-intraband-e2-red-mat}
-B(E2;(I,n)\rightarrow(I-2,n)\approx\frac{5}{16\pi}e^2Q'^2){22}
+B(E2;(I,n)\rightarrow(I-2,n))\approx\frac{5}{16\pi}e^2Q'^2_{22}
 \end{equation}
-Here $Q'^2_{22}=Q\cos(\gamma)$ where $Q$ is the intrinsic quadrupole moment. The interband B(E2) \cite{wobblingGeometry} become:
+Here $Q'_{22}=Q\cos(\gamma)$ where $Q$ is the intrinsic quadrupole moment. The interband B(E2)s \cite{wobblingGeometry} become:
 \begin{align}
 \label{eqn:chp2-simple-wobb-interband-e2-red-mat}
-B(E2;(I,n)\rightarrow(I-1,n+1)&\approx\frac{5}{16\pi}e^2\frac{n+1}{J}\left(\sqrt{3}Q'_{20}y+\sqrt{2}Q'_{22}x\right)^2\\
-B(E2;(I,n)\rightarrow(I-1,n-1)&\approx\frac{5}{16\pi}e^2\frac{n}{J}\left(\sqrt{3}Q'_{20}x+\sqrt{2}Q'_{22}y\right)^2
+B(E2;(I,n)\rightarrow(I-1,n+1))&\approx\frac{5}{16\pi}e^2\frac{n+1}{J}\left(\sqrt{3}Q'_{20}y+\sqrt{2}Q'_{22}x\right)^2\\
+B(E2;(I,n)\rightarrow(I-1,n-1))&\approx\frac{5}{16\pi}e^2\frac{n}{J}\left(\sqrt{3}Q'_{20}x+\sqrt{2}Q'_{22}y\right)^2
 \end{align}
 Where $Q'_{22}=\frac{1}{\sqrt{2}}Q\sin(\gamma)$ and $x$ and $y$ are defined as follows:
 \begin{align}
@@ -470,7 +474,7 @@ Transverse wobbling, the first of the two new wobbling modes defined by Frauendo
 \label{eqn:chp2-transverse-en-ellipsoid}
 E=A_3(J_3-j)^2 + A_1J_1^2 + A_2J_2^2
 \end{equation}
-Here the axes are chosen so that axis 3 is the short axis, \emph{i.e.} the axis with intermediate MOI, and axis 2 is the intermediate axis with maximum MOI, yielding: $A_1>A_3>A_2$ ($\mathcal{J}_1<\mathcal{J}_3<\mathcal{J}_2$). Taking the same angular momentum sphere in equation \ref{eqn:chp2-am-cons} the classical orbits of angular momentum are found in the intersections of the two surfaces in Fig. \ref{fig:chp2-transverse-am-orbits}. As with Fig. \ref{fig:chp2-classical-am-orbits} the top panel represents a wobbling state lying a little above the yrast line, the middle panel shows the separatrix and the bottom panel shows orbits that revolve around axis 3.
+Here the axes are chosen so that axis 3 is the short axis, \emph{i.e.} the axis with intermediate MOI, and axis 2 is the intermediate axis with maximum MOI, yielding: $A_1>A_3>A_2$ ($\mathcal{J}_1<\mathcal{J}_3<\mathcal{J}_2$). Taking the same angular momentum sphere in equation \ref{eqn:chp2-am-cons} the classical orbits of angular momentum are found in the intersections of the two surfaces in Fig. \ref{fig:chp2-transverse-am-orbits}. As with Fig. \ref{fig:chp2-classical-am-orbits}, the top panel represents a wobbling state lying a little above the yrast line, the middle panel shows the separatrix, and the bottom panel shows orbits that revolve around axis 3.
 
 \begin{figure}[t!]
 \centerline{\includegraphics[height=0.4\textheight]{./img/c2/transverse_am_orbits.png}}
