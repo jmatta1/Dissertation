@@ -35,7 +35,7 @@ The nucleus also exhibits collective excitations such as rotation and vibration 
 
 \section{The Shell Model}
 \label{sec:models-shell-model}
-The nuclear shell model, in its simplest form, seeks to explain the shell structure observed in nuclei by describing them and independent particles in a mean field potential produced by the other nucleons. While the short range nature of the nuclear force might lead to the use of a square well potential or similar as the mean field, the Simple Harmonic Oscillator (SHO) potential is a reasonable first order approximation (seen in Figure \ref{fig:chp2-SHOPot}), which happens to be much simpler to solve. Placing a single particle in the SHO potential gives the first few magic numbers observed; however, to reproduce all the magic numbers it is necessary to add an $\vec{l}^2$ potential and a strong spin-orbit ($\vec{l}\cdot\vec{s}$) potential. The Hamiltonian for such a potential is as follows:
+The nuclear shell model, in its simplest form, seeks to explain the shell structure observed in nuclei by describing the nucleons as independent particles in the mean field potential produced by the other nucleons. While the short range nature of the nuclear force might lead to the use of a square well potential or similar as the mean field, the Simple Harmonic Oscillator (SHO) potential is a reasonable first order approximation (seen in Figure \ref{fig:chp2-SHOPot}), which happens to be much simpler to solve. Placing a single particle in the SHO potential gives the first few magic numbers observed; however, to reproduce all the magic numbers it is necessary to add an $\vec{l}^2$ potential and a strong spin-orbit ($\vec{l}\cdot\vec{s}$) potential. The Hamiltonian for such a potential, called the modified oscillator potential, is as follows:
 \begin{equation}
 \label{eqn:chp2-sm-sho-hamil}
 \mathbf{\mathit{H}} = \frac{-\hbar^2}{2m}\nabla^2 + \frac{1}{2}m(\omega r)^2 + B \uvec{l}^2 + A \uvec{l}\cdot{}\uvec{s}
@@ -49,10 +49,8 @@ The progression of shell gaps from $SHO$ to $SHO + \vec{l}^2$ to $SHO + \uvec{l}
 
 \begin{figure}
 \centerline{\includegraphics[height=0.45\textheight]{./img/c2/shell_model.png}}
-	\caption{Spectrum of a single nucleon in an SHO potential, SHO + centrifugal potential, and, SHO + centrifugal + spin-orbit. Figure adapted from Ref. \cite{casten}.\label{fig:chp2-shell-model}}
+	\caption{Spectrum of a single nucleon in an SHO potential, SHO + $l^2$, and, SHO + $l^2$ + spin-orbit. Figure adapted from Ref. \cite{casten}.\label{fig:chp2-shell-model}}
 \end{figure}
-
-%TODO: Talk about quantum numbers and the like
 
 In more realistic shell model calculations a Woods-Saxon potential is adopted. Here the Hamiltonian becomes:
 \begin{equation}
@@ -75,7 +73,7 @@ R(\theta, \phi) = R_{o}\left \lgroup 1 + \sum_{\lambda = 2}^{\infty}\sum_{\mu = 
 \end{equation} 
 Here $R_0$ is the radius of a sphere with the same volume as the deformed nucleus, $Y_{\lambda \mu}(\theta, \phi)$ are the spherical harmonic functions, and $\alpha_{\lambda \mu}$ are the coefficients of the expansion. The expansion starts at $\lambda = 2$ because the $\lambda = 1$ corresponds to the translation of the center of mass, a term easily eliminated by requiring the nuclear center of mass to coincide with the coordinate's origin. The first of the non-trivial terms, $\lambda = 2$, corresponds to the components of quadrupole deformation, $\lambda = 3$ gives octupole deformation, $\lambda = 4$ gives hexadecapole deformation, and so on. As $\lambda = 2$ is the most important component in this work, only quadrupole deformation terms will be considered henceforth.
 
-The quadrupole shapes cover oblate spheres (two semi-major axes, like a doorknob), prolate spheres (two semi-minor axes, like an American football), and triaxial shapes (all three axes are different lengths, like a potato). Because the rotation of the nucleus is not fixed, \emph{i.e.} the nucleus can be rotated such that its principal axes coincide with the axes of the coordinate system, the five quadrupole shape parameters are reduced to two independent parameters $a_{2 0}$ and $a_{2 2}$, with the conditions: $a_{2 -2}=a_{2 2}$ and $a_{2 1}=a_{2 -1}=0$. Further, it is common to parameterize the remaining expansion coefficients using the Hill-Wheeler variables, $\beta$ and $\gamma$, as follows \cite{wongBook}:
+The quadrupole shapes cover oblate spheroids (two semi-major axes, like a doorknob), prolate spheroids (two semi-minor axes, like an American football), and triaxial ellipsoids (all three axes are different lengths, like a potato). Because the rotation of the nucleus is not fixed, \emph{i.e.} the nucleus can be rotated such that its principal axes coincide with the axes of the coordinate system, the five quadrupole shape parameters are reduced to two independent parameters $a_{2 0}$ and $a_{2 2}$, with the conditions: $a_{2 -2}=a_{2 2}$ and $a_{2 1}=a_{2 -1}=0$. Further, it is common to parameterize the remaining expansion coefficients using the Hill-Wheeler variables, $\beta$ and $\gamma$, as follows \cite{wongBook}:
 \begin{align}
 \label{eqn:chp2-hill-wheeler}
 a_{2 0} = \beta \cos(\gamma)  & &  a_{2 2} = a_{2 -2} = \frac{1}{\sqrt{2}}\beta \sin(\gamma)
@@ -101,9 +99,8 @@ The Hiller-Wheeler variables have some redundancy: for $\beta>0$ the nucleus is 
 \end{enumerate}
 A graphical schematic of the Lund convention is in Figure \ref{fig:chp2-lund}
 \begin{figure}[t!]
-\label{fig:chp2-lund}
 \centerline{\includegraphics[height=0.25\textheight]{./img/c2/lundconv.png}}
-	\caption{Schematic of the Lund convention. Figure adapted from Ref. \cite{danielDissertation}.}
+	\caption{Schematic of the Lund convention. Figure adapted from Ref. \cite{danielDissertation}.\label{fig:chp2-lund}}
 \end{figure}
 \subsection{The Nilsson Model}
 In 1955, to treat deformed nuclei, S.G. Nilsson introduced a modified version of the shell model in Ref. \cite{nilsson}. This modified shell model, known as the Nilsson model, allows deformation to be taken into account using an anisotropic harmonic oscillator potential as follows:
@@ -163,11 +160,11 @@ The deformation dependence of Nilsson orbitals is usually summarized in a Nilsso
 A model of collective nuclear motion was developed by Bohr and Mottleson \cite{bohrMottelsonArticle,bohrMottelson2} due to several observations that could not be explained with single particle motion. Among these are: \emph{1.} Fission, many of the features are successfully explained with the liquid drop model \cite{meitnerFissionProducts,fissionMechanism}. \emph{2.} Deformation of the nuclear surface by particle structure \cite{deformationPrediction} giving rise to quadrupole moments which exceed single particle estimates in many nuclei \cite{casimirQuadMoments,nuclearQuadMomentsAndShellStruc}. \emph{3.} The occurrence of electric quadrupole gamma ray transitions with lifetimes much shorter than single particle estimates \cite{nuclearIsomerClassification} which is a characteristic feature of the excitation spectra of strong deformed nuclei and most importantly: rotational bands \cite{QuadIsomerInterp}.
 \subsection{Rigid Triaxial Rotor Model (TRM)}
 \label{ssec:models-triaxial-rotor}
-One of the simplest forms of excitation a nucleus can experience is rotation. However, in quantum mechanics rotation is can only occur about axes that are not symmetry axes (where the symmetry axis is denoted the $\uvec{z}$-axis). This is because the wave function that describes this system is an eigenfunction of $\uvec{J}_z$, and thus, is symmetrical about the $\uvec{z}$-axis. Due to this symmetry any rotation of this wave function about the symmetry axis generates only phase shift and has a wave function identical to that of the ground state. A system cannot collectively rotate about symmetry axes. Since spherical nuclei are symmetric about all axes, they cannot exhibit collective rotation.
+One of the simplest forms of excitation a nucleus can experience is rotation. However, in quantum mechanics rotation can only occur about axes that are not symmetry axes (where the symmetry axis is denoted the $\uvec{z}$-axis). This is because the wave function that describes this system is an eigenfunction of $\uvec{J}_z$, and thus, is symmetrical about the $\uvec{z}$-axis. Due to this symmetry any rotation of this wave function about the symmetry axis generates only phase shift and has a wave function identical to that of the ground state. A system cannot collectively rotate about symmetry axes. Since spherical nuclei are symmetric about all axes, they cannot exhibit collective rotation.
 
 In rotating nuclei there are two primary components of the angular momentum. The first is the rotational angular momentum, $\vec{R}$, generated by the collective motion of many nucleons about some axis. The second component is found when there are unpaired valence nucleons. In these cases their angular momentum, $\vec{j}$, must be accounted for as well. This presents a situation like that in Figure \ref{fig:chp2-nillson-qn} which schematically illustrates the total angular momentum of the nucleus, $\vec{J}$, as the sum of $\vec{R}$ and $\vec{j}$.
 
-While it is often the case that the shape (and thus the moments of inertia (MOI)) of a nucleus changes somewhat as spin increases, accounting for this can be difficult. By approximating the system as a rigid rotor with unchanging MOI the problem can be simplified while maintaining descriptive power. Here each axis has a fixed MOI and the rotational component of the Hamiltonian depends only on the MOIs and the components of the spin along each axis. In the case of a triaxial nucleus with no unpaired valence particles, (thus $\vec{J}=\vec{R}$) the Hamiltonian can be written as follows \cite{triaxRotorSol,wobblingGeometry}:
+While it is often the case that the shape (and thus the moments of inertia (MOI)) of a nucleus changes somewhat as spin increases. By approximating the system as a rigid rotor with unchanging MOI the problem can be simplified while maintaining descriptive power. Here each axis has a fixed MOI and the rotational component of the Hamiltonian depends only on the MOIs and the components of the spin along each axis. In the case of a triaxial nucleus with no unpaired valence particles, (thus $\vec{J}=\vec{R}$) the Hamiltonian can be written as follows \cite{triaxRotorSol,wobblingGeometry}:
 \begin{align}
 \label{eqn:chp2-triaxial-rotor-hamiltonian}
 H &= H_{rot} + H_{intr} \\
@@ -185,7 +182,7 @@ Here $H_{r}^{Diag}$ is the diagonal component of the Hamiltonian, $H_{r}^{OffDia
 \label{eqn:chp2-triaxial-rotor-basis}
 \Ket{IMK}= \sqrt{\frac{2I+1}{16\pi^{2}(1+\delta_{K0})}} \left[\mathcal{D}^{J}_{MK} + (-1)^J \mathcal{D}^{J}_{-KM}\right]
 \end{equation}
-Where $\delta_{K0}$ is the Kronecker delta function and $\mathcal{D}^{J}_{MK}$ are the Wigner D-functions which are functions of the three Euler angles that determine the orientation of the nucleus's principal axes in space. With these basis states the Hamiltonian matrix can be calculated and the energy eigenvalues and eigenstates for a given spin I is a matter of diagonalizing the matrix. The reduced transition probabilities for $E2$ transitions of the triaxial rotor model are given by \cite{wobblingGeometry}:
+where $\delta_{K0}$ is the Kronecker delta function and $\mathcal{D}^{J}_{MK}$ are the Wigner D-functions which are functions of the three Euler angles that determine the orientation of the nucleus's principal axes in space. With these basis states the Hamiltonian matrix can be calculated and the energy eigenvalues and eigenstates for a given spin I is a matter of diagonalizing the matrix. The reduced transition probabilities for $E2$ transitions of the triaxial rotor model are given by \cite{wobblingGeometry}:
 
 %the diagonal portion of the Hamiltonian matrix is:
 %\begin{equation}
@@ -249,7 +246,7 @@ The pairing interaction is the force that couples two identical nucleons in time
 %\label{eqn:chp2-pairing-first-function}
 %V_{pair}=-G\delta(\phi_1-\phi_2)\delta(\cos(\theta_1)-\cos(\theta_2))\frac{\delta(r_1-r_2)}{r^2}
 %\end{equation}
-In 1950, M. Goeppert suggested describing the pairing force as a delta function multiplied by some interaction strength \cite{pairingFirstTheory}. Calculations were performed using this interaction to explore its effects \cite{pairingCorrEffectOnProperties} and then later analogies between nuclear pairing and BCS superconductivity theory \cite{bcsTheory} were discovered and examined \cite{pairingAnalogyToBCS,pairingSuperfluidity}. The pairing interaction strength $G$ has been determined to have different values for the protons and neutron. For protons the pairing strength is approximately $G_p=\frac{17}{A} MeV$ and for neutrons the pairing strength is approximately $G_n=\frac{23}{A} MeV$. The Hamiltonian to describe this interaction is usually written as:
+In 1950, M. Goeppert suggested describing the pairing force as a delta function multiplied by some interaction strength \cite{pairingFirstTheory}. Calculations were performed using this interaction to explore its effects \cite{pairingCorrEffectOnProperties} and then later analogies between nuclear pairing and BCS superconductivity theory \cite{bcsTheory} were discovered and examined \cite{pairingAnalogyToBCS,pairingSuperfluidity}. The Hamiltonian to describe this interaction is usually written as:
 \begin{equation}
 \label{eqn:chp2-pairing-hamil}
 H_{pair} = -GP^+P-\lambda{}\uvec{N}
@@ -260,7 +257,7 @@ H_{pair} = -GP^+P-\lambda{}\uvec{N}
 %\Braket{j_1j_2J|V_{pair}|j3j4J'}=-G\sqrt{\left(j_1+\sfrac{1}{2}\right)\left(j_3+\sfrac{1}{2}\right)}\delta_{j_1j_2}\delta_{j_3j_4}\delta_{J0}\delta_{J'0}
 %\end{equation}
 %In the second quantization formalism, the pairing Hamiltonian is usually written in the form:
-Here, $\lambda$ is the chemical potential and $\uvec{N}$ is the particle number operator, together these give particle number conservation. Finally, $P^+$ is the monopole pair field, expressed by:
+Here, $\lambda$ is the chemical potential, $\uvec{N}$ is the particle number operator, together these give particle number conservation, and $G$ is the pairing interaction strength, which has been determined to have different values for the protons and neutron. For protons the pairing strength is approximately $G_p=\frac{17}{A}$ MeV and for neutrons the pairing strength is approximately $G_n=\frac{23}{A}$ MeV. Finally, $P^+$ is the monopole pair field, expressed by:
 \begin{equation}
 \label{eqn:chp2-monopole-pair-op}
 P^+=\sum\limits_{k>0}^{}c^+_kc^+_{\bar{k}}
@@ -278,7 +275,7 @@ The energy range that this ``smearing'' of level occupancies covers is equal to 
 \label{eqn:chp2-pairing-gap-param}
 \Delta = G\sum\limits_{ij}^{}U_iV_j
 \end{equation}
-Where $U$ is the emptiness factor (the probability that a state will be occupied by a hole) and $V$ is the fullness factor (the probability that a state will be occupied by a particle). $U$ and $V$ are defined as follows
+where $U$ is the emptiness factor (the probability that a state will be occupied by a hole) and $V$ is the fullness factor (the probability that a state will be occupied by a particle). $U$ and $V$ are defined as follows
 \begin{align}
 \label{eqn:chp2-pairing-gap-param-defs}
 V_i &= \sqrt{\frac{1}{2}\left(1+\frac{\epsilon_i-\lambda}{\sqrt{(\epsilon_1-\lambda)^2+\Delta^2}}\right)}\\
@@ -465,7 +462,7 @@ Where $Q'_{22}=\frac{1}{\sqrt{2}}Q\sin(\gamma)$ and $x$ and $y$ are defined as f
 x&=\sqrt{\frac{1}{2}\left(\frac{A_2+A_1-2A_3}{2\sqrt{(A_1-A_3)(A_2-A_3)}}+1\right)}\\
 y&=\sqrt{\frac{1}{2}\left(\frac{A_2+A_1-2A_3}{2\sqrt{(A_1-A_3)(A_2-A_3)}}-1\right)}\nonumber
 \end{align}
-A final note about the simple wobbler is that the wobbling bands have alternating signature. Wobbling bands with an odd number of phonons have signature opposite to the that of the yrast band. Contrariwise, wobbling bands with even numbers of phonons have the same signature as the yrast band.
+A final note about the simple wobbler is that the wobbling bands have alternating signature. Wobbling bands with an odd number of phonons have signature opposite to that of the yrast band. Contrariwise, wobbling bands with even numbers of phonons have the same signature as the yrast band.
 
 \subsubsection{Transverse Wobbling}
 \label{sssec:models-wobbling-transverse-wobbling}
@@ -504,8 +501,8 @@ y&=-sign((A_1-A_2)J)&\sqrt{\frac{1}{2}\left(\frac{A_2+A_1-2\bar{A}_3}{2\sqrt{(A_
 Additionally, Frauendorf and D\"onau \cite{frauendorfTransverseWobbling} extracted reduced transition probabilities for the $M1$ components of the interband transitions. They are as follows:
 \begin{align}
 \label{eqn:chp2-simple-wobb-interband-m1-red-mat}
-B(E2;(I,n)\rightarrow(I-1,n+1)&\approx\frac{3}{4\pi}\frac{n+1}{J}\left(j(g_j-g_R)x\right)^2\\
-B(E2;(I,n)\rightarrow(I-1,n-1)&\approx\frac{3}{4\pi}\frac{n}{J}\left(j(g_j-g_R)y\right)^2
+B(M1;(I,n)\rightarrow(I-1,n+1)&\approx\frac{3}{4\pi}\frac{n+1}{J}\left(j(g_j-g_R)x\right)^2\\
+B(M1;(I,n)\rightarrow(I-1,n-1)&\approx\frac{3}{4\pi}\frac{n}{J}\left(j(g_j-g_R)y\right)^2
 \end{align}
 
 These semiclassical analyses and expressions are intended to clarify the physics of wobbling. While useful in assisting understanding of these systems, the calculations performed to compare theory with experiment in section \ref{sec:trw-theory-desc} are done with the full QTR model. Neither the semiclassical approximation nor assumption of frozen alignment are used in the calculations.
@@ -527,6 +524,6 @@ There are two observables that do not require a lifetime measurement. The first 
 \end{equation}
 These wobbling frequencies, while not a unique observable of wobbling, will allow differentiation between longitudinal and transverse wobbling modes in odd-A nuclei. The second observable is unique to wobbling bands. This signature is that $n_w=x \rightarrow n_w=x-1$ interband transitions must be of $\Delta{}I=1, E2$ nature. This is measurable using angular distributions.
  
-In the lifetime measurement category there are two observables. Measuring the lifetime of a state allows the B(E2) values to be extracted. As seen in equation \ref{eqn:chp2-simple-wobb-interband-e2-red-mat} the $B(E2,(I,n)\rightarrow(I-1,n-1)) \propto \sfrac{n_w}{I}$. This gives us two observables. Observing the $B(E2,(I,n)\rightarrow(I-1,n-1))$ of a wobbling band as spin increases allows the $\sfrac{1}{I}$ proportionality to be verified. If a two phonon band is identified, the $n$ dependance of the proportionality can be verified as well.
+In the lifetime measurement category there are two observables. Measuring the lifetime of a state allows the B(E2) values to be extracted. As seen in equation \ref{eqn:chp2-simple-wobb-interband-e2-red-mat} the $B(E2,(I,n)\rightarrow(I-1,n-1)) \propto \sfrac{n_w}{I}$. Coupled with the mixing ratio, this gives us two observables. Observing the $B(E2,(I,n)\rightarrow(I-1,n-1))$ of a wobbling band as spin increases allows the $\sfrac{1}{I}$ proportionality to be verified. If a two phonon band is identified, the $n$ dependance of the proportionality can be verified as well.
 
 %grows linearly with $n$. Therefore if more than one wobbling band is observed, this dependence can be verified. The other observable is that $B(E2,(I,n)\rightarrow(I-1,n-1))$ is inversely proportional to the total spin $J$, with lifetime measurements of a single wobbling band this could be verified.

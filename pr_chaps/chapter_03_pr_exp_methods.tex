@@ -13,29 +13,22 @@ Across experimental physics there is a common theme in the design of experiments
 Nuclear physics uses a vast array of reactions. Restricting the focus to in-beam gamma-ray spectroscopy, there are common ``workhorse'' reactions. Of these workhorse reactions the heavy-ion fusion-evaporation reaction is frequently chosen for its selectivity in final products, its production of relatively few species with large cross-section, and its creation of states with a large amount of angular momentum \cite{beausang1996arrays}.
 \subsection{Creation and Decay of the Compound Nucleus}
 \label{ssec:exp-pr-fus-evap-cn}
-The fusion-evaporation reaction proceeds by the formation of a highly excited compound nucleus, a mechanism first proposed by Neils Bohr\cite{bohr1936neutron}. It is possible for a compound nucleus to be formed for beam energies below the Coulomb barrier; however, the probability is dramatically lower as the beam must quantum mechanically tunnel through the Coulomb barrier. Therefore for heavy ion fusion to be experimentally feasible the center of momentum energy must exceed the height of the Coulomb barrier. The Coulomb barrier height can be estimated with
-
+The fusion-evaporation reaction proceeds by the formation of a highly excited compound nucleus, a mechanism first proposed by N. Bohr\cite{bohr1936neutron}. It is possible for a compound nucleus to be formed for beam energies below the Coulomb barrier; however, the probability is dramatically lower as the beam must quantum mechanically tunnel through the Coulomb barrier. Therefore for heavy ion fusion to be experimentally feasible the center of momentum energy must exceed the height of the Coulomb barrier. The Coulomb barrier height can be estimated with:
 \begin{equation}
 \label{eqn:chp3-cb_en}
 E_{CB}=\frac{\alpha \hbar c Z_p Z_t}{1.16 fm (A_p^{1/3} + A_t^{1/3} + 2)}
 \end{equation}
-
-and the non-relativistic center of momentum energy is
-
+and the non-relativistic center of momentum energy is:
 \begin{equation}
 \label{eqn:chp3-cmf_en}
 E_{cm} = \frac{\mu}{A_{p}}E_{p}
 \end{equation}
-
-Here the subscripts $p$ and $t$ denote projectile and target respectively, $A$ is the mass number, $Z$ represents the nuclear charge, $\alpha{}$ is the fine structure constant, and $\mu = A_{p}A_{t}/(A_{p}+A_{t})$ is the system's reduced mass. After its formation the compound nucleus will have an excitation energy of
-
+here the subscripts $p$ and $t$ denote projectile and target respectively, $A$ is the mass number, $Z$ represents the nuclear charge, $\alpha{}$ is the fine structure constant, and $\mu = A_{p}A_{t}/(A_{p}+A_{t})$ is the system's reduced mass. After its formation the compound nucleus will have an excitation energy of
 \begin{equation}
 \label{eqn:chp3-cn_ex}
 E_{ex} = Q + E_{cm}
 \end{equation}
-
 where $Q$ is the reaction's $Q$-value which is
-
 \begin{equation}
 \label{eqn:chp3-cn_form_qvalue}
 Q = (M_t+M_p-M_{CN})c^2
@@ -52,27 +45,24 @@ Following its formation, a compound nucleus will be left in a state with high ex
 
 \begin{figure}[h!]
 	\centerline{\includegraphics[width=\textwidth]{./img/c3/fusion_evaporation.pdf}}
-	\caption{Schematic illustration of heavy-ion fusion-evaporation, adapted from Ref. \cite{gsBooklet}.}
-	\label{fig:chp3-fus-evap-schem}
+	\caption{Schematic illustration of heavy-ion fusion-evaporation, adapted from Ref. \cite{gsBooklet}.\label{fig:chp3-fus-evap-schem}}
 \end{figure}
 
 The probability of the compound nucleus fissioning is governed by the height of the fission barrier relative to the nucleus's excitation energy. The height of the fission barrier is a function of the $A$ of the nucleus and is inversely proportional to the compound nucleus's angular momentum, as can be seen in Fig. \ref{fig:chp3-fission-barrier}. However, even the complete disappearance of the fission barrier does not guarantee fission as there are a few observed cases of spins above those required to reduce the barrier to zero\cite{hyperdef,hyperdef2}.
 
 \begin{figure}[h!]
 	\centerline{\includegraphics[height=0.3\textheight]{./img/c3/fission_barrier.eps}}
-	\caption{Isocontours of angular momenta that yield fission barriers of $8$ MeV and $0$ MeV at various masses. Note that the $0$ MeV height barrier occurs at higher spins for a given mass, showing the inverse dependence of fission barrier height on angular momentum. Adapted from Ref. \cite{fissionBarrier2}.}
-	\label{fig:chp3-fission-barrier}
+	\caption{Isocontours of angular momenta that yield fission barriers of $8$ MeV and $0$ MeV at various masses. Note that the $0$ MeV height barrier occurs at higher spins for a given mass, showing the inverse dependence of fission barrier height on angular momentum. Adapted from Ref. \cite{fissionBarrier2}.\label{fig:chp3-fission-barrier}}
 \end{figure}
 
 If the compound nucleus does not fission, then it will evaporate particles. Particle evaporation is the emission of protons, neutrons, or alpha particles over or through an emission barrier. For charged particles, this emission barrier is composed both of a centrifugal term which grows with increasing angular momentum and a Coulomb term. For neutrons the emission barrier is solely the centrifugal barrier. In most cases neutron evaporation will be more probable, because charged particles encounter a higher barrier due to the Coulomb term. The exception occurs for very neutron deficient nuclei where the reduction of proton separation energies make it possible for charged particle emission to compete with, or even dominate, neutron emission. Each successive evaporated particle carries energy, but little angular momentum away from the nucleus until there is insufficient excitation energy for particles to penetrate the emission barrier and the nucleus is left in a state that is stable against particle emission. From this point on, the nucleus must dissipate its excess angular momentum and excitation energy via gamma ray emission. A schematic of this is in Fig. \ref{fig:chp3-emission-schematic}.
 
 \begin{figure}[h!]
 	\centerline{\includegraphics[height=0.3\textheight]{./img/c3/evaporation_chans.eps}}
-	\caption{Schematic of the compound nuclear decay assuming that a rotational nucleus is being formed. Adapted from Ref. \cite{danielDissertation}.}
-	\label{fig:chp3-emission-schematic}
+	\caption{Schematic of the compound nuclear decay assuming that a rotational nucleus is being formed. Adapted from Ref. \cite{danielDissertation}.\label{fig:chp3-emission-schematic}}
 \end{figure}
 
-Initially, the nucleus is in a state with such high level density that it decays by the emission of statistical gamma rays \cite{cnCooling}. These statistical gamma rays are almost purely dipole in nature and form a continuum as the notion of a discrete state is not a good one at such high level densities. As the nucleus approaches the yrast line (the states with the minimum excitation energy for a given angular momentum), the level density drops. This allows the emission sequences of discrete gamma rays which feed the yrast line.
+Initially, the nucleus is in a state with such high level density that it decays by the emission of statistical gamma rays \cite{cnCooling}. These statistical gamma rays are almost purely dipole in nature and form a quasi-continuum as the very high level densities make discrete states impossible to distinguish. As the nucleus approaches the yrast line (the states with the minimum excitation energy for a given angular momentum), the level density drops. This allows the emission sequences of discrete gamma rays which feed the yrast line.
 
 \subsection{Choice of Beam and Target}
 \label{ssec:exp-pr-fus-evap-beam-target}
@@ -92,8 +82,7 @@ and $\alpha$ is $\sim6$ MeV. The reaction will only have a reasonable cross-sect
 
 \begin{figure}[h!]
 	\centerline{\includegraphics[width=\textwidth]{./img/c3/135Pr_calc_plot.eps}}
-	\caption{Cross-sections of various residual nuclei for a $^{16}$O beam on $^{123}$Sb at a variety of beam energies as calculated by PACE4. As $^{139}$Pr is the compound nucleus produced all products that are not isotopes of Pr require the evaporation of a charged particle.}
-	\label{fig:chp3-pace4-calc}
+	\caption{Cross-sections of various residual nuclei for a $^{16}$O beam on $^{123}$Sb at a variety of beam energies as calculated by PACE4. As $^{139}$Pr is the compound nucleus produced all products that are not isotopes of Pr require the evaporation of a charged particle.\label{fig:chp3-pace4-calc}}
 \end{figure}
 
 \section{Gamma-ray Spectroscopy}
@@ -106,8 +95,7 @@ In \emph{photoelectric absorption}, the photon interacts with a bound electron i
 
 \begin{figure}[hb!]
 	\centerline{\includegraphics[height=0.7\textheight]{./img/c3/gamma_interactions_scan.eps}}
-	\caption{Gamma-ray attenuation coefficients for various processes in NaI, adapted from Ref. \cite{knollBook}. Note the dominance of photoelectric absorption at lower energies, Compton scattering at intermediate energies, and pair production at high energies. While the slopes of these processes change from material to material, the trends remain the same.}
-	\label{fig:chp3-gamma-interactions}
+	\caption{Gamma-ray attenuation coefficients for various processes in NaI, adapted from Ref. \cite{knollBook}. Note the dominance of photoelectric absorption at lower energies, Compton scattering at intermediate energies, and pair production at high energies. While the slopes of these processes change from material to material, the trends remain the same.\label{fig:chp3-gamma-interactions}}
 \end{figure}
 
 In \emph{Compton scattering} a gamma-ray photon scatters from an electron in the material at some angle $\theta$ to its original direction\cite{Compton-PhysRev.21.483}. Due to conservation of momentum and energy, the energy transferred to the electron is precisely determined by $\theta$ and so the energy of the secondary photon can be written as: $E_{s}=E_{p}(1+\frac{E_{p}}{m_{e}c^2}(1-\cos\theta))^{-1}$. As above the electron then deposits its kinetic energy in the medium as it slows. However, unlike in the photoelectric effect, not all of the energy is deposited in the electron. After scattering the secondary photon travels in its new direction and is free to interact again with probabilities dictated by its energy. Fig. \ref{fig:chp3-gamma-interactions} shows Compton scattering is the dominant effect at intermediate energies.
@@ -124,8 +112,7 @@ Semiconductor detectors are either p-n or p-i-n junction diodes with a reverse b
 
 \begin{figure}[h!]
 	\centerline{\includegraphics[width=\textwidth]{./img/c3/pn-diode.eps}}
-	\caption{Above: Diagrammatic view of the depletion zone's with varying bias voltage. Below: Voltage difference across the depletion zone for each bias voltage shown above.}
-	\label{fig:chp3-pn_diode}
+	\caption{Above: Diagrammatic view of the depletion zone's with varying bias voltage. Below: Voltage difference across the depletion zone for each bias voltage shown above.\label{fig:chp3-pn_diode}}
 \end{figure}
 
 The higher the purity of the semiconductor, the higher the reverse bias voltage that can be applied without reaching the breakdown of the semiconductor (usually a catastrophic event). In HPGe detectors the purity is sufficiently high that almost the whole crystal of Ge can be depleted yielding a very large active region, an advantage for gamma rays given their low interaction probabilities compared to charged particles. When a gamma ray interacts in an HPGe detector, it produces at least one high energy secondary electron or positron (more if there are multiple interactions). These secondary electrons lose energy quickly as they pass through the detector, leaving a trail of electron-hole pairs in their wake. The electrons and holes are then swept to their respective contacts by the applied potential and collected.
@@ -163,8 +150,7 @@ Where $N_{1/2}$ is the FWHM of the electronic noise, $K$ is a constant of a give
 
 \begin{figure}
 	\centerline{\includegraphics[height=0.3\textheight]{./img/c3/split_contact.eps}}
-	\caption{Diagram showing the uncertainty inherent in the gamma ray's angle of emission, and Gammasphere's segmented electrode scheme to reduce this.}
-	\label{fig:chp3-doppler-split-contact}
+	\caption{Diagram showing the uncertainty inherent in the gamma ray's angle of emission, and Gammasphere's segmented electrode scheme to reduce this.\label{fig:chp3-doppler-split-contact}}
 \end{figure}
 
 The final term, $\Delta{}E_{D}$, of this equation comes from uncertainty in the angle at which the gamma ray was emitted from the recoiling nucleus due to the detectors finite size (shown in Fig. \ref{fig:chp3-doppler-split-contact}). The shift in gamma energy due to the nuclear recoil is:
@@ -172,7 +158,7 @@ The final term, $\Delta{}E_{D}$, of this equation comes from uncertainty in the 
 \label{eqn:chp3-doppler_formula} 
 E_{o} = E_{e}\frac{\sqrt{1+\beta{}\cos(\theta)}}{\sqrt{1-\beta{}\cos(\theta)}}
 \end{equation}
-Here, the subscripts $o$ and $e$ refer to observed and emitted, $\beta$ is the speed of the recoiling nucleus divided by $c$ and theta is the angle between the nucleus's line of a flight and the emitted gamma ray. If the detector has an angular acceptance of $\theta{}_{0}-\delta{}\theta{}\leq{}\theta{}\leq{}\theta{}_{0}+\delta{}\theta{}$ with $\theta{}_{0}$, the central angle of the detector then the leading order term of the Doppler broadening contribution to the resolution is:
+Here, the subscripts $o$ and $e$ refer to observed and emitted, $\beta$ is the speed of the recoiling nucleus divided by $c$ and $\theta$ is the angle between the nucleus's line of a flight and the emitted gamma ray. If the detector has an angular acceptance of $\theta{}_{0}-\delta{}\theta{}\leq{}\theta{}\leq{}\theta{}_{0}+\delta{}\theta{}$ with $\theta{}_{0}$, the central angle of the detector then the leading order term of the Doppler broadening contribution to the resolution is:
 \begin{equation}
 \label{eqn:chp3-res-doppler-term} 
 \Delta{}E_{D} = 2\beta{}\sin(\theta{})\sin(\delta{}\theta{})E_{\gamma}
@@ -184,21 +170,19 @@ There are three strategies to combat this term. The first is geometrical. By inc
 The primary contribution to the background in gamma-ray spectroscopy is the incomplete deposition of energy in the detector. Two of the mechanisms discussed in section \ref{ssec:exp-pr-gamma-spec-interactions} can lead to this. Compton scattering will result in incomplete energy deposition when the secondary photon yielded by the process escapes the HPGe crystal without depositing the rest of its energy. This mode results in a smooth background from the maximum energy transferable to an electron in the process down to zero energy. Pair production will yield incomplete energy deposition when one or both of the photons from the annihilation of the positron escape the detector. This mode results in 2 new peaks forming, the first $511$ keV below the photopeak, corresponding to one annihilation photon escaping, and a second $1022$ keV below the photopeak, corresponding to both escaping.
 \begin{figure}[h!]
 	\centerline{\includegraphics[height=0.25\textheight]{./img/c3/BGO_schematic.pdf}}
-	\caption{Schematic of BGO escape suppression around an HPGE crystal.}
-	\label{fig:chp3-supression-schematic}
+	\caption{Schematic of BGO escape suppression around an HPGE crystal.\label{fig:chp3-supression-schematic}}
 \end{figure}
 
 To ameliorate this, the principal detector is surrounded by a secondary detector and the electronics are set to be in anti-coincidence (see Fig. \ref{fig:chp3-supression-schematic} for a schematic). If both detectors have energy deposited, the event is discarded. In practical application, the second detector must be highly efficient at detecting gamma rays to minimize its size. Given this constraint, the scintillator Bismuth Germanate (BGO) is an excellent choice for escape suppression. While BGO's energy resolution is quite poor, it has excellent timing characteristics and quite high density and it is made of fairly high $Z$ materials. The latter two facts give it the desired high detection efficiency (substantially higher than the HPGe it is shielding). Improvements up to a factor of $2.48$ in the peak-to-total ratio (P/T) can be seen for some designs. A bare HPGE detector having a (P/T) of $0.270\pm0.002$ has been shown to improve to $0.669\pm0.002$\cite{GSComptonSuppression} with an escape suppression shield around the sides and part of the back (some space needs to be left for cables to exit the HPGe.) Example spectra showing this improvement can be seen in Fig. \ref{fig:chp3-supression-improvement}.
 
 \begin{figure}[h!]
 	\centerline{\includegraphics[height=0.25\textheight]{./img/c3/suppressed_spectra.eps}}
-	\caption{Superimposed spectra of an escape suppressed and unsuppressed detector. Adapted from Ref. \cite{gsBooklet}.}
-	\label{fig:chp3-supression-improvement}
+	\caption{Superimposed spectra of an escape suppressed and unsuppressed detector. Adapted from Ref. \cite{gsBooklet}.\label{fig:chp3-supression-improvement}}
 \end{figure}
 
 \subsection{The Gammasphere Detector Array}
 \label{ssec:exp-pr-gamma-gammasphere}
-Gammasphere (partially pictured in Fig. \ref{fig:chp3-gs-hemisphere}) is an array of $110$ escape suppressed HPGe detectors arranged in a sphere around a target. A cross sectional view of part of the array is found in Fig. \ref{fig:chp3-gs_det_schem}. The BGO shields are arranged in hexagonal shapes around each detector plus a backplug covering the majority the back of the detector. Gammasphere's spherical geometry is comprised of 17 rings of detectors, with each ring at a distinct angle to the beam axis. Using a scheme called honeycomb suppression, Gammasphere has a total efficiency of $~0.09$ at $1$ MeV and a singles P/T of $0.69$.
+Gammasphere (partially pictured in Fig. \ref{fig:chp3-gs-hemisphere}) is an array of $110$ escape suppressed HPGe detectors arranged in a sphere around a target. A cross sectional view of part of the array is found in Fig. \ref{fig:chp3-gs_det_schem}. The BGO shields are arranged in hexagonal shapes around each detector plus a backplug covering the majority of the back of the detector. Gammasphere's spherical geometry is comprised of 17 rings of detectors, with each ring at a distinct angle to the beam axis. Using a scheme called honeycomb suppression, Gammasphere has a total efficiency of $~0.09$ at $1$ MeV and a singles P/T of $0.69$.
 
 
 \begin{table}[hb!]
@@ -222,15 +206,13 @@ Energy Resolution (MeV)   & $2.1$ keV at $1.3$ MeV \\
 
 \begin{figure}[ht!]
 	\centerline{\includegraphics[height=0.3\textheight]{./img/c3/gammasphere_hemi.jpg}}
-	\caption{View of scattering chamber and interior of one of Gammasphere's hemispheres pulled back from the chamber. The hexagonal copper foils are x-ray absorbers.}
-	\label{fig:chp3-gs-hemisphere}
+	\caption{View of scattering chamber and interior of one of Gammasphere's hemispheres pulled back from the chamber. The hexagonal copper foils are x-ray absorbers.\label{fig:chp3-gs-hemisphere}}
 \end{figure}
 
 
 \begin{figure}[h]
 	\centerline{\includegraphics[height=0.5\textheight]{./img/c3/gammasphere_detector.eps}}
-	\caption{Cross-section schematic of part of Gammasphere. Adapted from Ref.\cite{gsBooklet}}
-	\label{fig:chp3-gs_det_schem}
+	\caption{Cross-section schematic of part of Gammasphere. Adapted from Ref.\cite{gsBooklet}.\label{fig:chp3-gs_det_schem}}
 \end{figure}
 
 Honeycomb suppression is an escape suppression scheme that uses the BGO shields of adjacent detector modules to effectively double the thickness of a detector's shields. As seen in Fig. \ref{fig:chp3-gs_det_schem}, almost every module will have additional modules immediately adjacent to it. If the HPGe detector for a given module does not register energy deposition, the 6 side segments of its BGO shield are used to double the thickness of the shields to which they are adjacent. Without this measure the singles P/T is $\sim0.62$; using honeycomb suppression improves this to $\sim0.69$ though it reduces the total efficiency at $1.332$ MeV from $\sim0.095$ to $\sim0.089$\cite{TheGS}. Table \ref{tbl:gs-summary} contains a brief summary of Gammasphere's features drawn from Refs. \cite{TheGS,SimulatedResGS,largeArrays,GSComptonSuppression}.
@@ -243,16 +225,14 @@ The Indian National Gamma Array (pictured in Fig. \ref{fig:chp3-INGA}) is an arr
 
 \begin{figure}[ht!]
 	\centerline{\includegraphics[height=0.25\textheight]{./img/c3/INGA.JPG}}
-	\caption{Exterior view of INGA.}
-	\label{fig:chp3-INGA}
+	\caption{Exterior view of INGA.\label{fig:chp3-INGA}}
 \end{figure}
 
 INGA utilizes a digital data acquisition system (DAQ) that allows it to run in a triggerless mode, producing time-stamped data from a $10ns$ clock\cite{IngaDigitalDAQ}. Digital data acquisition systems, because they digitize the preamp signal directly, can operate at higher counting rates than analog, because they do not require multiple microseconds of signal shaping time. The downside of this mode is that coincidences are not prebuilt by the DAQ and instead need to be constructed by moving a sliding window of the desired coincidence time across the timeline of events and selecting sets of gamma rays that occur within that window. A final advantage of the time-stamped events is that isomers can have their lifetime measured using time differences between gamma rays as seen in Fig. \ref{fig:chp3-INGA-isomer}.
 
 \begin{figure}[h!]
 	\centerline{\includegraphics[height=0.35\textheight]{./img/c3/INGA_isomer.eps}}
-	\caption{Example isomer timing spectrum for INGA. From Ref. \cite{IngaDigitalDAQ}.}
-	\label{fig:chp3-INGA-isomer}
+	\caption{Example isomer timing spectrum for INGA. From Ref. \cite{IngaDigitalDAQ}.\label{fig:chp3-INGA-isomer}}
 \end{figure}
 
 Using its digital DAQ and add-back on the clover crystals, INGA achieves a total efficiency of $\sim0.05$ and P/T of $0.4$ at $\sim1.33$ MeV. Table \ref{tbl:inga-summary} contains summary of INGA's features. INGA's sensitivity to polarization, efficiency, and granularity make it a good system for intermediate gamma-ray multiplicity coincidence measurements, reaching its best efficiency at 2- to 3-fold events.
@@ -280,7 +260,7 @@ Energy Resolution (MeV)   & $2.2$ keV at $1.3$ MeV \\
 
 \section{Experimental Details}
 \label{sec:exp-pr-details}
-The work on \pr{} presented in this dissertation was performed at two different facilities, the ATLAS (Argonne Tandem Linear Accelerator System) facility with the Gammasphere detector system and the TIFR-BARC Pelletron LINAC with the INGA detector system. At both facilities the $^{16}O(^{123}Sb,4n)^{135}Pr$ reaction was used. As mentioned in section \ref{sec:exp-pr-fus-evap} the choice of beam and target affects both the most probable channel, the excitation energy, and the maximum angular momentum of the compound (and residual) nucleus. In previous in-beam gamma-ray spectroscopy literature the following heavy ion fusion-evaporation reactions have been used to reach yield the \pr{} residual nucleus: $^{120}Sn(^{19}F @ 91$ MeV$, 4n)^{135}Pr$\cite{semkow135Pr}, $^{123}Sb(^{16}O @ 76$ MeV$,4n)^{135}Pr$\cite{135PrLifetimes}, and  $^{116}Cd(^{23}Na @ 115$ MeV$,4n)^{135}Pr$\cite{ePaul135Pr}. The $^{16}$O and $^{123}$Sb projectile-target combination was chosen for its lighter projectile to optimize for population of states away from the yrast line.
+The work on \pr{} presented in this dissertation was performed at two different facilities, the ATLAS (Argonne Tandem Linear Accelerator System) facility with the Gammasphere detector system and the TIFR-BARC Pelletron LINAC with the INGA detector system. At both facilities the $^{16}O(^{123}Sb,4n)^{135}Pr$ reaction was used. As mentioned in section \ref{sec:exp-pr-fus-evap} the choice of beam and target affects both the most probable channel, the excitation energy, and the maximum angular momentum of the compound (and residual) nucleus. In previous in-beam gamma-ray spectroscopy literature the following heavy ion fusion-evaporation reactions have been used to yield the \pr{} residual nucleus: $^{120}Sn(^{19}F @ 91$ MeV$, 4n)^{135}Pr$\cite{semkow135Pr}, $^{123}Sb(^{16}O @ 76$ MeV$,4n)^{135}Pr$\cite{135PrLifetimes}, and  $^{116}Cd(^{23}Na @ 115$ MeV$,4n)^{135}Pr$\cite{ePaul135Pr}. The $^{16}$O and $^{123}$Sb projectile-target combination was chosen for its lighter projectile to optimize for population of states away from the yrast line.
 
 \subsection{ATLAS/Gammasphere}
 \label{ssec:exp-pr-details-gs}
@@ -296,7 +276,7 @@ The TIFR-BARC pelletron linac is located at the Tata Institute of Fundamental Re
 
 The INGA detector system was used in its standard position at the facility; however a few detectors were not present due to various problems. A summary of the electronics connections and detectors is in Table \ref{tbl:app2-inga-detectors}.
 
-The two self supporting targets used in the Gammasphere experiment were given thick gold backings of $20.3mg/cm^2$ for the $630\mu{}g/cm^2$ target and $22.8mg/cm^2$ for the $634\mu{}g/cm^2$\cite{sbTargets}. This served a two purposes: The backing would allow a doppler shift attenuation measurement to determine lifetimes (this unfortunately proved impossible) and the thick gold backing allowed heat deposited in the target by the beam to be easily dissipated, negating the need for a beam wobbling system.
+The two self supporting targets used in the Gammasphere experiment were given thick gold backings of $20.3mg/cm^2$ for the $630\mu{}g/cm^2$ target and $22.8mg/cm^2$ for the $634\mu{}g/cm^2$\cite{sbTargets}. This served two purposes: The backing would allow a doppler shift attenuation measurement to determine lifetimes (this unfortunately proved impossible) and the thick gold backing allowed heat deposited in the target by the beam to be easily dissipated, negating the need for a beam wobbling system.
 
 \section{Data Processing}
 \label{sec:exp-pr-data-proc}
@@ -304,13 +284,12 @@ The two self supporting targets used in the Gammasphere experiment were given th
  
 \begin{figure}[h!]
 	\centerline{\includegraphics[height=0.25\textheight]{./img/c3/gs_event_plot.eps}}
-	\caption{Histogram of the number of events in each multiplicity for the experiment at Gammasphere.}
-	\label{fig:chp3-gs_event_pattern}
+	\caption{Histogram of the number of events in each multiplicity for the experiment at Gammasphere.\label{fig:chp3-gs_event_pattern}}
 \end{figure}
  
 In the experiment utilizing INGA, $\sim{}550$Gb of data spread across $\sim800$ files were collected. As INGA was run in a triggerless mode, each module of electronics output time-stamped events in each detector to a file. Afterwards, the data are merged into an order according to their time-stamp, yielding $\sim{}503$Gb of data spread across $185$ files. Construction of events then proceeds by setting a coincidence time window and ``scanning'' the window across the merged events looking for sets of events whose time stamps all fall within that window. This process yielded $3.52\times{}10^9$ two- and higher-fold events. These data were used for the extraction of polarizations using the scattering asymmetry at $90^{\circ{}}$. This and requiring that the energy be seen in two and \emph{only} two of the crystals of a $90^{\circ{}}$ detector, reduced the number of eligible two- and higher-fold events to $3.47\times{}10^8$.
  
-These data were processed using both histogram mode (matrices, cubes, and hypercubes)\cite{radware} and list mode\cite{ROOT,blue} systems. The histograms mode analyses used to extract level schemes with symmetric gates. List mode and asymmetric matrices were used when asymmetric gates were necessary, as is it is in the extraction of angular distributions and polarizations.
+These data were processed using both histogram mode (matrices, cubes, and hypercubes)\cite{radware} and list mode\cite{ROOT,blue} systems. The histograms mode analyses were used to extract level schemes with symmetric gates. List mode and asymmetric matrices were used when asymmetric gates were necessary, as is it is in the extraction of angular distributions and polarizations.
  
 \subsection{Calibration}
 \label{ssec:exp-pr-data-proc-cal}
@@ -360,15 +339,13 @@ Peak No. & Energy (keV) & Rel. Intensity. \\
 \begin{figure}[h!]
 	\setlength{\capwidth}{\textwidth}
 	\centerline{\includegraphics[height=0.25\textheight]{./img/c3/gs_cal_spec.eps}}
-	\caption{$^{152}$Eu calibration spectrum from a typical Gammasphere detector.}
-	\label{fig:chp3-gs-cal-spec}
+	\caption{$^{152}$Eu calibration spectrum from a typical Gammasphere detector.\label{fig:chp3-gs-cal-spec}}
 	\setlength{\capwidth}{0.9\textwidth}
 \end{figure}
 
 \begin{figure}[h!]
 	\centerline{\includegraphics[height=0.25\textheight]{./img/c3/inga_crystal_en_cal.eps}}
-	\caption{Typical $^{152}$Eu and $^{133}$Ba mixed source calibration spectrum from a single crystal of an INGA clover detector.}
-	\label{fig:chp3-inga-cal-spec}
+	\caption{Typical $^{152}$Eu and $^{133}$Ba mixed source calibration spectrum from a single crystal of an INGA clover detector.\label{fig:chp3-inga-cal-spec}}
 \end{figure}
 
 For Gammasphere after extraction of the spectra, energy calibration of each detector was performed as follows. First, using the program \emph{gf3} from the Radware tool suite\cite{radware}, each of the $10$ peaks was fit with a Gaussian peak shape plus linear background whose formula is:
@@ -401,8 +378,7 @@ A plot of extracted relative efficiencies and the fit to them for a Gammasphere 
 
 \begin{figure}[h!]
 	\centerline{\includegraphics[width=0.9\textwidth]{./img/c3/gs_eff_plot.eps}}
-	\caption{$^{152}$Eu extracted relative efficiencies and fit.}
-	\label{fig:chp3-gs-eff-plot}
+	\caption{$^{152}$Eu extracted relative efficiencies and fit.\label{fig:chp3-gs-eff-plot}}
 \end{figure}
 
 As it was unnecessary for the asymmetry analysis performed on the INGA data, a relative efficiency calibration was not performed. %If it had been necessary, the ratio of the $^{133}$Ba and $^{152}$Eu source activities would have been needed or it would be necessary to include that ratio as an eighth parameter of the fit. This would allow normalization of the relative efficiencies of the peaks from the two sources to the same scale.
@@ -416,7 +392,7 @@ Size=\frac{1}{d!}\prod\limits_{i=1}^{d}(n+i)
 \end{equation}
 While this still scales with $n^d$ it reduces somewhat the large storage requirements. Events that are of lower dimensionality than the histogram are ignored and events that are of higher fold than the histogram, $f$, are ``unfolded'' into $f \choose d$ unique events.
 
-Construction of a nucleus's level scheme involves gating on one or more transitions and examining the resultant spectra which will show what transitions are in coincidence with the gates. A gate on a symmetrized histogram is a projection of the histogram along one of its axes with restrictions on the summation of the other axes. As an example, equation \ref{eqn:chp3-matrix-proj}, shows an ungated projection of a matrix ($2-d$ histogram). Equation \ref{eqn:chp3-matrix-single-gate} shows a single gate on a matrix.
+Construction of a nucleus's level scheme involves gating on one or more transitions and examining the resultant spectra which will show what transitions are in coincidence with the gates. A gate on a symmetrized histogram is a projection of the histogram along one of its axes with restrictions on the summation of the other axes. As an example, equation \ref{eqn:chp3-matrix-proj}, shows an ungated projection of a matrix ($2$-$d$ histogram). Equation \ref{eqn:chp3-matrix-single-gate} shows a single gate on a matrix.
 \begin{equation}
 \label{eqn:chp3-matrix-proj}
 S_i = \sum\limits_{j=0}^{n-1}M_{ij}
@@ -435,7 +411,7 @@ A spectrum can be thought of as having two components, the background part and t
 
 \subsubsection{Symmetric Gates}
 \label{sssec:exp-pr-data-proc-bg-sub-sym}
-For symmetric gates where all the axes can be taken to be equivalent, the background subtraction algorithm, developed by Radford in Ref. \cite{symBGSub}, is used. For a cube ($3-d$ histogram), this background is:
+For symmetric gates where all the axes can be taken to be equivalent, the background subtraction algorithm, developed by Radford in Ref. \cite{symBGSub}, is used. For a cube ($3$-$d$ histogram), this background is:
 \begin{equation}
 \label{eqn:chp3-cube-bg}
 B_{ijk}=\frac{1}{T}\left(M_{ij}b_{k} + M_{ik}b_{j} + M_{jk}b_{i}\right) + \frac{1}{T^{2}}\left(b_{i}b_{j}b_{k} - P_{i}b_{j}b_{k} - b_{i}P_{j}b_{k} - b_{i}b_{j}P_{k}\right)
@@ -448,22 +424,20 @@ P_i &= p_i + b_i = \sum\limits_{jk}^{}C_{ijk}\\
 T &= \sum\limits_{ijk}^{}C_{ijk}
 \end{align}
 
-Similar expressions are derived for gates on matrices and hypercubes ($4-d$ histograms) in Ref \cite{symBGSub}. The extraction of the smooth background component $b_{i}$ from the total projection $P_{i}$ can be seen in  Fig. \ref{fig:chp3-smooth-bg}. An example of the background from this procedure and the results of the subtraction can be seen in Fig. \ref{fig:chp3-sym-bg-sub}. 
+Similar expressions are derived for gates on matrices and hypercubes ($4$-$d$ histograms) in Ref \cite{symBGSub}. The extraction of the smooth background component $b_{i}$ from the total projection $P_{i}$ can be seen in  Fig. \ref{fig:chp3-smooth-bg}. An example of the background from this procedure and the results of the subtraction can be seen in Fig. \ref{fig:chp3-sym-bg-sub}. 
 \begin{figure}[h!]
 	\centerline{\includegraphics[width=0.6\textwidth]{./img/c3/smth_bg.eps}}
-	\caption{Total projection spectrum and its smooth background drawn below it.}
-	\label{fig:chp3-smooth-bg}
+	\caption{Total projection spectrum and its smooth background drawn below it.\label{fig:chp3-smooth-bg}}
 \end{figure}
 
 \begin{figure}[h!]
 	\centerline{\includegraphics[width=0.6\textwidth]{./img/c3/bg_sub_ex.eps}}
-	\caption{Spectra of a symmetric triple gate on a hypercube showing the components of the gates spectrum. Top: The unsubtracted gated spectrum. Middle: The background spectrum for the gate. Bottom: The final background subtracted spectrum.}
-	\label{fig:chp3-sym-bg-sub}
+	\caption{Spectra of a symmetric triple gate on a hypercube showing the components of the gates spectrum. Top: The unsubtracted gated spectrum. Middle: The background spectrum for the gate. Bottom: The final background subtracted spectrum.\label{fig:chp3-sym-bg-sub}}
 \end{figure}
 
 \subsubsection{Asymmetric Gates}
 \label{sssec:exp-pr-data-proc-bg-sub-asym}
-Some types of data analysis, such as those examined in Section \ref{sec:exp-pr-data-ang}, require asymmetric gates where the $\uvec{x}$-axis of the spectrum produced is not the same as the axes that were gated on/summed across. For example the projection axis is gamma rays recorded in a specific ring of the array while the gate is placed on all the rings of the array. In such cases the background subtraction method developed by Starosta et al. in Ref \cite{asymBGSub} is desirable. If a double gate is considered on $\gamma{}_1$ and $\gamma{}_2$, then events in that double gate will fall into four categories: 1) Peak-Peak (pp): Both $\gamma{}_1$ and $\gamma{}_2$ are correctly identified. 2) Peak-Background(pb): $\gamma{}_1$ is correctly identified and $\gamma{}_2$ comes from background. 3) Background-Peak(bp): $\gamma{}_1$ is from background and $\gamma{}_2$ is correctly identified. 4) Background-Background (bb): Both $\gamma{}_1$ and $\gamma{}_2$ are from background. Similar combinations apply to higher order and lower order gates. The spectrum to be examined should be made up solely of events from the first category. To subtract events that fall into categories $2$, $3$, and $4$ we first realize:
+Some types of data analysis, such as those examined in Section \ref{sec:exp-pr-data-ang}, require asymmetric gates where the $\uvec{x}$-axis of the spectrum produced is not the same as the axes that were gated on/summed across. For example the projection axis is gamma rays recorded in a specific ring of the array while the gate is placed on all the rings of the array. In such cases the background subtraction method developed by Starosta et al. in Ref \cite{asymBGSub} is desirable. If a double gate is considered on $\gamma{}_1$ and $\gamma{}_2$, then events in that double gate will fall into four categories: 1) Peak-Peak (pp): both $\gamma{}_1$ and $\gamma{}_2$ are correctly identified. 2) Peak-Background(pb): $\gamma{}_1$ is correctly identified and $\gamma{}_2$ comes from background. 3) Background-Peak(bp): $\gamma{}_1$ is from background and $\gamma{}_2$ is correctly identified. 4) Background-Background (bb): both $\gamma{}_1$ and $\gamma{}_2$ are from background. Similar combinations apply to higher order and lower order gates. The spectrum to be examined should be made up solely of events from the first category. To subtract events that fall into categories $2$, $3$, and $4$ we first realize:
 \begin{align}
 S_{pp}(j) &= S_{tt}(j) - B_{\gamma{}\gamma{}}(j)\label{eqn:chp3-asym-pp}\\
 B_{\gamma{}\gamma{}}(j) &= N_{bp}S_{bp}(j) + N_{pb}S_{pb}(j) + N_{bb}S_{bb}(j)\label{eqn:chp3-asym-gg}\\
@@ -482,8 +456,7 @@ Where $S^{g_i}$ are the unsubtracted, unnormalized spectra resulting from a sing
 
 \begin{figure}[h!]
 	\centerline{\includegraphics[width=0.6\textwidth]{./img/c3/peak_to_bg_asym_bg.eps}}
-	\caption{Extraction of the peak and background, where $p + b = 1$. Adapted from Ref. \cite{asymBGSub}.}
-	\label{fig:chp3-asym-bg-ratio}
+	\caption{Extraction of the peak and background, where $p + b = 1$. Adapted from Ref. \cite{asymBGSub}.\label{fig:chp3-asym-bg-ratio}}
 \end{figure}
 
 \begin{equation}
@@ -494,12 +467,11 @@ Where $b^{g_k}_i$ is the background to total ratio of peak $i$ in $S^{g_k}(j)$, 
 
 \section{Directional Correlation of Gamma-rays from Oriented Nuclei (DCO)}
 \label{sec:exp-pr-data-ang}
-Angular distribution measurements, angular correlation measurements, and polarization measurements all rely on the radiation emitting nucleus being oriented in some fashion. There are three broad categories of methods for establishing the orientation of the nucleus. The first category involves using a beam to impose an orientation via nuclear reaction (such as fusion-evaporation) or Coulomb excitation. In the second category a sample of radioactive atoms that have non-zero spin are cryogenically cooled and an external magnetic field is applied. The spins align in this field to the extent determined by their temperature and the field strength. The final category involves not forcing the nucleus into some orientation, but observing its orientation by taking the direction of a radiation preceding the gamma ray of interest to be the $\uvec{z}$-axis. A diagrammatic scheme for the emission of two successive radiations $X_1$ and $X_2$ is found in Fig. \ref{fig:chp3-DCO-diagram-lvl-scheme}.
+Angular distribution measurements, angular correlation measurements, and polarization measurements all rely on the radiation emitting nucleus being oriented in some fashion. There are three broad categories of methods for establishing the orientation of the nucleus. The first category involves using a beam to impose an orientation via nuclear reaction (such as fusion-evaporation) or Coulomb excitation \cite{emInteraction,dcoKrane}. In the second category a sample of radioactive atoms that have non-zero spin are cryogenically cooled and an external magnetic field is applied \cite{cryoOrientationKrane}. The spins align in this field to the extent determined by their temperature and the field strength. The final category involves not forcing the nucleus into some orientation, but observing its orientation by taking the direction of a radiation preceding the gamma ray of interest to be the $\uvec{z}$-axis \cite{emInteraction,dcoKrane}. A diagrammatic scheme for the emission of two successive radiations $X_1$ and $X_2$ is found in Fig. \ref{fig:chp3-DCO-diagram-lvl-scheme}.
 
-\begin{figure}[h!]
+\begin{figure}[hT!]
 	\centerline{\includegraphics[height=0.35\textheight]{./img/c3/dco_lvl_scheme.eps}}
-	\caption{Emission of two successive radiations $X_1$ and $X_2$ from an oriented nuclear state, $I_1$.}
-	\label{fig:chp3-DCO-diagram-lvl-scheme}
+	\caption{Emission of two successive radiations $X_1$ and $X_2$ from an oriented nuclear state, $I_1$.\label{fig:chp3-DCO-diagram-lvl-scheme}}
 \end{figure}
 
 The full correlation function describing the situation in Fig. \ref{fig:chp3-DCO-diagram-lvl-scheme} can be written as follows\cite{emInteraction,dcoKrane}:
@@ -513,16 +485,16 @@ Here $\lambda{}_1$ and $\lambda{}_2$ are the ranks of the statistical tensors th
 \delta{} &= \sqrt{\frac{I_{\gamma{}}(L')}{I_{\gamma{}}(L)}} \label{eqn:chp3-mixing-ratio-inten}
 \end{align}
 
+\begin{figure}[hT!]
+	\centerline{\includegraphics[height=0.35\textheight]{./img/c3/dco_setup.eps}}
+	\caption{Diagram of the angles in a directional correlation of two successive radiations X$_{1}$ and X$_{2}$ emitted from an axial symmetric oriented source S.\label{fig:chp3-DCO-Angles}}
+\end{figure}
+
 \begin{equation}
 \label{eqn:chp3-angular-function}
-H_{\lambda{}_1\lambda{}\lambda{}_2}\left(\theta{}_1,\theta{}_2,\phi{}\right) = \sum\limits_{q=-\lambda{}'}^{\lambda{}'}\frac{4 \pi{}}{2\lambda{}_2 +1} <\lambda{}_1 0 \lambda{} q | \lambda{}_2 q> Y_{\lambda{}q}\left(\theta{}_1,0\right) Y^{*}_{\lambda{}q}\left(\theta{}_2,\phi{}\right)
+H_{\lambda{}_1\lambda{}\lambda{}_2}\left(\theta{}_1,\theta{}_2,\phi{}\right) = \sum\limits_{q=-\lambda{}'}^{\lambda{}'}\frac{4 \pi{}}{2\lambda{}_2 +1} <\lambda{}_1 0 \lambda{} q | \lambda{}_2 q> Y_{\lambda{}q}\left(\theta{}_1,0\right) Y^{*}_{\lambda{}_2q}\left(\theta{}_2,\phi{}\right)
 \end{equation}
 
-\begin{figure}[h!]
-	\centerline{\includegraphics[height=0.35\textheight]{./img/c3/dco_setup.eps}}
-	\caption{Diagram of the angles in a directional correlation of two successive radiations X$_{1}$ and X$_{2}$ emitted from an axial symmetric oriented source S.}
-	\label{fig:chp3-DCO-Angles}
-\end{figure}
 
 The orientation parameters $B_{\lambda{}_1}\left(I_1\right)$ take several different forms depending on the method used to orient the nucleus. For methods which result in an axially symmetric distribution where the nucleus has probability $P(m)$ to be in a given magnetic substate $m$, Eqn. \ref{eqn:chp3-orient-fus-evap} is used. For determining the orientation of the nucleus by observing a preceding gamma ray $X_0$, Eqn. \ref{eqn:chp3-orient-preceding} is used.
 
@@ -601,13 +573,13 @@ $\Delta I$ & $L$ & Sign of $A_2$ & Sign of $A_4$ & $A_2$ Value & $A_4$ Value\\
 
 \subsection{DCO Ratios}
 \label{sssec:exp-pr-data-ang-cor-dco}
-In addition to angular distributions, ratios of the DCO function given in Eqn. \ref{eqn:chp3-full-dco} can be used to gather information about the nature of a transition\cite{dcoRatios}. A pair of successive gamma-ray transitions are examined. These two gamma rays, $\gamma{}_1$ and $\gamma{}_2$, are observed in detectors placed at $\theta{}_1$ and $\theta{}_2$ with respect to the beam axis. By examining the intensity of $\gamma{}_2$ in the detector at $\theta_1$ from a gate on $\gamma{}_1$ in the detector at $\theta{}_2$ and the intensity of $\gamma{}_2$ in the detector at $\theta_2$ from a gate on $\gamma{}_1$ in the detector at $\theta{}_1$ a ratio is determined which can be related to a ratio of the DCO function. It does not matter if the upper or lower transition of the pair of gamma rays is gated on, as long as the nature of the transition gated on is taken into account, the result will not change.
+In addition to angular distributions, ratios of the DCO function given in Eqn. \ref{eqn:chp3-full-dco} can be used to gather information about the nature of a transition\cite{dcoRatios}. A pair of successive gamma-ray transitions is examined. These two gamma rays, $\gamma{}_1$ and $\gamma{}_2$, are observed in detectors placed at $\theta{}_1$ and $\theta{}_2$ with respect to the beam axis. By examining the intensity of $\gamma{}_2$ in the detector at $\theta_1$ from a gate on $\gamma{}_1$ in the detector at $\theta{}_2$ and the intensity of $\gamma{}_2$ in the detector at $\theta_2$ from a gate on $\gamma{}_1$ in the detector at $\theta{}_1$ a ratio is determined which can be related to a ratio of the DCO function. It does not matter if the upper or lower transition of the pair of gamma rays is gated on, as long as the nature of the transition gated on is taken into account, the result will not change.
 \begin{align}
 R_{DCO} &= \frac{I^{\gamma{}_2}_{\theta{}_1}(Gate^{\gamma{}_1}_{\theta{}_2})}{I^{\gamma{}_2}_{\theta{}_2}(Gate^{\gamma{}_1}_{\theta{}_1})} \label{eqn:chp3:exp-dco-ratio}\\
  &= \frac{W(\theta{}_2,\theta{}_1,\phi{})}{W(\theta{}_1,\theta{}_2,\phi{})} \label{eqn:chp3:theory-dco-ratio}
 \end{align}
 
-In practice, these ratios are constructed for groups of detectors which requires integration of the numerator and denominators across the appropriate ranges of $\theta{}_1$, $\theta{}_2$, and $\phi{}$. For Gammasphere the usual angle ranges for a DCO-ratio ($R_{DCO}$) are $(\theta{}\leq{}50.1^{\circ} or 129.9^{\circ}\leq{}\theta{})$, corresponding to the forward and backward ranges (``F/B'') (the DCO function is symmetric about $90^{\circ}$), and $69.8^{\circ}\leq{}\theta{}\leq{}110.2^{\circ}$, corresponding to the approximately $90^{\circ{}}$ range (``$\sim{}90^{\circ}$'').  Another ratio that can be used is the so called ``DCO-like'' ratio ($r$). This ratio is constructed by examining the intensity of $\gamma{}_2$ in the detector at $\theta_1$ from a gate on $\gamma{}_1$ in all detectors and the intensity of $\gamma{}_2$ in the detector at $\theta_2$ from a gate on $\gamma{}_1$ in all detectors. These DCO-like ratios have a few benefits: the transition to be examined has greater intensity due to the more inclusive gate; the value is independent of the type of transition gated on; and they can distinguish between $\Delta I=2$ pure quadrupole and $\Delta I=0$ pure dipole transitions. Values of these ratios using the ``F/B'' range as $\theta_2$ and the ``$\sim{}90^{\circ}$'' range as $\theta_1$ can be found in Table \ref{tbl:chp3-dco-ratios}.
+In practice, these ratios are constructed for groups of detectors which requires integration of the numerator and denominators across the appropriate ranges of $\theta{}_1$, $\theta{}_2$, and $\phi{}$. For Gammasphere the usual angle ranges for a DCO-ratio ($R_{DCO}$) are $(\theta{}\leq{}50.1^{\circ}$ or $\theta{}\geq{}129.9^{\circ})$, corresponding to the forward and backward ranges (``F/B'') (the DCO function is symmetric about $90^{\circ}$), and $69.8^{\circ}\leq{}\theta{}\leq{}110.2^{\circ}$, corresponding to the approximately $90^{\circ{}}$ range (``$\sim{}90^{\circ}$'').  Another ratio that can be used is the so called ``DCO-like'' ratio ($r$). This ratio is constructed by examining the intensity of $\gamma{}_2$ in the detector at $\theta_1$ from a gate on $\gamma{}_1$ in all detectors and the intensity of $\gamma{}_2$ in the detector at $\theta_2$ from a gate on $\gamma{}_1$ in all detectors. These DCO-like ratios have a few benefits: the transition to be examined has greater intensity due to the more inclusive gate; the value is independent of the type of transition gated on; and they can distinguish between $\Delta I=2$ pure quadrupole and $\Delta I=0$ pure dipole transitions. Values of these ratios using the ``F/B'' range as $\theta_2$ and the ``$\sim{}90^{\circ}$'' range as $\theta_1$ can be found in Table \ref{tbl:chp3-dco-ratios}.
 
 \begin{table}[t]
 \caption[TYPICAL VALUES OF DCO RATIOS AND DCO-LIKE RATIOS FOR THE GAMMASPHERE ARRAY.]{TYPICAL VALUES OF DCO RATIOS ($R_{DCO}$) AND DCO-LIKE RATIOS ($r$) FOR THE GAMMASPHERE ARRAY. ADAPTED FROM REF. \cite{dcoLike}\label{tbl:chp3-dco-ratios}}
@@ -630,7 +602,7 @@ $R_{DCO}$ and $r$ are typically used to distinguish stretched quadrupole transit
 
 \subsection{Polarization}
 \label{ssec:exp-pol}
-A transition can have a polarization of either electric or magnetic in nature, giving rise to $EL$ and $ML$ transitions, if $L$ is even electric transitions leave the parity of the nucleus unchanged and magnetic transitions change the parity. If $L$ is odd, this is reversed. The polarization of a transition can be measured via the scattering asymmetry \cite{expPolDCO}:
+A transition can have a polarization of either electric or magnetic nature, giving rise to $EL$ and $ML$ transitions, if $L$ is even electric transitions leave the parity of the nucleus unchanged and magnetic transitions change the parity. If $L$ is odd, this is reversed. The polarization of a transition can be measured via the scattering asymmetry \cite{expPolDCO}:
 \begin{equation}
 \label{eqn:chp3-scat-asym}
 A=\frac{a(E_{\gamma})N_{\perp}-N_{\parallel}}{a(E_{\gamma})N_{\perp}+N_{\parallel}}
@@ -648,6 +620,6 @@ As a radioactive source has no spin alignment, it can serve as a source of unpol
 The linear fit was:
 \begin{equation}
 \label{eqn:chp3-nat-asym-fit}
-a(E_{\gamma}(keV)) = 0.92\pm0.02 + 8.2\pm3.7\times{}10^{-5}
+a(E_{\gamma}(keV)) = 0.92\pm0.02 + \left(8.2\pm3.7\times{}10^{-5}\right)E_{\gamma}
 \end{equation}
 With the fit to the natural asymmetries, calculation of the polarization asymmetry $A$ can proceed. If $A>0$ the transition in question is predominantly electric in nature; if $A<0$ the transition is predominantly magnetic in nature.
